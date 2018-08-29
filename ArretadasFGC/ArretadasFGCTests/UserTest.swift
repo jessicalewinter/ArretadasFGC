@@ -1,5 +1,5 @@
 //
-//  ArretadasFGCTests.swift
+//  UserTest.swift
 //  ArretadasFGCTests
 //
 //  Created by Ada 2018 on 29/08/2018.
@@ -9,7 +9,8 @@
 import XCTest
 @testable import ArretadasFGC
 
-class ArretadasFGCTests: XCTestCase {
+
+class UserTest: XCTestCase {
     
     override func setUp() {
         super.setUp()

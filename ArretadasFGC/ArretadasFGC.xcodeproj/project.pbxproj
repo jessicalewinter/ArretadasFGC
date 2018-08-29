@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		BEF5B0862136E013002FB168 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF5B0852136E013002FB168 /* AppDelegate.swift */; };
-		BEF5B0882136E013002FB168 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF5B0872136E013002FB168 /* ViewController.swift */; };
 		BEF5B08B2136E013002FB168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF5B0892136E013002FB168 /* Main.storyboard */; };
 		BEF5B08E2136E013002FB168 /* ArretadasFGC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEF5B08C2136E013002FB168 /* ArretadasFGC.xcdatamodeld */; };
 		BEF5B0902136E014002FB168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEF5B08F2136E014002FB168 /* Assets.xcassets */; };
 		BEF5B0932136E014002FB168 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF5B0912136E014002FB168 /* LaunchScreen.storyboard */; };
-		BEF5B09E2136E014002FB168 /* ArretadasFGCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF5B09D2136E014002FB168 /* ArretadasFGCTests.swift */; };
 		BEF5B0A92136E014002FB168 /* ArretadasFGCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF5B0A82136E014002FB168 /* ArretadasFGCUITests.swift */; };
+		BEF5B0BC2136E20C002FB168 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF5B0BB2136E20C002FB168 /* User.swift */; };
+		BEF5B0BE2136E2A8002FB168 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF5B0BD2136E2A8002FB168 /* Story.swift */; };
+		BEF5B0C02136E2DD002FB168 /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF5B0BF2136E2DD002FB168 /* Club.swift */; };
+		BEF5B0C32136E53A002FB168 /* UserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF5B0C22136E53A002FB168 /* UserTest.swift */; };
+		BEF5B0C52136E54A002FB168 /* StoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF5B0C42136E54A002FB168 /* StoryTest.swift */; };
+		BEF5B0C72136E557002FB168 /* ClubTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF5B0C62136E557002FB168 /* ClubTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,18 +41,23 @@
 /* Begin PBXFileReference section */
 		BEF5B0822136E013002FB168 /* ArretadasFGC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArretadasFGC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF5B0852136E013002FB168 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BEF5B0872136E013002FB168 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BEF5B08A2136E013002FB168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BEF5B08D2136E013002FB168 /* ArretadasFGC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArretadasFGC.xcdatamodel; sourceTree = "<group>"; };
 		BEF5B08F2136E014002FB168 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEF5B0922136E014002FB168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEF5B0942136E014002FB168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEF5B0992136E014002FB168 /* ArretadasFGCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArretadasFGCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEF5B09D2136E014002FB168 /* ArretadasFGCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArretadasFGCTests.swift; sourceTree = "<group>"; };
 		BEF5B09F2136E014002FB168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEF5B0A42136E014002FB168 /* ArretadasFGCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArretadasFGCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF5B0A82136E014002FB168 /* ArretadasFGCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArretadasFGCUITests.swift; sourceTree = "<group>"; };
 		BEF5B0AA2136E014002FB168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEF5B0BB2136E20C002FB168 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BEF5B0BD2136E2A8002FB168 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		BEF5B0BF2136E2DD002FB168 /* Club.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
+		BEF5B0C12136E539002FB168 /* ArretadasFGCTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ArretadasFGCTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		BEF5B0C22136E53A002FB168 /* UserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTest.swift; sourceTree = "<group>"; };
+		BEF5B0C42136E54A002FB168 /* StoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTest.swift; sourceTree = "<group>"; };
+		BEF5B0C62136E557002FB168 /* ClubTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				BEF5B0852136E013002FB168 /* AppDelegate.swift */,
-				BEF5B0872136E013002FB168 /* ViewController.swift */,
+				BEF5B0B72136E17B002FB168 /* Controllers */,
+				BEF5B0B62136E174002FB168 /* Models */,
+				BEF5B0B82136E18D002FB168 /* Views */,
 				BEF5B0892136E013002FB168 /* Main.storyboard */,
 				BEF5B08F2136E014002FB168 /* Assets.xcassets */,
 				BEF5B0912136E014002FB168 /* LaunchScreen.storyboard */,
@@ -113,8 +124,11 @@
 		BEF5B09C2136E014002FB168 /* ArretadasFGCTests */ = {
 			isa = PBXGroup;
 			children = (
-				BEF5B09D2136E014002FB168 /* ArretadasFGCTests.swift */,
 				BEF5B09F2136E014002FB168 /* Info.plist */,
+				BEF5B0C22136E53A002FB168 /* UserTest.swift */,
+				BEF5B0C12136E539002FB168 /* ArretadasFGCTests-Bridging-Header.h */,
+				BEF5B0C42136E54A002FB168 /* StoryTest.swift */,
+				BEF5B0C62136E557002FB168 /* ClubTest.swift */,
 			);
 			path = ArretadasFGCTests;
 			sourceTree = "<group>";
@@ -126,6 +140,30 @@
 				BEF5B0AA2136E014002FB168 /* Info.plist */,
 			);
 			path = ArretadasFGCUITests;
+			sourceTree = "<group>";
+		};
+		BEF5B0B62136E174002FB168 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BEF5B0BB2136E20C002FB168 /* User.swift */,
+				BEF5B0BD2136E2A8002FB168 /* Story.swift */,
+				BEF5B0BF2136E2DD002FB168 /* Club.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BEF5B0B72136E17B002FB168 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BEF5B0B82136E18D002FB168 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +237,7 @@
 					};
 					BEF5B0982136E014002FB168 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 						TestTargetID = BEF5B0812136E013002FB168;
 					};
 					BEF5B0A32136E014002FB168 = {
@@ -259,9 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEF5B0882136E013002FB168 /* ViewController.swift in Sources */,
 				BEF5B08E2136E013002FB168 /* ArretadasFGC.xcdatamodeld in Sources */,
 				BEF5B0862136E013002FB168 /* AppDelegate.swift in Sources */,
+				BEF5B0C02136E2DD002FB168 /* Club.swift in Sources */,
+				BEF5B0BC2136E20C002FB168 /* User.swift in Sources */,
+				BEF5B0BE2136E2A8002FB168 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +310,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEF5B09E2136E014002FB168 /* ArretadasFGCTests.swift in Sources */,
+				BEF5B0C72136E557002FB168 /* ClubTest.swift in Sources */,
+				BEF5B0C32136E53A002FB168 /* UserTest.swift in Sources */,
+				BEF5B0C52136E54A002FB168 /* StoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FG6BFSTBUF;
 				INFOPLIST_FILE = ArretadasFGC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +496,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FG6BFSTBUF;
 				INFOPLIST_FILE = ArretadasFGC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,6 +514,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ArretadasFGCTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -478,6 +524,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.ifce.academy.ArretadasFGCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ArretadasFGCTests/ArretadasFGCTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArretadasFGC.app/ArretadasFGC";
@@ -489,6 +537,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ArretadasFGCTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -498,6 +547,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.ifce.academy.ArretadasFGCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ArretadasFGCTests/ArretadasFGCTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArretadasFGC.app/ArretadasFGC";
