@@ -112,6 +112,7 @@
 		BE7D2FCD21381834003897C5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BE24BC5A2138124C00CBAE4C /* DataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,7 +161,6 @@
 				BE7D2FCD21381834003897C5 /* Model */,
 				BE24BC5E213812DC00CBAE4C /* Storyboard */,
 				BEF5B0852136E013002FB168 /* AppDelegate.swift */,
-				BE24BC5A2138124C00CBAE4C /* DataManager.swift */,
 				BEF5B0B72136E17B002FB168 /* Controllers */,
 				BEF5B08F2136E014002FB168 /* Assets.xcassets */,
 				BEF5B0912136E014002FB168 /* LaunchScreen.storyboard */,
