@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Club" representedClassName="Club" syncable="YES" codeGenerationType="class">
         <attribute name="dateMeeting" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="descriptionClub" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="local" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="stories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Story" syncable="YES"/>
-        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="clubs" inverseEntity="User" syncable="YES"/>
+        <relationship name="expReports" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExperienceReports" inverseName="club" inverseEntity="ExperienceReports" syncable="YES"/>
+        <relationship name="members" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="clubs" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="Story" representedClassName="Story" syncable="YES" codeGenerationType="class">
+    <entity name="ExperienceReports" representedClassName="ExperienceReports" syncable="YES" codeGenerationType="class">
         <attribute name="audio" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="club" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Club" syncable="YES"/>
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="stories" inverseEntity="User" syncable="YES"/>
+        <relationship name="club" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Club" inverseName="expReports" inverseEntity="Club" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="expReports" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
@@ -23,12 +23,12 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="clubs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Club" inverseName="users" inverseEntity="Club" syncable="YES"/>
-        <relationship name="stories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Story" inverseName="user" inverseEntity="Story" syncable="YES"/>
+        <relationship name="clubs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Club" inverseName="members" inverseEntity="Club" syncable="YES"/>
+        <relationship name="expReports" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExperienceReports" inverseName="user" inverseEntity="ExperienceReports" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-144" positionY="-49" width="128" height="148"/>
         <element name="Club" positionX="99" positionY="252" width="128" height="148"/>
-        <element name="Story" positionX="369" positionY="-25" width="128" height="133"/>
+        <element name="ExperienceReports" positionX="369" positionY="-25" width="128" height="133"/>
+        <element name="User" positionX="-144" positionY="-49" width="128" height="148"/>
     </elements>
 </model>
