@@ -44,7 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BE24BC4C213811A900CBAE4C /* OursColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OursColors.swift; path = ArretadasFGC/View/OursColors.swift; sourceTree = SOURCE_ROOT; };
+		BE24BC4C213811A900CBAE4C /* OursColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OursColors.swift; path = "ArretadasFGC/New Group/OursColors.swift"; sourceTree = SOURCE_ROOT; };
 		BE24BC4E213811C300CBAE4C /* ProfileClubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileClubViewController.swift; sourceTree = "<group>"; };
 		BE24BC4F213811C300CBAE4C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BE24BC50213811C300CBAE4C /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +106,22 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		BE7D2FCD21381834003897C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE7D2FCE21381841003897C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE24BC4C213811A900CBAE4C /* OursColors.swift */,
+			);
+			name = View;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		BEF5B0792136E013002FB168 = {
 			isa = PBXGroup;
 			children = (
@@ -129,12 +145,12 @@
 		BEF5B0842136E013002FB168 /* ArretadasFGC */ = {
 			isa = PBXGroup;
 			children = (
+				BE7D2FCE21381841003897C5 /* View */,
+				BE7D2FCD21381834003897C5 /* Model */,
 				BE24BC5E213812DC00CBAE4C /* Storyboard */,
 				BEF5B0852136E013002FB168 /* AppDelegate.swift */,
 				BE24BC5A2138124C00CBAE4C /* DataManager.swift */,
 				BEF5B0B72136E17B002FB168 /* Controllers */,
-				BEF5B0B62136E174002FB168 /* Models */,
-				BEF5B0B82136E18D002FB168 /* Views */,
 				BEF5B08F2136E014002FB168 /* Assets.xcassets */,
 				BEF5B0912136E014002FB168 /* LaunchScreen.storyboard */,
 				BEF5B0942136E014002FB168 /* Info.plist */,
@@ -164,13 +180,6 @@
 			path = ArretadasFGCUITests;
 			sourceTree = "<group>";
 		};
-		BEF5B0B62136E174002FB168 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		BEF5B0B72136E17B002FB168 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,14 +188,6 @@
 				BE24BC4F213811C300CBAE4C /* ProfileViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		BEF5B0B82136E18D002FB168 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				BE24BC4C213811A900CBAE4C /* OursColors.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
