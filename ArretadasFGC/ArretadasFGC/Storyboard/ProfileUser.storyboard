@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hfR-Vx-8Zq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,9 +15,22 @@
             <objects>
                 <viewController id="hfR-Vx-8Zq" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ht2-sx-hS7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQn-uy-RER">
+                                <rect key="frame" x="0.0" y="20" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wQn-uy-RER" firstAttribute="leading" secondItem="rqw-LN-UhT" secondAttribute="leading" id="6Gn-6p-fle"/>
+                            <constraint firstItem="rqw-LN-UhT" firstAttribute="trailing" secondItem="wQn-uy-RER" secondAttribute="trailing" id="FuG-1M-9kF"/>
+                            <constraint firstItem="wQn-uy-RER" firstAttribute="top" secondItem="rqw-LN-UhT" secondAttribute="top" id="eVe-At-kii"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rqw-LN-UhT"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="3IJ-7W-J6n"/>

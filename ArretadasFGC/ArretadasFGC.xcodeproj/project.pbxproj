@@ -16,6 +16,7 @@
 		BE24BC602138144D00CBAE4C /* ProfileClub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE24BC5F2138144D00CBAE4C /* ProfileClub.storyboard */; };
 		BE24BC622138146400CBAE4C /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE24BC612138146400CBAE4C /* Feed.storyboard */; };
 		BE24BC64213814F700CBAE4C /* ProfileUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE24BC63213814F700CBAE4C /* ProfileUser.storyboard */; };
+		BE7D2FD1213827BF003897C5 /* RegisterAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE7D2FD0213827BF003897C5 /* RegisterAccount.storyboard */; };
 		BEF5B0862136E013002FB168 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF5B0852136E013002FB168 /* AppDelegate.swift */; };
 		BEF5B08B2136E013002FB168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF5B0892136E013002FB168 /* Main.storyboard */; };
 		BEF5B0902136E014002FB168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEF5B08F2136E014002FB168 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		BE24BC5F2138144D00CBAE4C /* ProfileClub.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileClub.storyboard; sourceTree = "<group>"; };
 		BE24BC612138146400CBAE4C /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		BE24BC63213814F700CBAE4C /* ProfileUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileUser.storyboard; sourceTree = "<group>"; };
+		BE7D2FD0213827BF003897C5 /* RegisterAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterAccount.storyboard; sourceTree = "<group>"; };
 		BEF5B0822136E013002FB168 /* ArretadasFGC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArretadasFGC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF5B0852136E013002FB168 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEF5B08A2136E013002FB168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				BE24BC612138146400CBAE4C /* Feed.storyboard */,
 				BE24BC5F2138144D00CBAE4C /* ProfileClub.storyboard */,
 				BEF5B0892136E013002FB168 /* Main.storyboard */,
+				BE7D2FD0213827BF003897C5 /* RegisterAccount.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -120,6 +123,13 @@
 			);
 			name = View;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		BE7D2FCF21382741003897C5 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Xibs;
 			sourceTree = "<group>";
 		};
 		BEF5B0792136E013002FB168 = {
@@ -145,6 +155,7 @@
 		BEF5B0842136E013002FB168 /* ArretadasFGC */ = {
 			isa = PBXGroup;
 			children = (
+				BE7D2FCF21382741003897C5 /* Xibs */,
 				BE7D2FCE21381841003897C5 /* View */,
 				BE7D2FCD21381834003897C5 /* Model */,
 				BE24BC5E213812DC00CBAE4C /* Storyboard */,
@@ -300,6 +311,7 @@
 				BEF5B0932136E014002FB168 /* LaunchScreen.storyboard in Resources */,
 				BEF5B0902136E014002FB168 /* Assets.xcassets in Resources */,
 				BEF5B08B2136E013002FB168 /* Main.storyboard in Resources */,
+				BE7D2FD1213827BF003897C5 /* RegisterAccount.storyboard in Resources */,
 				BE24BC64213814F700CBAE4C /* ProfileUser.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
