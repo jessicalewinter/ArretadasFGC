@@ -62,6 +62,5 @@ extension RegisterAccountViewController: UITableViewDelegate, UITableViewDataSou
             return cell
         }
     }
-    
-    
 }
+

@@ -15,13 +15,21 @@ class CardRegisterAccountTableViewCell: UITableViewCell {
     @IBOutlet weak var labelRequired: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    func setupLayout(tableView: UITableView, cornerRadius: CGFloat, color: UIColor, shadowRadius: CGFloat, shadowOpacity: Float, shadowOffset: CGSize){
+        tableView.clipsToBounds = true
+        tableView.layer.cornerRadius = cornerRadius
+        tableView.layer.masksToBounds = false
+        tableView.layer.shadowColor = UIColor.blue.cgColor
+        tableView.layer.shadowRadius = shadowRadius
+        tableView.layer.shadowOpacity = shadowOpacity
+        tableView.layer.shadowOffset = shadowOffset
     }
     
 }
