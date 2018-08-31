@@ -8,14 +8,10 @@
 
 import UIKit
 
-class CardRegisterAccountForm: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+class CardRegisterAccountForm: UITableViewCell {
+    
+    @IBOutlet weak var labelCellCardRegister: UILabel!
+    @IBOutlet weak var textFieldCardRegister: UITextField!
+    
+    
 }
