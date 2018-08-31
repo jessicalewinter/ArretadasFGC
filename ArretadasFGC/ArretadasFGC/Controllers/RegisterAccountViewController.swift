@@ -23,6 +23,11 @@ class RegisterAccountViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @objc func register(){
+        
+    }
+    
+    
 }
 
 extension RegisterAccountViewController: UITableViewDelegate, UITableViewDataSource{
@@ -52,6 +57,7 @@ extension RegisterAccountViewController: UITableViewDelegate, UITableViewDataSou
             
             let createAccountButton = PrimaryButton(frame: CGRect(x: tableView.bounds.width/4, y: 0, width: tableView.bounds.width/2, height: 50))
             createAccountButton.setTitle("Criar Conta", for: .normal)
+//            createAccountButton.addTarget(self, action: #selector(register(sender:), for: .touchUpInside)
             cell.contentView.addSubview(createAccountButton)
             return cell
         }
