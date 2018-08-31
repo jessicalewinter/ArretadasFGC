@@ -21,6 +21,7 @@
 		BE24BC622138146400CBAE4C /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE24BC612138146400CBAE4C /* Feed.storyboard */; };
 		BE24BC64213814F700CBAE4C /* ProfileUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE24BC63213814F700CBAE4C /* ProfileUser.storyboard */; };
 		BE7D2FD1213827BF003897C5 /* RegisterAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE7D2FD0213827BF003897C5 /* RegisterAccount.storyboard */; };
+		BEC6148E213882F0009E8E51 /* ClubsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6148C213882F0009E8E51 /* ClubsCollectionViewCell.swift */; };
 		BEF5B0862136E013002FB168 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF5B0852136E013002FB168 /* AppDelegate.swift */; };
 		BEF5B08B2136E013002FB168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF5B0892136E013002FB168 /* Main.storyboard */; };
 		BEF5B0902136E014002FB168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEF5B08F2136E014002FB168 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		BE24BC612138146400CBAE4C /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		BE24BC63213814F700CBAE4C /* ProfileUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileUser.storyboard; sourceTree = "<group>"; };
 		BE7D2FD0213827BF003897C5 /* RegisterAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterAccount.storyboard; sourceTree = "<group>"; };
+		BEC6148C213882F0009E8E51 /* ClubsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsCollectionViewCell.swift; sourceTree = "<group>"; };
 		BEF5B0822136E013002FB168 /* ArretadasFGC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArretadasFGC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF5B0852136E013002FB168 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEF5B08A2136E013002FB168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		BE7D2FCF21382741003897C5 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				BEC6148C213882F0009E8E51 /* ClubsCollectionViewCell.swift */,
 				BE21485A213829A9002BED27 /* CardRegisterAccountForm.xib */,
 				BE21485C21382EA5002BED27 /* BackgroundUser.xib */,
 				BE2148602138808E002BED27 /* ClubsCell.xib */,
@@ -354,6 +357,7 @@
 			files = (
 				BE24BC53213811C300CBAE4C /* FeedViewController.swift in Sources */,
 				BEF5B0862136E013002FB168 /* AppDelegate.swift in Sources */,
+				BEC6148E213882F0009E8E51 /* ClubsCollectionViewCell.swift in Sources */,
 				BE24BC51213811C300CBAE4C /* ProfileClubViewController.swift in Sources */,
 				BE24BC5B2138124C00CBAE4C /* DataManager.swift in Sources */,
 				BE24BC4D213811A900CBAE4C /* OursColors.swift in Sources */,
