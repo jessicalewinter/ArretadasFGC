@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE21485B213829A9002BED27 /* CardRegisterAccountForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE21485A213829A9002BED27 /* CardRegisterAccountForm.xib */; };
 		BE21485D21382EA5002BED27 /* BackgroundUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE21485C21382EA5002BED27 /* BackgroundUser.xib */; };
 		BE21485F21383185002BED27 /* BackgroundUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21485E21383185002BED27 /* BackgroundUser.swift */; };
 		BE2148612138808E002BED27 /* ClubsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE2148602138808E002BED27 /* ClubsCell.xib */; };
+		BE21486521395B94002BED27 /* RegisterAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21486421395B94002BED27 /* RegisterAccountViewController.swift */; };
+		BE21486C213964DC002BED27 /* CardRegisterAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21486A213964DC002BED27 /* CardRegisterAccountTableViewCell.swift */; };
+		BE21486D213964DC002BED27 /* CardRegisterAccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE21486B213964DC002BED27 /* CardRegisterAccountTableViewCell.xib */; };
 		BE24BC4D213811A900CBAE4C /* OursColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE24BC4C213811A900CBAE4C /* OursColors.swift */; };
 		BE24BC51213811C300CBAE4C /* ProfileClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE24BC4E213811C300CBAE4C /* ProfileClubViewController.swift */; };
 		BE24BC52213811C300CBAE4C /* ProfileUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE24BC4F213811C300CBAE4C /* ProfileUserViewController.swift */; };
@@ -53,10 +55,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BE21485A213829A9002BED27 /* CardRegisterAccountForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardRegisterAccountForm.xib; sourceTree = SOURCE_ROOT; };
 		BE21485C21382EA5002BED27 /* BackgroundUser.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackgroundUser.xib; sourceTree = SOURCE_ROOT; };
 		BE21485E21383185002BED27 /* BackgroundUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundUser.swift; sourceTree = "<group>"; };
 		BE2148602138808E002BED27 /* ClubsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ClubsCell.xib; path = "ArretadasFGC/New Group/ClubsCell.xib"; sourceTree = SOURCE_ROOT; };
+		BE21486421395B94002BED27 /* RegisterAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAccountViewController.swift; sourceTree = "<group>"; };
+		BE21486A213964DC002BED27 /* CardRegisterAccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterAccountTableViewCell.swift; sourceTree = "<group>"; };
+		BE21486B213964DC002BED27 /* CardRegisterAccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardRegisterAccountTableViewCell.xib; sourceTree = "<group>"; };
 		BE24BC4C213811A900CBAE4C /* OursColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OursColors.swift; path = "ArretadasFGC/New Group/OursColors.swift"; sourceTree = SOURCE_ROOT; };
 		BE24BC4E213811C300CBAE4C /* ProfileClubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileClubViewController.swift; sourceTree = "<group>"; };
 		BE24BC4F213811C300CBAE4C /* ProfileUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUserViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +225,7 @@
 				BE24BC50213811C300CBAE4C /* FeedViewController.swift */,
 				BE24BC4E213811C300CBAE4C /* ProfileClubViewController.swift */,
 				BE24BC4F213811C300CBAE4C /* ProfileUserViewController.swift */,
+				BE21486421395B94002BED27 /* RegisterAccountViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -334,7 +339,7 @@
 				BE24BC602138144D00CBAE4C /* ProfileClub.storyboard in Resources */,
 				BEF5B0932136E014002FB168 /* LaunchScreen.storyboard in Resources */,
 				BEF5B0902136E014002FB168 /* Assets.xcassets in Resources */,
-				BE21485B213829A9002BED27 /* CardRegisterAccountForm.xib in Resources */,
+				BE21486D213964DC002BED27 /* CardRegisterAccountTableViewCell.xib in Resources */,
 				BE2148612138808E002BED27 /* ClubsCell.xib in Resources */,
 				BEC61497213970FB009E8E51 /* Glossary.storyboard in Resources */,
 				BE21485D21382EA5002BED27 /* BackgroundUser.xib in Resources */,
@@ -369,9 +374,11 @@
 				BEC6149421395B34009E8E51 /* ProfileUserTableViewFirstCell.swift in Sources */,
 				BE24BC53213811C300CBAE4C /* FeedViewController.swift in Sources */,
 				BEF5B0862136E013002FB168 /* AppDelegate.swift in Sources */,
+				BE21486C213964DC002BED27 /* CardRegisterAccountTableViewCell.swift in Sources */,
 				BEC6148E213882F0009E8E51 /* ClubsCollectionViewCell.swift in Sources */,
 				BE24BC51213811C300CBAE4C /* ProfileClubViewController.swift in Sources */,
 				BE24BC5B2138124C00CBAE4C /* DataManager.swift in Sources */,
+				BE21486521395B94002BED27 /* RegisterAccountViewController.swift in Sources */,
 				BE24BC4D213811A900CBAE4C /* OursColors.swift in Sources */,
 				BE24BC592138122800CBAE4C /* ArretadasFGC.xcdatamodeld in Sources */,
 				BE21485F21383185002BED27 /* BackgroundUser.swift in Sources */,

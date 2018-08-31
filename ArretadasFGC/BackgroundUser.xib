@@ -25,14 +25,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="iuK-ac-uEq">
-                    <rect key="frame" x="126.5" y="16" width="121.5" height="121.5"/>
+                    <rect key="frame" x="147.5" y="50" width="80.5" height="80.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="iuK-ac-uEq" secondAttribute="height" multiplier="1:1" id="9Ne-aJ-xLc"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fh-eA-JUr">
-                    <rect key="frame" x="166" y="150.5" width="42" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="163" y="143.5" width="49" height="27.5"/>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                     <color key="textColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -41,7 +41,7 @@
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1Fh-eA-JUr" secondAttribute="bottom" constant="65" id="H62-W2-QWK"/>
                 <constraint firstItem="iuK-ac-uEq" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.3" priority="750" id="Tks-GE-4RC"/>
-                <constraint firstItem="iuK-ac-uEq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="b8H-01-nla"/>
+                <constraint firstItem="iuK-ac-uEq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="b8H-01-nla"/>
                 <constraint firstItem="1Fh-eA-JUr" firstAttribute="top" secondItem="iuK-ac-uEq" secondAttribute="bottom" constant="13" id="cJ4-hW-qvU"/>
                 <constraint firstItem="1Fh-eA-JUr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="i7p-8K-UPR"/>
                 <constraint firstItem="1Fh-eA-JUr" firstAttribute="centerX" secondItem="iuK-ac-uEq" secondAttribute="centerX" id="kL9-fx-lkX"/>
