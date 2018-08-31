@@ -10,10 +10,14 @@ import UIKit
 
 class ClubCardCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var clubImage: UIImageView!
     @IBOutlet weak var container: UIView!
+    @IBOutlet weak var clubName: UILabel!
+    @IBOutlet weak var clubLocation: UILabel!
+    @IBOutlet weak var clubMoreInfoBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
 }

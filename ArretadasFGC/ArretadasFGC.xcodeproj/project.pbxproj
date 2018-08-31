@@ -163,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				BEDE55D3213983D60076CCB5 /* ReportCard.swift */,
+				BE21487421399034002BED27 /* ClubCardCollectionViewCell.swift */,
 				BEC6148C213882F0009E8E51 /* ClubsCollectionViewCell.swift */,
 				BE24BC4C213811A900CBAE4C /* OursColors.swift */,
 				BEC6149B21397E34009E8E51 /* CardRegisterAccountTableViewCell.swift */,
@@ -183,7 +184,6 @@
 				BEDE55CE213983BF0076CCB5 /* ReportAudio.xib */,
 				BEDE55CD213983BE0076CCB5 /* ReportImage.xib */,
 				BEDE55CC213983BE0076CCB5 /* ReportText.xib */,
-				BE21487421399034002BED27 /* ClubCardCollectionViewCell.swift */,
 				BE21487521399034002BED27 /* ClubCardCollectionViewCell.xib */,
 			);
 			path = Xibs;
