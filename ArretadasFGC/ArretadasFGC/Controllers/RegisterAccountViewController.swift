@@ -123,8 +123,6 @@ extension RegisterAccountViewController: UITableViewDelegate, UITableViewDataSou
             return cell
         }
     }
-    
-    
 }
 
 extension RegisterAccountViewController: UITextFieldDelegate{
