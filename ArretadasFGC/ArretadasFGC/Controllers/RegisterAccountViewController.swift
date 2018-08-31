@@ -15,7 +15,7 @@ class RegisterAccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableViewRegisterAccount.register(UINib(nibName: "CardRegisterAccountForm", bundle: nil), forCellReuseIdentifier: "CardRegisterAccountForm")
+        self.tableViewRegisterAccount.register(UINib(nibName: "CardRegisterAccountTableViewCell", bundle: nil), forCellReuseIdentifier: "CardRegisterAccountTableViewCell")
         // Do any additional setup after loading the view.
     }
 
@@ -27,13 +27,37 @@ class RegisterAccountViewController: UIViewController {
 
 extension RegisterAccountViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return labels.count
+        return labels.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableViewRegisterAccount.dequeueReusableCell(withIdentifier: "CardRegisterAccountForm", for: indexPath) as! CardRegisterAccountForm
         
-        return cell
+        if indexPath.row < tableView.numberOfRows(inSection: 0) - 1{
+            let cell = self.tableViewRegisterAccount.dequeueReusableCell(withIdentifier: "CardRegisterAccountTableViewCell", for: indexPath) as! CardRegisterAccountTableViewCell
+            
+            cell.labelRegisterAccount.text = labels[indexPath.row]
+            cell.labelRegisterAccount.sizeToFit()
+            
+            if indexPath.row == 0 || indexPath.row == 1{
+                cell.labelRequired.text = "*"
+                cell.labelRequired.textColor = UIColor.red
+            }else{
+                cell.labelRequired.text = ""
+            }
+            return cell
+
+
+        } else{
+            let cell = UITableViewCell(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width/2, height: 50))
+            
+            cell.backgroundColor = UIColor.red
+            
+            let createAccountButton = UIButton(frame: CGRect(x: tableView.bounds.width/4, y: 0, width: tableView.bounds.width/2, height: 50))
+            createAccountButton.setTitle("Criar Conta", for: .normal)
+            createAccountButton.backgroundColor = UIColor.blue
+            cell.contentView.addSubview(createAccountButton)
+            return cell
+        }
     }
     
     

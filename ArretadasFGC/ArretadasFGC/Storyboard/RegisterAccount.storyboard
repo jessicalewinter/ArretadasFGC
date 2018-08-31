@@ -24,7 +24,7 @@
                                 <color key="backgroundColor" red="1" green="0.78638017732767307" blue="0.64128353997358789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="97s-ow-CGm">
-                                <rect key="frame" x="16" y="275" width="343" height="372"/>
+                                <rect key="frame" x="16" y="223.5" width="343" height="423.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="KXd-yl-gLV" id="edA-V0-yfO"/>
@@ -34,7 +34,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="97s-ow-CGm" firstAttribute="top" secondItem="n6S-ER-hwq" secondAttribute="bottom" constant="1.5" id="AvF-8H-Nig"/>
+                            <constraint firstItem="97s-ow-CGm" firstAttribute="top" secondItem="n6S-ER-hwq" secondAttribute="bottom" constant="-50" id="AvF-8H-Nig"/>
                             <constraint firstItem="n6S-ER-hwq" firstAttribute="leading" secondItem="PI6-Oh-EBB" secondAttribute="leading" id="FUK-lZ-eQq"/>
                             <constraint firstItem="n6S-ER-hwq" firstAttribute="top" secondItem="PI6-Oh-EBB" secondAttribute="top" id="GSq-C0-CPf"/>
                             <constraint firstItem="n6S-ER-hwq" firstAttribute="trailing" secondItem="PI6-Oh-EBB" secondAttribute="trailing" id="Rxp-cE-dq2"/>
