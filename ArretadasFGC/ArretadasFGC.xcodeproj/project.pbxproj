@@ -11,8 +11,6 @@
 		BE21485F21383185002BED27 /* BackgroundUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21485E21383185002BED27 /* BackgroundUser.swift */; };
 		BE2148612138808E002BED27 /* ClubsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE2148602138808E002BED27 /* ClubsCell.xib */; };
 		BE21486521395B94002BED27 /* RegisterAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21486421395B94002BED27 /* RegisterAccountViewController.swift */; };
-		BE21486C213964DC002BED27 /* CardRegisterAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21486A213964DC002BED27 /* CardRegisterAccountTableViewCell.swift */; };
-		BE21486D213964DC002BED27 /* CardRegisterAccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE21486B213964DC002BED27 /* CardRegisterAccountTableViewCell.xib */; };
 		BE24BC4D213811A900CBAE4C /* OursColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE24BC4C213811A900CBAE4C /* OursColors.swift */; };
 		BE24BC51213811C300CBAE4C /* ProfileClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE24BC4E213811C300CBAE4C /* ProfileClubViewController.swift */; };
 		BE24BC52213811C300CBAE4C /* ProfileUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE24BC4F213811C300CBAE4C /* ProfileUserViewController.swift */; };
@@ -27,6 +25,13 @@
 		BEC6149421395B34009E8E51 /* ProfileUserTableViewFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6149221395B34009E8E51 /* ProfileUserTableViewFirstCell.swift */; };
 		BEC6149521395B34009E8E51 /* ProfileUserTableViewFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEC6149321395B34009E8E51 /* ProfileUserTableViewFirstCell.xib */; };
 		BEC61497213970FB009E8E51 /* Glossary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC61496213970FB009E8E51 /* Glossary.storyboard */; };
+		BEC6149C21397E34009E8E51 /* CardRegisterAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6149B21397E34009E8E51 /* CardRegisterAccountTableViewCell.swift */; };
+		BEDE55CB213981FE0076CCB5 /* CardRegisterAccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEDE55C9213981DA0076CCB5 /* CardRegisterAccountTableViewCell.xib */; };
+		BEDE55CF213983BF0076CCB5 /* ReportText.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEDE55CC213983BE0076CCB5 /* ReportText.xib */; };
+		BEDE55D0213983BF0076CCB5 /* ReportImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEDE55CD213983BE0076CCB5 /* ReportImage.xib */; };
+		BEDE55D1213983BF0076CCB5 /* ReportAudio.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEDE55CE213983BF0076CCB5 /* ReportAudio.xib */; };
+		BEDE55D5213983D60076CCB5 /* ReportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDE55D3213983D60076CCB5 /* ReportCard.swift */; };
+		BEDE55D7213984B20076CCB5 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDE55D6213984B20076CCB5 /* PrimaryButton.swift */; };
 		BEF5B0862136E013002FB168 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF5B0852136E013002FB168 /* AppDelegate.swift */; };
 		BEF5B08B2136E013002FB168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF5B0892136E013002FB168 /* Main.storyboard */; };
 		BEF5B0902136E014002FB168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEF5B08F2136E014002FB168 /* Assets.xcassets */; };
@@ -55,13 +60,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BE21485C21382EA5002BED27 /* BackgroundUser.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackgroundUser.xib; sourceTree = SOURCE_ROOT; };
+		BE21485C21382EA5002BED27 /* BackgroundUser.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BackgroundUser.xib; path = ArretadasFGC/Xibs/BackgroundUser.xib; sourceTree = SOURCE_ROOT; };
 		BE21485E21383185002BED27 /* BackgroundUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundUser.swift; sourceTree = "<group>"; };
-		BE2148602138808E002BED27 /* ClubsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ClubsCell.xib; path = "ArretadasFGC/New Group/ClubsCell.xib"; sourceTree = SOURCE_ROOT; };
+		BE2148602138808E002BED27 /* ClubsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ClubsCell.xib; path = ArretadasFGC/Xibs/ClubsCell.xib; sourceTree = SOURCE_ROOT; };
 		BE21486421395B94002BED27 /* RegisterAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAccountViewController.swift; sourceTree = "<group>"; };
 		BE21486A213964DC002BED27 /* CardRegisterAccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterAccountTableViewCell.swift; sourceTree = "<group>"; };
 		BE21486B213964DC002BED27 /* CardRegisterAccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardRegisterAccountTableViewCell.xib; sourceTree = "<group>"; };
-		BE24BC4C213811A900CBAE4C /* OursColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OursColors.swift; path = "ArretadasFGC/New Group/OursColors.swift"; sourceTree = SOURCE_ROOT; };
+		BE24BC4C213811A900CBAE4C /* OursColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OursColors.swift; path = ArretadasFGC/View/OursColors.swift; sourceTree = SOURCE_ROOT; };
 		BE24BC4E213811C300CBAE4C /* ProfileClubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileClubViewController.swift; sourceTree = "<group>"; };
 		BE24BC4F213811C300CBAE4C /* ProfileUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUserViewController.swift; sourceTree = "<group>"; };
 		BE24BC50213811C300CBAE4C /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +80,13 @@
 		BEC6149221395B34009E8E51 /* ProfileUserTableViewFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserTableViewFirstCell.swift; sourceTree = "<group>"; };
 		BEC6149321395B34009E8E51 /* ProfileUserTableViewFirstCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileUserTableViewFirstCell.xib; sourceTree = "<group>"; };
 		BEC61496213970FB009E8E51 /* Glossary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Glossary.storyboard; sourceTree = "<group>"; };
+		BEC6149B21397E34009E8E51 /* CardRegisterAccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardRegisterAccountTableViewCell.swift; sourceTree = "<group>"; };
+		BEDE55C9213981DA0076CCB5 /* CardRegisterAccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardRegisterAccountTableViewCell.xib; sourceTree = "<group>"; };
+		BEDE55CC213983BE0076CCB5 /* ReportText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportText.xib; sourceTree = "<group>"; };
+		BEDE55CD213983BE0076CCB5 /* ReportImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportImage.xib; sourceTree = "<group>"; };
+		BEDE55CE213983BF0076CCB5 /* ReportAudio.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportAudio.xib; sourceTree = "<group>"; };
+		BEDE55D3213983D60076CCB5 /* ReportCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportCard.swift; sourceTree = "<group>"; };
+		BEDE55D6213984B20076CCB5 /* PrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		BEF5B0822136E013002FB168 /* ArretadasFGC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArretadasFGC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF5B0852136E013002FB168 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEF5B08A2136E013002FB168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -141,24 +153,38 @@
 		BE7D2FCE21381841003897C5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BEDE55D3213983D60076CCB5 /* ReportCard.swift */,
 				BEC6148C213882F0009E8E51 /* ClubsCollectionViewCell.swift */,
 				BE24BC4C213811A900CBAE4C /* OursColors.swift */,
+				BEC6149B21397E34009E8E51 /* CardRegisterAccountTableViewCell.swift */,
 				BE21485E21383185002BED27 /* BackgroundUser.swift */,
+				BEDE55D6213984B20076CCB5 /* PrimaryButton.swift */,
 				BEC6149221395B34009E8E51 /* ProfileUserTableViewFirstCell.swift */,
 			);
-			name = View;
-			path = "New Group";
+			path = View;
 			sourceTree = "<group>";
 		};
 		BE7D2FCF21382741003897C5 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
-				BE21485A213829A9002BED27 /* CardRegisterAccountForm.xib */,
+				BEDE55C9213981DA0076CCB5 /* CardRegisterAccountTableViewCell.xib */,
 				BE21485C21382EA5002BED27 /* BackgroundUser.xib */,
 				BE2148602138808E002BED27 /* ClubsCell.xib */,
 				BEC6149321395B34009E8E51 /* ProfileUserTableViewFirstCell.xib */,
+				BEDE55CE213983BF0076CCB5 /* ReportAudio.xib */,
+				BEDE55CD213983BE0076CCB5 /* ReportImage.xib */,
+				BEDE55CC213983BE0076CCB5 /* ReportText.xib */,
 			);
 			path = Xibs;
+			sourceTree = "<group>";
+		};
+		BEC6149821397DA5009E8E51 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				BE21486A213964DC002BED27 /* CardRegisterAccountTableViewCell.swift */,
+				BE21486B213964DC002BED27 /* CardRegisterAccountTableViewCell.xib */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		BEF5B0792136E013002FB168 = {
@@ -168,6 +194,7 @@
 				BEF5B09C2136E014002FB168 /* ArretadasFGCTests */,
 				BEF5B0A72136E014002FB168 /* ArretadasFGCUITests */,
 				BEF5B0832136E013002FB168 /* Products */,
+				BEC6149821397DA5009E8E51 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -335,14 +362,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDE55CB213981FE0076CCB5 /* CardRegisterAccountTableViewCell.xib in Resources */,
 				BE24BC622138146400CBAE4C /* Feed.storyboard in Resources */,
 				BE24BC602138144D00CBAE4C /* ProfileClub.storyboard in Resources */,
 				BEF5B0932136E014002FB168 /* LaunchScreen.storyboard in Resources */,
+				BEDE55D1213983BF0076CCB5 /* ReportAudio.xib in Resources */,
 				BEF5B0902136E014002FB168 /* Assets.xcassets in Resources */,
-				BE21486D213964DC002BED27 /* CardRegisterAccountTableViewCell.xib in Resources */,
 				BE2148612138808E002BED27 /* ClubsCell.xib in Resources */,
 				BEC61497213970FB009E8E51 /* Glossary.storyboard in Resources */,
+				BEDE55CF213983BF0076CCB5 /* ReportText.xib in Resources */,
 				BE21485D21382EA5002BED27 /* BackgroundUser.xib in Resources */,
+				BEDE55D0213983BF0076CCB5 /* ReportImage.xib in Resources */,
 				BEF5B08B2136E013002FB168 /* Main.storyboard in Resources */,
 				BE7D2FD1213827BF003897C5 /* RegisterAccount.storyboard in Resources */,
 				BE24BC64213814F700CBAE4C /* ProfileUser.storyboard in Resources */,
@@ -374,9 +404,11 @@
 				BEC6149421395B34009E8E51 /* ProfileUserTableViewFirstCell.swift in Sources */,
 				BE24BC53213811C300CBAE4C /* FeedViewController.swift in Sources */,
 				BEF5B0862136E013002FB168 /* AppDelegate.swift in Sources */,
-				BE21486C213964DC002BED27 /* CardRegisterAccountTableViewCell.swift in Sources */,
+				BEC6149C21397E34009E8E51 /* CardRegisterAccountTableViewCell.swift in Sources */,
+				BEDE55D7213984B20076CCB5 /* PrimaryButton.swift in Sources */,
 				BEC6148E213882F0009E8E51 /* ClubsCollectionViewCell.swift in Sources */,
 				BE24BC51213811C300CBAE4C /* ProfileClubViewController.swift in Sources */,
+				BEDE55D5213983D60076CCB5 /* ReportCard.swift in Sources */,
 				BE24BC5B2138124C00CBAE4C /* DataManager.swift in Sources */,
 				BE21486521395B94002BED27 /* RegisterAccountViewController.swift in Sources */,
 				BE24BC4D213811A900CBAE4C /* OursColors.swift in Sources */,

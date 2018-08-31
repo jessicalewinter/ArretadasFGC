@@ -23,6 +23,7 @@
                         <segue destination="By3-IE-NqN" kind="relationship" relationship="viewControllers" id="G9f-Gv-YTC"/>
                         <segue destination="KZh-Ef-06b" kind="relationship" relationship="viewControllers" id="ECn-sV-sXA"/>
                         <segue destination="6Fz-or-y86" kind="relationship" relationship="viewControllers" id="7OJ-w1-icV"/>
+                        <segue destination="5Lg-9y-oEP" kind="relationship" relationship="viewControllers" id="jRW-7X-g9Q"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48J-DX-w0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -68,6 +69,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sgu-EC-TkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-294" y="-184"/>
+        </scene>
+        <!--RegisterAccount-->
+        <scene sceneID="C1t-x2-Pis">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RegisterAccount" id="5Lg-9y-oEP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Register" id="LcR-bP-STE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5hM-ch-zMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-556" y="-56"/>
         </scene>
     </scenes>
 </document>

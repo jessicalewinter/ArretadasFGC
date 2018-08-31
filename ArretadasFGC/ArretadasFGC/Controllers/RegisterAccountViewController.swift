@@ -50,11 +50,8 @@ extension RegisterAccountViewController: UITableViewDelegate, UITableViewDataSou
         } else{
             let cell = UITableViewCell(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width/2, height: 50))
             
-            cell.backgroundColor = UIColor.red
-            
-            let createAccountButton = UIButton(frame: CGRect(x: tableView.bounds.width/4, y: 0, width: tableView.bounds.width/2, height: 50))
+            let createAccountButton = PrimaryButton(frame: CGRect(x: tableView.bounds.width/4, y: 0, width: tableView.bounds.width/2, height: 50))
             createAccountButton.setTitle("Criar Conta", for: .normal)
-            createAccountButton.backgroundColor = UIColor.blue
             cell.contentView.addSubview(createAccountButton)
             return cell
         }
