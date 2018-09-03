@@ -140,37 +140,6 @@ class RegisterAccountViewController: UIViewController {
         
     }
     
-    //get the image choosen, save in the File Manager and return the path
-    func savingImage() -> String {
-        
-        let fileManager = FileManager.default
-        let directory = "Images"
-        var filePath = ""
-        if let documentDirectory = try fileManager.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let documentoDiretorio = documentDirectory.appendingPathComponent(directory)
-            
-            let saida = FileManager.default.fileExists(atPath: documentoDiretorio.path)
-            if !saida {
-                do {
-                    try FileManager.default.createDirectory(atPath: documentoDiretorio.path, withIntermediateDirectories: true, attributes: nil)
-                } catch {
-                    print(error)
-                }
-            }
-        }
-        if let data = UIImageJPEGRepresentation(viewHeader.profileImageView.image!, 1){
-            if let path = try? fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) as NSURL{
-                do {
-                    filePath = "/\(directory)/\(self.pickedImageName).jpeg"
-                    try data.write(to: path.appendingPathComponent(filePath)!)
-                    print("Succes in Save Photo!")
-                } catch {
-                    print(error.localizedDescription)
-                }
-            }
-        }
-        return filePath
-    }
     
     
 }

@@ -17,8 +17,6 @@ class PrimaryButton: UIButton {
 		self.layer.masksToBounds = true
 		self.layer.cornerRadius = 5
 		self.titleEdgeInsets = UIEdgeInsets(top: 15.0, left: 5.0, bottom: 15.0, right: 5.0)
-
-		
 		self.backgroundColor = UIColor.primary
 		self.setTitleColor(UIColor.white, for: .normal)
     }
