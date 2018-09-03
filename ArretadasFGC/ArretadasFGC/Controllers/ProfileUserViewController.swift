@@ -21,7 +21,6 @@ class ProfileUserViewController: UIViewController {
     var icons = ["briefcase", "comment", "location"]
     var info: [String] = []
     var storedOffsets = [Int: CGFloat]()
-    let screenWidth = UIScreen.main.bounds.width
     private lazy var backgroundView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -35,12 +34,14 @@ class ProfileUserViewController: UIViewController {
         
         return view
     }()
+    
+    let screenWidth = UIScreen.main.bounds.width
+    
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
         tableView.register(UINib(nibName: "ProfileUserTableViewFirstCell", bundle: nil), forCellReuseIdentifier: "cellProfileUser")
         
         //userClubs = user?.clubs?.allObjects as! [Club]
