@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Club" representedClassName="Club" syncable="YES" codeGenerationType="class">
-        <attribute name="dateMeeting" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateMeeting" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="descriptionClub" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="local" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -29,7 +30,7 @@
         <relationship name="expReports" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExperienceReports" inverseName="user" inverseEntity="ExperienceReports" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Club" positionX="99" positionY="252" width="128" height="148"/>
+        <element name="Club" positionX="99" positionY="252" width="128" height="165"/>
         <element name="ExperienceReports" positionX="369" positionY="-25" width="128" height="133"/>
         <element name="User" positionX="-144" positionY="-49" width="128" height="180"/>
     </elements>

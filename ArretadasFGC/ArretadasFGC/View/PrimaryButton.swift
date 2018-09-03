@@ -11,6 +11,10 @@ import UIKit
 @IBDesignable
 
 class PrimaryButton: UIButton {
+	
+	required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+	}
 
     override func draw(_ rect: CGRect) {
         // Drawing code
