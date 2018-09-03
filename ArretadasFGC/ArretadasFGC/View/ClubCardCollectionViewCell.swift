@@ -15,6 +15,7 @@ class ClubCardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var clubName: UILabel!
     @IBOutlet weak var clubLocation: UILabel!
     @IBOutlet weak var clubMoreInfoBtn: UIButton!
+    @IBOutlet weak var clubDescription: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         setupLayout()
