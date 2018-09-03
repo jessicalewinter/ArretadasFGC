@@ -20,7 +20,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="RcN-Vm-thA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="home" id="lHe-GJ-CtB"/>
+                    <tabBarItem key="tabBarItem" title="" image="home" selectedImage="home_active" id="lHe-GJ-CtB">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Oj-v5-rqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -30,5 +32,6 @@
     </scenes>
     <resources>
         <image name="home" width="25" height="24"/>
+        <image name="home_active" width="25" height="24"/>
     </resources>
 </document>

@@ -277,7 +277,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="settings" selectedImage="marker" id="bLw-b3-y3a">
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-10"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

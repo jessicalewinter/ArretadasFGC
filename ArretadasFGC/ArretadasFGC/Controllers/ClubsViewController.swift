@@ -14,8 +14,6 @@ class ClubsViewController: UIViewController {
     
     let minimumInteritemSpacing: CGFloat = 10
     let minimumLineSpacing:CGFloat = 10
-    let dbManager = DataManager()
-    let fileManager = StoreMidia()
     
     var clubs: [Club] = []
 
@@ -29,8 +27,8 @@ class ClubsViewController: UIViewController {
     }
     
     func getObjectsFromCoreData(){
-        let entity = dbManager.getEntity(entity: "Club")
-        let result = dbManager.getAll(entity: entity)
+        let entity = DataManager.getEntity(entity: "Club")
+        let result = DataManager.getAll(entity: entity)
         if result.success {
             clubs = result.objects as! [Club]
         }else{

@@ -10,9 +10,9 @@ import UIKit
 
 class StoreMidia {
     
-     let fileManager = FileManager.default
+	static let fileManager = FileManager.default
     
-    func loadImageFromPath(_ path: String) -> UIImage? {
+    static func loadImageFromPath(_ path: String) -> UIImage? {
         
         if let dir = try? fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) {
             let imagePath = URL(fileURLWithPath: dir.absoluteString).appendingPathComponent(path).path
@@ -23,7 +23,7 @@ class StoreMidia {
         
     }
     
-    func saving(image: UIImage, withName: String) -> String {
+    static func saving(image: UIImage, withName: String) -> String {
         
         let directory = "Images"
         var filePath = ""

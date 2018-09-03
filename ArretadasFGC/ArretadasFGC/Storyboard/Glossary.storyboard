@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hiK-MA-SEF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hiK-MA-SEF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -83,7 +83,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IAj-en-zFv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="glossary" id="Mq1-8N-OY7"/>
+                    <tabBarItem key="tabBarItem" title="" image="glossary" selectedImage="glossary_active" id="Mq1-8N-OY7"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BtX-hO-yj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -110,5 +110,6 @@
     </scenes>
     <resources>
         <image name="glossary" width="25" height="31"/>
+        <image name="glossary_active" width="25" height="31"/>
     </resources>
 </document>

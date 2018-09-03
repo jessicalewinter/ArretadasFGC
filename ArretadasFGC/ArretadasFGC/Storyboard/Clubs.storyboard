@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rd3-5W-Wqn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rd3-5W-Wqn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -71,7 +71,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fu8-Os-mjM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="clubs" id="xei-bz-yN4"/>
+                    <tabBarItem key="tabBarItem" title="" image="clubs" selectedImage="clubs_active" id="xei-bz-yN4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="Rf5-Bd-lb0" id="Y3P-f3-weq"/>
@@ -109,5 +109,6 @@
     </scenes>
     <resources>
         <image name="clubs" width="25" height="25"/>
+        <image name="clubs_active" width="25" height="25"/>
     </resources>
 </document>

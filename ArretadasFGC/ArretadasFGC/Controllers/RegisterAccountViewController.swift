@@ -76,7 +76,7 @@ class RegisterAccountViewController: UIViewController {
             newUser.profession = self.profession.text
             newUser.name = self.name.text
             newUser.email = self.email.text
-            newUser.photo = self.savingImage()
+            newUser.photo = StoreMidia.saving(image: viewHeader.profileImageView.image!, withName: pickedImageName)
             DataManager.saveContext()
         }
     }
