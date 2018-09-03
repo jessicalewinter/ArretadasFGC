@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rd3-5W-Wqn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rd3-5W-Wqn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,20 +11,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Clubs View Controller-->
         <scene sceneID="yD1-SD-bDD">
             <objects>
-                <viewController id="Rd3-5W-Wqn" sceneMemberID="viewController">
+                <viewController id="Rd3-5W-Wqn" customClass="ClubsViewController" customModule="ArretadasFGC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6pV-2B-36G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCf-yQ-Kut">
-                                <rect key="frame" x="0.0" y="20" width="375" height="253.5"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="204"/>
                                 <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rf5-Bd-lb0">
-                                <rect key="frame" x="16" y="276" width="343" height="376"/>
+                                <rect key="frame" x="16" y="184" width="343" height="467"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="k00-jd-JWC">
                                     <size key="itemSize" width="50" height="50"/>
@@ -32,31 +32,29 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bYf-BH-ah8">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Rd3-5W-Wqn" id="ke0-hj-Vam"/>
+                                    <outlet property="delegate" destination="Rd3-5W-Wqn" id="0w7-g3-T09"/>
+                                </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Fu8-Os-mjM" firstAttribute="trailing" secondItem="CCf-yQ-Kut" secondAttribute="trailing" id="EjK-xF-cWk"/>
-                            <constraint firstItem="CCf-yQ-Kut" firstAttribute="top" secondItem="Fu8-Os-mjM" secondAttribute="top" id="Ick-Cc-47G"/>
-                            <constraint firstItem="Fu8-Os-mjM" firstAttribute="bottom" secondItem="Rf5-Bd-lb0" secondAttribute="bottom" constant="15" id="fUf-6W-8Cm"/>
-                            <constraint firstItem="CCf-yQ-Kut" firstAttribute="leading" secondItem="Fu8-Os-mjM" secondAttribute="leading" id="gNp-DL-bWh"/>
-                            <constraint firstItem="Rf5-Bd-lb0" firstAttribute="leading" secondItem="Fu8-Os-mjM" secondAttribute="leading" constant="16" id="inn-0L-TMY"/>
-                            <constraint firstItem="Rf5-Bd-lb0" firstAttribute="top" secondItem="CCf-yQ-Kut" secondAttribute="bottom" constant="2.5" id="j1c-Td-PAb"/>
-                            <constraint firstItem="CCf-yQ-Kut" firstAttribute="height" secondItem="6pV-2B-36G" secondAttribute="height" multiplier="0.38" id="l3J-8J-6nE"/>
-                            <constraint firstItem="Fu8-Os-mjM" firstAttribute="trailing" secondItem="Rf5-Bd-lb0" secondAttribute="trailing" constant="16" id="tV1-nY-TNp"/>
+                            <constraint firstItem="Rf5-Bd-lb0" firstAttribute="top" secondItem="CCf-yQ-Kut" secondAttribute="bottom" constant="-40" id="5n7-5j-E7f"/>
+                            <constraint firstItem="Rf5-Bd-lb0" firstAttribute="leading" secondItem="Fu8-Os-mjM" secondAttribute="leading" constant="16" id="DiU-9b-Ufo"/>
+                            <constraint firstItem="Rf5-Bd-lb0" firstAttribute="height" secondItem="6pV-2B-36G" secondAttribute="height" multiplier="0.7" id="ExZ-ra-Q4F"/>
+                            <constraint firstItem="Fu8-Os-mjM" firstAttribute="trailing" secondItem="CCf-yQ-Kut" secondAttribute="trailing" id="Nby-89-TS8"/>
+                            <constraint firstItem="CCf-yQ-Kut" firstAttribute="leading" secondItem="Fu8-Os-mjM" secondAttribute="leading" id="ZtD-eq-zbc"/>
+                            <constraint firstItem="CCf-yQ-Kut" firstAttribute="top" secondItem="Fu8-Os-mjM" secondAttribute="top" id="mwV-RR-0uQ"/>
+                            <constraint firstItem="Fu8-Os-mjM" firstAttribute="trailing" secondItem="Rf5-Bd-lb0" secondAttribute="trailing" constant="16" id="tLz-7Z-3Cg"/>
+                            <constraint firstItem="Fu8-Os-mjM" firstAttribute="bottom" secondItem="Rf5-Bd-lb0" secondAttribute="bottom" constant="16" id="wwS-CD-1V9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fu8-Os-mjM"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Rf5-Bd-lb0" id="Y3P-f3-weq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7t-n1-WXj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
