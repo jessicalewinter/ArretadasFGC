@@ -9,15 +9,33 @@
 import UIKit
 
 class ClubsViewController: UIViewController {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     let minimumInteritemSpacing: CGFloat = 10
     let minimumLineSpacing:CGFloat = 10
+    let dbManager = DataManager()
+    let fileManager = StoreMidia()
+    
+    var clubs: [Club] = []
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.collectionView.register(UINib(nibName: "ClubCardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ClubCardCollectionViewCell")
         layout(collectionView)
+    }
+    
+    func getObjectsFromCoreData(){
+        let entity = dbManager.getEntity(entity: "Club")
+        let result = dbManager.getAll(entity: entity)
+        if result.success {
+            clubs = result.objects as! [Club]
+        }else{
+            NSLog("Error on fetch clubs")
+            
+        }
     }
 
 }
@@ -36,10 +54,15 @@ func layout(_ collectionView: UICollectionView){
 
 extension ClubsViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return clubs.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "ClubCardCollectionViewCell", for: indexPath) as! ClubCardCollectionViewCell
+        let club = clubs[indexPath.row]
+        let path = club.photo
+        cell.clubImage.image = fileManager.loadImageFromPath(path!)!
+        cell.clubLocation.text = club.local
+        cell.clubName.text = club.name
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

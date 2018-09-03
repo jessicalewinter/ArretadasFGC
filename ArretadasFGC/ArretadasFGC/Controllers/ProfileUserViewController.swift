@@ -87,18 +87,6 @@ class ProfileUserViewController: UIViewController {
         
     }
     
-    func loadImageFromPath(_ path: String) -> UIImage? {
-        
-        let fileManager = FileManager.default
-        
-        if let dir = try? fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) {
-            let imagePath = URL(fileURLWithPath: dir.absoluteString).appendingPathComponent(path).path
-            return UIImage(contentsOfFile: imagePath)
-            
-        }
-        return nil
-        
-    }
 	
 }
 
