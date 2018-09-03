@@ -25,8 +25,6 @@
 		BE24BC622138146400CBAE4C /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE24BC612138146400CBAE4C /* Feed.storyboard */; };
 		BE24BC64213814F700CBAE4C /* ProfileUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE24BC63213814F700CBAE4C /* ProfileUser.storyboard */; };
 		BE7D2FD1213827BF003897C5 /* RegisterAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE7D2FD0213827BF003897C5 /* RegisterAccount.storyboard */; };
-		BE7D2FEE213D5E0E003897C5 /* ProfileClubTableViewFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D2FEC213D5E0E003897C5 /* ProfileClubTableViewFirstCell.swift */; };
-		BE7D2FEF213D5E0E003897C5 /* ProfileClubTableViewFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7D2FED213D5E0E003897C5 /* ProfileClubTableViewFirstCell.xib */; };
 		BEAADC0D2139DD4A002CCE0B /* GlossaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAADC0C2139DD4A002CCE0B /* GlossaryViewController.swift */; };
 		BEC6148E213882F0009E8E51 /* ClubsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6148C213882F0009E8E51 /* ClubsCollectionViewCell.swift */; };
 		BEC6149421395B34009E8E51 /* ProfileUserTableViewFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6149221395B34009E8E51 /* ProfileUserTableViewFirstCell.swift */; };
@@ -87,8 +85,6 @@
 		BE24BC612138146400CBAE4C /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		BE24BC63213814F700CBAE4C /* ProfileUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileUser.storyboard; sourceTree = "<group>"; };
 		BE7D2FD0213827BF003897C5 /* RegisterAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterAccount.storyboard; sourceTree = "<group>"; };
-		BE7D2FEC213D5E0E003897C5 /* ProfileClubTableViewFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileClubTableViewFirstCell.swift; sourceTree = "<group>"; };
-		BE7D2FED213D5E0E003897C5 /* ProfileClubTableViewFirstCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileClubTableViewFirstCell.xib; sourceTree = "<group>"; };
 		BEAADC0C2139DD4A002CCE0B /* GlossaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryViewController.swift; sourceTree = "<group>"; };
 		BEC6148C213882F0009E8E51 /* ClubsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsCollectionViewCell.swift; sourceTree = "<group>"; };
 		BEC6149221395B34009E8E51 /* ProfileUserTableViewFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserTableViewFirstCell.swift; sourceTree = "<group>"; };
@@ -176,7 +172,6 @@
 				BE21485E21383185002BED27 /* BackgroundUser.swift */,
 				BEDE55D6213984B20076CCB5 /* PrimaryButton.swift */,
 				BEC6149221395B34009E8E51 /* ProfileUserTableViewFirstCell.swift */,
-				BE7D2FEC213D5E0E003897C5 /* ProfileClubTableViewFirstCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,7 +187,6 @@
 				BEDE55CD213983BE0076CCB5 /* ReportImage.xib */,
 				BEDE55CC213983BE0076CCB5 /* ReportText.xib */,
 				BE21487521399034002BED27 /* ClubCardCollectionViewCell.xib */,
-				BE7D2FED213D5E0E003897C5 /* ProfileClubTableViewFirstCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -400,7 +394,6 @@
 				BE7D2FD1213827BF003897C5 /* RegisterAccount.storyboard in Resources */,
 				BE24BC64213814F700CBAE4C /* ProfileUser.storyboard in Resources */,
 				BEC6149521395B34009E8E51 /* ProfileUserTableViewFirstCell.xib in Resources */,
-				BE7D2FEF213D5E0E003897C5 /* ProfileClubTableViewFirstCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +426,6 @@
 				BEC6148E213882F0009E8E51 /* ClubsCollectionViewCell.swift in Sources */,
 				BE24BC51213811C300CBAE4C /* ProfileClubViewController.swift in Sources */,
 				BE21487621399034002BED27 /* ClubCardCollectionViewCell.swift in Sources */,
-				BE7D2FEE213D5E0E003897C5 /* ProfileClubTableViewFirstCell.swift in Sources */,
 				BEDE55D5213983D60076CCB5 /* ReportCard.swift in Sources */,
 				BE24BC5B2138124C00CBAE4C /* DataManager.swift in Sources */,
 				BE21486521395B94002BED27 /* RegisterAccountViewController.swift in Sources */,

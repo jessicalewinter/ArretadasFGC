@@ -24,7 +24,6 @@ class RegisterAccountViewController: UIViewController {
     
     //constantes
     let labels = ["Nome", "Email", "Ocupação", "Cidade", "Senha"]
-    let dbManager = DataManager()
     
     //vaiaveis
     var pickedImageName = ""
@@ -55,7 +54,7 @@ class RegisterAccountViewController: UIViewController {
         registerButton.sizeToFit()
         registerButton.primaryButtton()
         registerButton.titleLabel?.sizeToFit()
-        newUser = User(context: dbManager.getContext())
+        newUser = User(context: DataManager.getContext())
         viewHeader.nameLabel.isHidden = true
         viewHeader.profileImageView.isUserInteractionEnabled = true
         viewHeader.profileImageView.addGestureRecognizer(tapGestureRecognizer!)
@@ -78,7 +77,7 @@ class RegisterAccountViewController: UIViewController {
             newUser.name = self.name.text
             newUser.email = self.email.text
             newUser.photo = self.savingImage()
-            dbManager.saveContext()
+            DataManager.saveContext()
         }
     }
     

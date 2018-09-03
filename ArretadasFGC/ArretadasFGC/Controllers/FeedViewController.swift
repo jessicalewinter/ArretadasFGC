@@ -10,7 +10,6 @@ import UIKit
 
 class FeedViewController: UIViewController {
 	
-	var dbManager = DataManager()
 	var clubs: [Club] = []
 	var personalPublicReports: [ExperienceReports] = []
 	var publicClubsReports: [ExperienceReports] = []
@@ -23,8 +22,8 @@ class FeedViewController: UIViewController {
 	
 
 	func fetchClubs(){
-		let entity = dbManager.getEntity(entity: "Club")
-		let result = dbManager.getAll(entity: entity)
+		let entity = DataManager.getEntity(entity: "Club")
+		let result = DataManager.getAll(entity: entity)
 		if result.success {
 			clubs = result.objects as! [Club]
 		}else{

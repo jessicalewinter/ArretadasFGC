@@ -11,7 +11,7 @@ import CoreData
 
 class DataManager {
 	
-	lazy var persistentContainer: NSPersistentContainer = {
+	static var persistentContainer: NSPersistentContainer = {
 		let container = NSPersistentContainer(name: "ArretadasFGC")
 		container.loadPersistentStores(completionHandler: { (storeDescription, error) in
 			if let error = error as NSError? {
@@ -22,7 +22,7 @@ class DataManager {
 	}()
 	
 	
-	func saveContext () {
+	static func saveContext () {
 		let context = self.getContext()
 		if context.hasChanges {
 			do {
@@ -34,7 +34,7 @@ class DataManager {
 		}
 	}
 	
-	func getEntity(entity: String) -> (NSEntityDescription){
+	static func getEntity(entity: String) -> (NSEntityDescription){
 		let context = self.getContext()
 		
 		let description:NSEntityDescription = NSEntityDescription.entity(forEntityName: entity, in: context)!
@@ -42,11 +42,11 @@ class DataManager {
 		return description
 	}
 	
-	func getContext () -> (NSManagedObjectContext) {
+	static func getContext () -> (NSManagedObjectContext) {
 		return persistentContainer.viewContext
 	}
 	
-	func getAll(entity: NSEntityDescription) -> (success: Bool, objects: [NSManagedObject]){
+	static func getAll(entity: NSEntityDescription) -> (success: Bool, objects: [NSManagedObject]){
 		let context = self.getContext()
 		
 		let request:NSFetchRequest = NSFetchRequest<NSFetchRequestResult>()
@@ -63,7 +63,7 @@ class DataManager {
 		}
 	}
 	
-	func getRecords(entity: NSEntityDescription, fetchOffset: Int) -> (success: Bool, objects: [NSManagedObject]){
+	static func getRecords(entity: NSEntityDescription, fetchOffset: Int) -> (success: Bool, objects: [NSManagedObject]){
 		let context = self.getContext()
 		
 		let request:NSFetchRequest = NSFetchRequest<NSFetchRequestResult>()
@@ -82,7 +82,7 @@ class DataManager {
 		}
 	}
 	
-	func deleteAll(entity: NSEntityDescription) {
+	static func deleteAll(entity: NSEntityDescription) {
 		let managedContext = self.getContext()
 		let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity.name!)
 		fetchRequest.returnsObjectsAsFaults = false
