@@ -24,7 +24,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="236"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="iuK-ac-uEq">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userDefault" translatesAutoresizingMaskIntoConstraints="NO" id="iuK-ac-uEq">
                     <rect key="frame" x="147.5" y="50" width="80.5" height="80.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="iuK-ac-uEq" secondAttribute="height" multiplier="1:1" id="9Ne-aJ-xLc"/>
@@ -53,6 +53,6 @@
         </view>
     </objects>
     <resources>
-        <image name="user" width="231" height="231"/>
+        <image name="userDefault" width="231" height="231"/>
     </resources>
 </document>

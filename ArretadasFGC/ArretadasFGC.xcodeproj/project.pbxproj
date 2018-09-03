@@ -26,6 +26,10 @@
 		BE24BC64213814F700CBAE4C /* ProfileUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE24BC63213814F700CBAE4C /* ProfileUser.storyboard */; };
 		BE7D2FD1213827BF003897C5 /* RegisterAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE7D2FD0213827BF003897C5 /* RegisterAccount.storyboard */; };
 		BE7D2FF2213DA27E003897C5 /* StoreMidia.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D2FF1213DA27E003897C5 /* StoreMidia.swift */; };
+		BE7D2FF8213DAC6F003897C5 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D2FF7213DAC6F003897C5 /* CustomSegmentedControl.swift */; };
+		BE7D2FFA213DC4F8003897C5 /* MemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D2FF9213DC4F8003897C5 /* MemberCollectionViewCell.swift */; };
+		BE7D2FFE213DC830003897C5 /* ReportImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7D2FFC213DC830003897C5 /* ReportImage.xib */; };
+		BE7D3000213DC930003897C5 /* ReportImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D2FFF213DC930003897C5 /* ReportImageCell.swift */; };
 		BEAADC0D2139DD4A002CCE0B /* GlossaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAADC0C2139DD4A002CCE0B /* GlossaryViewController.swift */; };
 		BEC6148E213882F0009E8E51 /* ClubsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6148C213882F0009E8E51 /* ClubsCollectionViewCell.swift */; };
 		BEC6149421395B34009E8E51 /* ProfileUserTableViewFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6149221395B34009E8E51 /* ProfileUserTableViewFirstCell.swift */; };
@@ -34,7 +38,6 @@
 		BEC6149C21397E34009E8E51 /* CardRegisterAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6149B21397E34009E8E51 /* CardRegisterAccountTableViewCell.swift */; };
 		BEDE55CB213981FE0076CCB5 /* CardRegisterAccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEDE55C9213981DA0076CCB5 /* CardRegisterAccountTableViewCell.xib */; };
 		BEDE55CF213983BF0076CCB5 /* ReportText.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEDE55CC213983BE0076CCB5 /* ReportText.xib */; };
-		BEDE55D0213983BF0076CCB5 /* ReportImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEDE55CD213983BE0076CCB5 /* ReportImage.xib */; };
 		BEDE55D1213983BF0076CCB5 /* ReportAudio.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEDE55CE213983BF0076CCB5 /* ReportAudio.xib */; };
 		BEDE55D5213983D60076CCB5 /* ReportCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDE55D3213983D60076CCB5 /* ReportCard.swift */; };
 		BEDE55D7213984B20076CCB5 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDE55D6213984B20076CCB5 /* PrimaryButton.swift */; };
@@ -87,6 +90,10 @@
 		BE24BC63213814F700CBAE4C /* ProfileUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileUser.storyboard; sourceTree = "<group>"; };
 		BE7D2FD0213827BF003897C5 /* RegisterAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterAccount.storyboard; sourceTree = "<group>"; };
 		BE7D2FF1213DA27E003897C5 /* StoreMidia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreMidia.swift; sourceTree = "<group>"; };
+		BE7D2FF7213DAC6F003897C5 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		BE7D2FF9213DC4F8003897C5 /* MemberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCollectionViewCell.swift; sourceTree = "<group>"; };
+		BE7D2FFC213DC830003897C5 /* ReportImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportImage.xib; sourceTree = "<group>"; };
+		BE7D2FFF213DC930003897C5 /* ReportImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportImageCell.swift; sourceTree = "<group>"; };
 		BEAADC0C2139DD4A002CCE0B /* GlossaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryViewController.swift; sourceTree = "<group>"; };
 		BEC6148C213882F0009E8E51 /* ClubsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsCollectionViewCell.swift; sourceTree = "<group>"; };
 		BEC6149221395B34009E8E51 /* ProfileUserTableViewFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserTableViewFirstCell.swift; sourceTree = "<group>"; };
@@ -95,7 +102,6 @@
 		BEC6149B21397E34009E8E51 /* CardRegisterAccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardRegisterAccountTableViewCell.swift; sourceTree = "<group>"; };
 		BEDE55C9213981DA0076CCB5 /* CardRegisterAccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardRegisterAccountTableViewCell.xib; sourceTree = "<group>"; };
 		BEDE55CC213983BE0076CCB5 /* ReportText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportText.xib; sourceTree = "<group>"; };
-		BEDE55CD213983BE0076CCB5 /* ReportImage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportImage.xib; sourceTree = "<group>"; };
 		BEDE55CE213983BF0076CCB5 /* ReportAudio.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportAudio.xib; sourceTree = "<group>"; };
 		BEDE55D3213983D60076CCB5 /* ReportCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportCard.swift; sourceTree = "<group>"; };
 		BEDE55D6213984B20076CCB5 /* PrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -167,6 +173,7 @@
 		BE7D2FCE21381841003897C5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BE7D2FF7213DAC6F003897C5 /* CustomSegmentedControl.swift */,
 				BEDE55D3213983D60076CCB5 /* ReportCard.swift */,
 				BE21487421399034002BED27 /* ClubCardCollectionViewCell.swift */,
 				BEC6148C213882F0009E8E51 /* ClubsCollectionViewCell.swift */,
@@ -175,6 +182,8 @@
 				BE21485E21383185002BED27 /* BackgroundUser.swift */,
 				BEDE55D6213984B20076CCB5 /* PrimaryButton.swift */,
 				BEC6149221395B34009E8E51 /* ProfileUserTableViewFirstCell.swift */,
+				BE7D2FF9213DC4F8003897C5 /* MemberCollectionViewCell.swift */,
+				BE7D2FFF213DC930003897C5 /* ReportImageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,9 +196,9 @@
 				BE2148602138808E002BED27 /* ClubsCell.xib */,
 				BEC6149321395B34009E8E51 /* ProfileUserTableViewFirstCell.xib */,
 				BEDE55CE213983BF0076CCB5 /* ReportAudio.xib */,
-				BEDE55CD213983BE0076CCB5 /* ReportImage.xib */,
 				BEDE55CC213983BE0076CCB5 /* ReportText.xib */,
 				BE21487521399034002BED27 /* ClubCardCollectionViewCell.xib */,
+				BE7D2FFC213DC830003897C5 /* ReportImage.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -392,7 +401,7 @@
 				BEDE55CF213983BF0076CCB5 /* ReportText.xib in Resources */,
 				BE21485D21382EA5002BED27 /* BackgroundUser.xib in Resources */,
 				BE214879213990C6002BED27 /* Clubs.storyboard in Resources */,
-				BEDE55D0213983BF0076CCB5 /* ReportImage.xib in Resources */,
+				BE7D2FFE213DC830003897C5 /* ReportImage.xib in Resources */,
 				BEF5B08B2136E013002FB168 /* Main.storyboard in Resources */,
 				BE7D2FD1213827BF003897C5 /* RegisterAccount.storyboard in Resources */,
 				BE24BC64213814F700CBAE4C /* ProfileUser.storyboard in Resources */,
@@ -422,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEC6149421395B34009E8E51 /* ProfileUserTableViewFirstCell.swift in Sources */,
+				BE7D2FF8213DAC6F003897C5 /* CustomSegmentedControl.swift in Sources */,
 				BE24BC53213811C300CBAE4C /* FeedViewController.swift in Sources */,
 				BEF5B0862136E013002FB168 /* AppDelegate.swift in Sources */,
 				BEC6149C21397E34009E8E51 /* CardRegisterAccountTableViewCell.swift in Sources */,
@@ -433,9 +443,11 @@
 				BEDE55D5213983D60076CCB5 /* ReportCard.swift in Sources */,
 				BE24BC5B2138124C00CBAE4C /* DataManager.swift in Sources */,
 				BE21486521395B94002BED27 /* RegisterAccountViewController.swift in Sources */,
+				BE7D3000213DC930003897C5 /* ReportImageCell.swift in Sources */,
 				BE24BC4D213811A900CBAE4C /* OursColors.swift in Sources */,
 				BE21487B21399102002BED27 /* ClubsViewController.swift in Sources */,
 				BE24BC592138122800CBAE4C /* ArretadasFGC.xcdatamodeld in Sources */,
+				BE7D2FFA213DC4F8003897C5 /* MemberCollectionViewCell.swift in Sources */,
 				BEAADC0D2139DD4A002CCE0B /* GlossaryViewController.swift in Sources */,
 				BE21485F21383185002BED27 /* BackgroundUser.swift in Sources */,
 				BE24BC52213811C300CBAE4C /* ProfileUserViewController.swift in Sources */,
