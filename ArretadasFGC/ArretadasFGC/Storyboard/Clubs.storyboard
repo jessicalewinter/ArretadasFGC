@@ -20,11 +20,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCf-yQ-Kut">
-                                <rect key="frame" x="0.0" y="20" width="375" height="204"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="155"/>
                                 <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rf5-Bd-lb0">
-                                <rect key="frame" x="16" y="184" width="343" height="467"/>
+                                <rect key="frame" x="16" y="135" width="343" height="467"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="k00-jd-JWC">
                                     <size key="itemSize" width="50" height="50"/>
@@ -52,6 +52,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fu8-Os-mjM"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="clubs" id="xei-bz-yN4"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="Rf5-Bd-lb0" id="Y3P-f3-weq"/>
                     </connections>
@@ -61,4 +63,7 @@
             <point key="canvasLocation" x="-196" y="184.85757121439281"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="clubs" width="25" height="25"/>
+    </resources>
 </document>

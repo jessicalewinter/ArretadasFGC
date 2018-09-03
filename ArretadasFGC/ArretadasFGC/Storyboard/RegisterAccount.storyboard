@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="58V-N4-cgD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="58V-N4-cgD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -170,6 +170,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OFM-xO-Hzr"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="bio" id="4LG-bA-kD5"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="city" destination="6tj-iD-kYF" id="uf8-Ko-xjE"/>
                         <outlet property="email" destination="N1W-B1-LqA" id="AAt-bY-jTt"/>
@@ -188,4 +190,7 @@
             <point key="canvasLocation" x="-1916" y="1249"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bio" width="25" height="25"/>
+    </resources>
 </document>

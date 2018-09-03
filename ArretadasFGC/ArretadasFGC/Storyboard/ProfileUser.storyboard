@@ -183,7 +183,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AtN-wx-hhb">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="Ja2-9V-YAa">
@@ -323,6 +323,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9mD-XX-ORP"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="marker" id="xx6-lO-utf"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="AtN-wx-hhb" id="f2m-yh-2Ue"/>
                         <outlet property="viewBio" destination="b8X-Oj-aBd" id="nWg-pK-ru4"/>
