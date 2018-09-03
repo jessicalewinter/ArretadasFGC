@@ -15,6 +15,7 @@ class ClubsViewController: UIViewController {
     let minimumInteritemSpacing: CGFloat = 10
     let minimumLineSpacing:CGFloat = 10
     
+    var currentuser: User?
     var clubs: [Club] = []
 
     
@@ -24,6 +25,34 @@ class ClubsViewController: UIViewController {
         layout(collectionView)
         getObjectsFromCoreData()
         
+    }
+    
+    @IBAction func addClub(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "addClub", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is AddClubViewController{
+            let isLogged = UserDefaults.standard.bool(forKey: "isLogged")
+            if isLogged {
+                let dest = segue.destination as! AddClubViewController
+                dest.user = currentuser
+            } else {
+                let alert: UIAlertController = UIAlertController(title: "Você não está logad@ ainda", message: "É preciso está cadastrada para criar um clube", preferredStyle: .alert)
+                
+                let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+                let logginAction = UIAlertAction(title: "Logar", style: .default) { (_) in
+//                    let vc = UIStoryboard.init(name: "RegisterAccount", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+//                    self.present(vc, animated: true, completion: nil)
+                    
+                }
+                alert.addAction(cancelAction)
+                alert.addAction(logginAction)
+                self.present(alert, animated: true, completion: nil)
+            }
+            
+            
+        }
     }
     
     func getObjectsFromCoreData(){
@@ -41,12 +70,7 @@ class ClubsViewController: UIViewController {
 func layout(_ collectionView: UICollectionView){
     collectionView.clipsToBounds = true
     collectionView.layer.cornerRadius = 10
-//    collectionView.layer.masksToBounds = false
     collectionView.layer.cornerRadius = 5
-//    collectionView.layer.shadowColor = #colorLiteral(red: 0.4390000105, green: 0.4390000105, blue: 0.4390000105, alpha: 1)
-//    collectionView.layer.shadowRadius = 1
-//    collectionView.layer.shadowOpacity = 0.3
-//    collectionView.layer.shadowOffset = CGSize.init(width: 4.0, height: 4.0)
     collectionView.backgroundColor = #colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9725490196, alpha: 1)
 }
 

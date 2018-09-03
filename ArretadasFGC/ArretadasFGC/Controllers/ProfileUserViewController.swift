@@ -27,7 +27,7 @@ class ProfileUserViewController: UIViewController {
     private lazy var backgroundView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
-        view.layer.cornerRadius = 10.0
+        view.layer.cornerRadius = 5.0
         view.layer.shadowColor = #colorLiteral(red: 0.4390000105, green: 0.4390000105, blue: 0.4390000105, alpha: 1)
         view.layer.shadowRadius = 1
         view.layer.shadowOpacity = 0.3
@@ -78,16 +78,13 @@ class ProfileUserViewController: UIViewController {
     func setupLayout(){
         
         viewLocal.layer.cornerRadius = 10
-        viewRoot.clipsToBounds = true
-        viewRoot.layer.cornerRadius = 10
+        viewProfession.layer.cornerRadius = 10
         viewBio.layer.cornerRadius = 10
         viewRoot.addShadow()
-        viewLocal.addBorder(toEdges: .bottom, color: .darkGray, thickness: 0.5)
-        viewProfession.addBorder(toEdges: .bottom, color: .darkGray, thickness: 0.5)
+        viewLocal.addBorder(toEdges: .bottom, color: .lightGray, thickness: 0.5)
+        viewProfession.addBorder(toEdges: .bottom, color: .lightGray, thickness: 0.5)
         
     }
-    
-	
 }
 
 extension ProfileUserViewController: UITableViewDelegate, UITableViewDataSource{
@@ -200,6 +197,7 @@ extension UIView {
         }
     }
     func addShadow(){
+        self.layer.cornerRadius = 5
         self.layer.shadowColor = #colorLiteral(red: 0.4390000105, green: 0.4390000105, blue: 0.4390000105, alpha: 1)
         self.layer.shadowRadius = 1
         self.layer.shadowOpacity = 0.3
