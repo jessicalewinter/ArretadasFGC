@@ -11,7 +11,10 @@ import CoreData
 
 class ProfileUserViewController: UIViewController {
 
-    @IBOutlet var stackRoot: UIStackView!
+    @IBOutlet var viewRoot: UIView!
+    @IBOutlet var viewBio: UIView!
+    @IBOutlet var viewLocal: UIView!
+    @IBOutlet var viewProfession: UIView!
     @IBOutlet var tableView: UITableView!
     
     
@@ -43,10 +46,9 @@ class ProfileUserViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ProfileUserTableViewFirstCell", bundle: nil), forCellReuseIdentifier: "cellProfileUser")
-        
-        //userClubs = user?.clubs?.allObjects as! [Club]
         info = [user?.city ?? "Não Informado", user?.profession ?? "Não Informado", user?.bio ?? "Não Informado" ]
         setupLayout()
+        getObjectsInCoreData()
 	}
     
     override func viewDidLayoutSubviews() {
@@ -55,7 +57,11 @@ class ProfileUserViewController: UIViewController {
         setupLayout()
     }
     
+    func getObjectsInCoreData(){
+         //userClubs = user?.clubs?.allObjects as! [Club]
+    }
     
+    // conf the height of tableViwe header
     func sizeHeader(){
         guard let headerView = tableView.tableHeaderView else {
             return
@@ -70,15 +76,15 @@ class ProfileUserViewController: UIViewController {
     }
     
     func setupLayout(){
-        pinBackground(backgroundView, to: stackRoot)
         
+        viewLocal.layer.cornerRadius = 10
+        viewRoot.clipsToBounds = true
+        viewRoot.layer.cornerRadius = 10
+        viewBio.layer.cornerRadius = 10
+        viewRoot.addShadow()
+        viewLocal.addBorder(toEdges: .bottom, color: .darkGray, thickness: 0.5)
+        viewProfession.addBorder(toEdges: .bottom, color: .darkGray, thickness: 0.5)
         
-    }
-	
-    private func pinBackground(_ view: UIView, to stackView: UIStackView) {
-        view.translatesAutoresizingMaskIntoConstraints = false
-        stackView.insertSubview(view, at: 0)
-        view.pin(to: stackView)
     }
     
     func loadImageFromPath(_ path: String) -> UIImage? {
@@ -94,19 +100,18 @@ class ProfileUserViewController: UIViewController {
         
     }
 	
-	
 }
 
 extension ProfileUserViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (user?.expReports?.count ?? 0) + 2
+        return (user?.expReports?.count ?? 0) + 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellProfileUser", for: indexPath)
         if indexPath.row == 0 {
             let collection = cell as! ProfileUserTableViewFirstCell
             collection.setCollectionViewDataSourceDelegate(self, forRow: indexPath.row)
-            collection.collectionViewOffset = storedOffsets[indexPath.row] ?? 0
+            collection.collectionViewOffset = storedOffsets[indexPath.row-1] ?? 0
             return collection
         }
         //cell dos relatos
@@ -126,7 +131,7 @@ extension ProfileUserViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-            return "Clubes da luta  que participo"
+            return "Clubes da luta que participo"
         }else if section == 1 {
             return "Meus Relatos"
         }
@@ -144,8 +149,8 @@ extension ProfileUserViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ClubsCollectionViewCell", for: indexPath) as! ClubsCollectionViewCell
         //cell.image.image = self.loadImageFromPath(userClubs[indexPath.row].photo!)
-        cell.labelLocal.text = userClubs[indexPath.row].local!
-        cell.labelName.text = userClubs[indexPath.row].name!
+        //cell.labelLocal.text = userClubs[indexPath.row-2].local!
+        //cell.labelName.text = userClubs[indexPath.row-2].name!
         return cell
     }
     
@@ -167,7 +172,7 @@ extension ProfileUserViewController: UICollectionViewDelegate, UICollectionViewD
     }
 }
 
-extension UIView {
+extension UIView {        
     func addBorder(toEdges edges: UIRectEdge, color: UIColor, thickness: CGFloat) {
         
         func addBorder(toEdge edges: UIRectEdge, color: UIColor, thickness: CGFloat) {
@@ -206,13 +211,14 @@ extension UIView {
             addBorder(toEdge: .right, color: color, thickness: thickness)
         }
     }
-    public func pin(to view: UIView) {
-        NSLayoutConstraint.activate([
-            leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            topAnchor.constraint(equalTo: view.topAnchor),
-            bottomAnchor.constraint(equalTo: view.bottomAnchor)
-            ])
+    func addShadow(){
+        self.layer.shadowColor = #colorLiteral(red: 0.4390000105, green: 0.4390000105, blue: 0.4390000105, alpha: 1)
+        self.layer.shadowRadius = 1
+        self.layer.shadowOpacity = 0.3
+        self.layer.shadowOffset = CGSize.init(width: 4.0, height: 4.0)
+        self.clipsToBounds = true
+        self.layer.masksToBounds = false
     }
+    
 }
 
