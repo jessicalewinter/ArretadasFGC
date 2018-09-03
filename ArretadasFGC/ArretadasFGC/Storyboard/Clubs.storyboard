@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rd3-5W-Wqn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rd3-5W-Wqn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,7 +22,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCf-yQ-Kut">
                                 <rect key="frame" x="0.0" y="20" width="375" height="155"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" ambiguous="YES" barStyle="black" searchBarStyle="minimal" placeholder="Pesquise por clubes" showsScopeBar="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0qF-uW-B5J">
+                                    <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="Pesquise por clubes" showsCancelButton="YES" showsScopeBar="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0qF-uW-B5J">
                                         <rect key="frame" x="0.0" y="-7" width="375" height="100"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <scopeButtonTitles>
@@ -35,6 +35,11 @@
                                     </searchBar>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0qF-uW-B5J" secondAttribute="trailing" id="NFi-4m-wux"/>
+                                    <constraint firstItem="0qF-uW-B5J" firstAttribute="top" secondItem="CCf-yQ-Kut" secondAttribute="top" constant="-7" id="NIm-lc-a13"/>
+                                    <constraint firstItem="0qF-uW-B5J" firstAttribute="leading" secondItem="CCf-yQ-Kut" secondAttribute="leading" id="eZI-Q3-xqb"/>
+                                </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rf5-Bd-lb0">
                                 <rect key="frame" x="16" y="135" width="343" height="467"/>
@@ -85,6 +90,21 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-196" y="184.85757121439281"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FYG-Xi-x3e">
+            <objects>
+                <viewController id="r3R-rB-zWf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HYb-Bn-Utx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tNn-B7-p9P"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxG-r8-UrC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="606" y="185"/>
         </scene>
     </scenes>
     <resources>
