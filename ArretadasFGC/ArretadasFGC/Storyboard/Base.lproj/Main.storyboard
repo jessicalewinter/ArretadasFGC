@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yCc-TV-Xck">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yCc-TV-Xck">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -34,7 +34,7 @@
         <scene sceneID="c2m-RP-gzn">
             <objects>
                 <viewControllerPlaceholder storyboardName="Clubs" id="pMC-jr-qRM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ojo" image="home" id="pHa-LO-93a"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="pHa-LO-93a"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="450-Uk-HyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,7 +44,7 @@
         <scene sceneID="V6U-lA-Xxj">
             <objects>
                 <viewControllerPlaceholder storyboardName="Glossary" id="By3-IE-NqN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="glossary" id="Ny1-m6-ZTe"/>
+                    <tabBarItem key="tabBarItem" title="Glossário" image="glossary" id="Ny1-m6-ZTe"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ey-Mm-EAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,7 +54,7 @@
         <scene sceneID="Tzp-sP-kHI">
             <objects>
                 <viewControllerPlaceholder storyboardName="ProfileClub" id="KZh-Ef-06b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="clubs" id="e2D-ij-bOn"/>
+                    <tabBarItem key="tabBarItem" title="Clubes" image="clubs" id="e2D-ij-bOn"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPl-Ra-o2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,7 +64,7 @@
         <scene sceneID="8te-pd-Hmr">
             <objects>
                 <viewControllerPlaceholder storyboardName="ProfileUser" id="6Fz-or-y86" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="user" id="MFb-xX-Txi"/>
+                    <tabBarItem key="tabBarItem" title="Perfil" image="user" id="MFb-xX-Txi"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sgu-EC-TkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -74,7 +74,7 @@
         <scene sceneID="C1t-x2-Pis">
             <objects>
                 <viewControllerPlaceholder storyboardName="RegisterAccount" id="5Lg-9y-oEP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="bio" id="LcR-bP-STE"/>
+                    <tabBarItem key="tabBarItem" title="Register" image="bio" id="LcR-bP-STE"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hM-ch-zMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
