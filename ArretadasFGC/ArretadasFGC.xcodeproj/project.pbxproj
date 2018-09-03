@@ -25,6 +25,7 @@
 		BE24BC622138146400CBAE4C /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE24BC612138146400CBAE4C /* Feed.storyboard */; };
 		BE24BC64213814F700CBAE4C /* ProfileUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE24BC63213814F700CBAE4C /* ProfileUser.storyboard */; };
 		BE7D2FD1213827BF003897C5 /* RegisterAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE7D2FD0213827BF003897C5 /* RegisterAccount.storyboard */; };
+		BEAADC0D2139DD4A002CCE0B /* GlossaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAADC0C2139DD4A002CCE0B /* GlossaryViewController.swift */; };
 		BEC6148E213882F0009E8E51 /* ClubsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6148C213882F0009E8E51 /* ClubsCollectionViewCell.swift */; };
 		BEC6149421395B34009E8E51 /* ProfileUserTableViewFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6149221395B34009E8E51 /* ProfileUserTableViewFirstCell.swift */; };
 		BEC6149521395B34009E8E51 /* ProfileUserTableViewFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEC6149321395B34009E8E51 /* ProfileUserTableViewFirstCell.xib */; };
@@ -84,6 +85,7 @@
 		BE24BC612138146400CBAE4C /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		BE24BC63213814F700CBAE4C /* ProfileUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileUser.storyboard; sourceTree = "<group>"; };
 		BE7D2FD0213827BF003897C5 /* RegisterAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterAccount.storyboard; sourceTree = "<group>"; };
+		BEAADC0C2139DD4A002CCE0B /* GlossaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryViewController.swift; sourceTree = "<group>"; };
 		BEC6148C213882F0009E8E51 /* ClubsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsCollectionViewCell.swift; sourceTree = "<group>"; };
 		BEC6149221395B34009E8E51 /* ProfileUserTableViewFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserTableViewFirstCell.swift; sourceTree = "<group>"; };
 		BEC6149321395B34009E8E51 /* ProfileUserTableViewFirstCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileUserTableViewFirstCell.xib; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				BEDE55D3213983D60076CCB5 /* ReportCard.swift */,
+				BE21487421399034002BED27 /* ClubCardCollectionViewCell.swift */,
 				BEC6148C213882F0009E8E51 /* ClubsCollectionViewCell.swift */,
 				BE24BC4C213811A900CBAE4C /* OursColors.swift */,
 				BEC6149B21397E34009E8E51 /* CardRegisterAccountTableViewCell.swift */,
@@ -183,7 +186,6 @@
 				BEDE55CE213983BF0076CCB5 /* ReportAudio.xib */,
 				BEDE55CD213983BE0076CCB5 /* ReportImage.xib */,
 				BEDE55CC213983BE0076CCB5 /* ReportText.xib */,
-				BE21487421399034002BED27 /* ClubCardCollectionViewCell.swift */,
 				BE21487521399034002BED27 /* ClubCardCollectionViewCell.xib */,
 			);
 			path = Xibs;
@@ -265,6 +267,7 @@
 				BE24BC4F213811C300CBAE4C /* ProfileUserViewController.swift */,
 				BE21486421395B94002BED27 /* RegisterAccountViewController.swift */,
 				BE21487A21399102002BED27 /* ClubsViewController.swift */,
+				BEAADC0C2139DD4A002CCE0B /* GlossaryViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				BE24BC4D213811A900CBAE4C /* OursColors.swift in Sources */,
 				BE21487B21399102002BED27 /* ClubsViewController.swift in Sources */,
 				BE24BC592138122800CBAE4C /* ArretadasFGC.xcdatamodeld in Sources */,
+				BEAADC0D2139DD4A002CCE0B /* GlossaryViewController.swift in Sources */,
 				BE21485F21383185002BED27 /* BackgroundUser.swift in Sources */,
 				BE24BC52213811C300CBAE4C /* ProfileUserViewController.swift in Sources */,
 			);

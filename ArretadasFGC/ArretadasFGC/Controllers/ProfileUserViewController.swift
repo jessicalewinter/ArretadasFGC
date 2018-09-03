@@ -38,15 +38,6 @@ class ProfileUserViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        let club = Club(context: dbManager.getContext())
-        club.name = "Clube da Luluzinha"
-        club.local = "Fortaleza"
-        user = User(context: dbManager.getContext())
-        user?.name = "Paloma"
-        user?.bio = "wqjdwil"
-        user?.city = "Fprtaleza"
-        user?.addToClubs(club)
-        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -152,8 +143,8 @@ extension ProfileUserViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ClubsCollectionViewCell", for: indexPath) as! ClubsCollectionViewCell
         //cell.image.image = self.loadImageFromPath(userClubs[indexPath.row].photo!)
-        cell.labelLocal.text = "sodhwqkd"//userClubs[indexPath.row].local!
-        cell.labelName.text = "jsdb" //userClubs[indexPath.row].name!
+        cell.labelLocal.text = userClubs[indexPath.row].local!
+        cell.labelName.text = userClubs[indexPath.row].name!
         return cell
     }
     
