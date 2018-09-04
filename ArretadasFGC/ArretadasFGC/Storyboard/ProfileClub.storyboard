@@ -336,7 +336,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pud-5x-dEg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="settings" selectedImage="marker" id="bLw-b3-y3a">
+                    <tabBarItem key="tabBarItem" title="" image="home" selectedImage="home_active" id="bLw-b3-y3a">
                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
@@ -363,9 +363,10 @@
     </scenes>
     <resources>
         <image name="bio" width="25" height="25"/>
+        <image name="home" width="25" height="24"/>
+        <image name="home_active" width="25" height="24"/>
         <image name="imgDefault" width="800" height="800"/>
         <image name="marker" width="25" height="31"/>
-        <image name="settings" width="25" height="25"/>
         <image name="suitcase" width="25" height="22"/>
         <image name="user" width="25" height="32"/>
     </resources>

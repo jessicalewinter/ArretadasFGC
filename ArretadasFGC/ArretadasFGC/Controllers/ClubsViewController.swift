@@ -77,12 +77,12 @@ extension ClubsViewController: UICollectionViewDelegateFlowLayout, UICollectionV
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "ClubCardCollectionViewCell", for: indexPath) as! ClubCardCollectionViewCell
-        let club = clubs[indexPath.row]
-        let path = club.photo
-        cell.clubImage.image = StoreMidia.loadImageFromPath(path!)!
-        cell.clubLocation.text = club.local
-        cell.clubName.text = club.name
-        cell.clubDescription.text = club.descriptionClub
+//        let club = clubs[indexPath.row]
+//        let path = club.photo
+//        //cell.clubImage.image = StoreMidia.loadImageFromPath(path!)!
+//        cell.clubLocation.text = club.local
+//        cell.clubName.text = club.name
+//        cell.clubDescription.text = club.descriptionClub
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

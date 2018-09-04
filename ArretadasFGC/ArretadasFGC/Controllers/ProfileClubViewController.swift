@@ -97,7 +97,7 @@ class ProfileClubViewController: UIViewController {
         headerView.setNeedsLayout()
         headerView.layoutIfNeeded()
         var frame = headerView.frame
-        frame.size.height = self.view.frame.size.height*0.60
+        frame.size.height = self.view.frame.size.height*0.55
         headerView.frame = frame
         
         tableView.tableHeaderView = headerView

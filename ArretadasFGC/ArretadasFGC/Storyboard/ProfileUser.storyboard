@@ -180,7 +180,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9mD-XX-ORP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="marker" id="xx6-lO-utf"/>
+                    <tabBarItem key="tabBarItem" title="" image="user" selectedImage="user_active" id="xx6-lO-utf"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="backgroundUserView" destination="Wuq-S9-rZS" id="8ti-G9-NPc"/>
@@ -203,5 +203,7 @@
         <image name="bio" width="25" height="25"/>
         <image name="marker" width="25" height="31"/>
         <image name="suitcase" width="25" height="22"/>
+        <image name="user" width="25" height="32"/>
+        <image name="user_active" width="25" height="32"/>
     </resources>
 </document>
