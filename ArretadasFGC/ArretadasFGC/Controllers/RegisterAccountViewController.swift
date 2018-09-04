@@ -20,7 +20,8 @@ class RegisterAccountViewController: UIViewController {
     @IBOutlet var registerButton: UIButton!
     @IBOutlet var viewCard: UIView!
     @IBOutlet var scView: UIScrollView!
-
+    @IBOutlet var cancelButton: UIButton!
+    
     
     //constantes
     let labels = ["Nome", "Email", "Ocupação", "Cidade", "Senha"]
@@ -58,6 +59,7 @@ class RegisterAccountViewController: UIViewController {
         viewHeader.nameLabel.isHidden = true
         viewHeader.profileImageView.isUserInteractionEnabled = true
         viewHeader.profileImageView.addGestureRecognizer(tapGestureRecognizer!)
+        viewHeader.addSubview(cancelButton)
         
     }
     
@@ -66,11 +68,17 @@ class RegisterAccountViewController: UIViewController {
         if (self.city.text == "" || self.name.text == "" || self.email.text == "" || self.password.text == "" || self.profession.text == ""){
             let alert = UIAlertController(title: "Complete all the fields", message: nil, preferredStyle: .alert)
             self.present(alert, animated: true, completion: nil)
-            let when = DispatchTime.now() + 5
+            let when = DispatchTime.now() + 3
             DispatchQueue.main.asyncAfter(deadline: when){
                 alert.dismiss(animated: true, completion: nil)
             }
         }else{
+            let alert = UIAlertController(title: "Cadastrado com sucesso!", message: nil, preferredStyle: .alert)
+            self.present(alert, animated: true, completion: nil)
+            let when = DispatchTime.now() + 3
+            DispatchQueue.main.asyncAfter(deadline: when){
+                alert.dismiss(animated: true, completion: nil)
+            }
             newUser.city = self.city.text
             newUser.password = self.password.text
             newUser.profession = self.profession.text
@@ -78,9 +86,13 @@ class RegisterAccountViewController: UIViewController {
             newUser.email = self.email.text
             newUser.photo = StoreMidia.saving(image: viewHeader.profileImageView.image!, withName: pickedImageName)
             DataManager.saveContext()
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
+    @IBAction func cancel(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
     
     @objc func keyboardWillShow(notification: Notification){
         let targetFrame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
@@ -139,8 +151,6 @@ class RegisterAccountViewController: UIViewController {
         self.present(actionSheet, animated: true, completion: nil)
         
     }
-    
-    
     
 }
 

@@ -13,8 +13,10 @@ class LoginViewController: UIViewController {
     @IBOutlet var viewForm: UIView!
     @IBOutlet var loginOutlet: UIButton!
     @IBOutlet var singUpOutlet: UIButton!
-    @IBOutlet var password: UILabel!
+    @IBOutlet var password: UITextField!
     @IBOutlet var email: UITextField!
+    
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,31 +35,29 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func login(_ sender: UIButton) {
-        let entity = DataManager.getEntity(entity: "User")
-        let result = DataManager.getAll(entity: entity)
-        var users = Array<User>()
-        if result.success {
-            users = result.objects as! Array<User>
-        }else{
-            NSLog("Error on fetch Users")
-        }
-        
-        let user = users.filter { (user) -> Bool in
-            if user.email == email.text && user.password == password.text {
-                return true
-            }
-            return false
-            
-        }
-        if user.isEmpty {
-            let alert = UIAlertController(title: "Senha ou email errados", message: nil, preferredStyle: .alert)
+        // TODO: verificar campos
+        let predicate = NSPredicate(format: "email == %@  AND password == %@", email.text!, password.text!)
+        let result = DataManager.executeThe(query: predicate, forEntityName: "User") as! [User]
+        if result.isEmpty {
+            let alert = UIAlertController(title: "Senha ou email incorretos", message: nil, preferredStyle: .alert)
             self.present(alert, animated: true, completion: nil)
-            let when = DispatchTime.now() + 5
+            let when = DispatchTime.now() + 3
             DispatchQueue.main.asyncAfter(deadline: when){
                 alert.dismiss(animated: true, completion: nil)
             }
         }else{
-            print("wse")
+            user = result.first
+            _ = self.navigationController?.popViewController(animated: true)
+            //salvar id user
+            UserDefaults.standard.set(true, forKey: "isLogged")
+            
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is ProfileUserViewController {
+            let dest = segue.destination as! ProfileUserViewController
+            dest.user = self.user
         }
     }
     

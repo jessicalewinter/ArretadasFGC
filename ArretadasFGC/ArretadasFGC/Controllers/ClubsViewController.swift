@@ -16,14 +16,22 @@ class ClubsViewController: UIViewController {
     let minimumLineSpacing:CGFloat = 10
     
     var currentuser: User?
-    var clubs: [Club] = []
-
+    var clubs: [Club] {
+        let entity = DataManager.getEntity(entity: "Club")
+        let result = DataManager.getAll(entity: entity)
+        if result.success {
+            return result.objects as! [Club]
+        }
+        return []
+        
+    }
     
     override func viewDidLoad() {
+//        DataManager.deleteAll(entity: DataManager.getEntity(entity: "User"))
+//        DataManager.deleteAll(entity: DataManager.getEntity(entity: "Club"))
         super.viewDidLoad()
         self.collectionView.register(UINib(nibName: "ClubCardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ClubCardCollectionViewCell")
         layout(collectionView)
-        getObjectsFromCoreData()
         
     }
     
@@ -42,9 +50,7 @@ class ClubsViewController: UIViewController {
                 
                 let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
                 let logginAction = UIAlertAction(title: "Logar", style: .default) { (_) in
-//                    let vc = UIStoryboard.init(name: "RegisterAccount", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-//                    self.present(vc, animated: true, completion: nil)
-                    
+                    self.performSegue(withIdentifier: "login", sender: nil)
                 }
                 alert.addAction(cancelAction)
                 alert.addAction(logginAction)
@@ -55,17 +61,8 @@ class ClubsViewController: UIViewController {
         }
     }
     
-    func getObjectsFromCoreData(){
-        let entity = DataManager.getEntity(entity: "Club")
-        let result = DataManager.getAll(entity: entity)
-        if result.success {
-            clubs = result.objects as! [Club]
-        }else{
-            NSLog("Error on fetch clubs")
-            
-        }
-    }
 }
+    
 
 func layout(_ collectionView: UICollectionView){
     collectionView.clipsToBounds = true
@@ -76,17 +73,16 @@ func layout(_ collectionView: UICollectionView){
 
 extension ClubsViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return clubs.count
-        return 4
+       return clubs.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "ClubCardCollectionViewCell", for: indexPath) as! ClubCardCollectionViewCell
-        //let club = clubs[indexPath.row]
-        //let path = club.photo
-//        cell.clubImage.image = fileManager.loadImageFromPath(path!)!
-//        cell.clubLocation.text = club.local
-//        cell.clubName.text = club.name
-//        cell.clubDescription.text = club.descriptionClub
+        let club = clubs[indexPath.row]
+        let path = club.photo
+        cell.clubImage.image = StoreMidia.loadImageFromPath(path!)!
+        cell.clubLocation.text = club.local
+        cell.clubName.text = club.name
+        cell.clubDescription.text = club.descriptionClub
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
