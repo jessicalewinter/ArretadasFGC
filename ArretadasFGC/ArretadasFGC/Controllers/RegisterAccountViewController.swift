@@ -20,7 +20,8 @@ class RegisterAccountViewController: UIViewController {
     @IBOutlet var registerButton: UIButton!
     @IBOutlet var viewCard: UIView!
     @IBOutlet var scView: UIScrollView!
-
+    @IBOutlet var cancelButton: UIButton!
+    
     
     //constantes
     let labels = ["Nome", "Email", "Ocupação", "Cidade", "Senha"]
@@ -58,6 +59,7 @@ class RegisterAccountViewController: UIViewController {
         viewHeader.nameLabel.isHidden = true
         viewHeader.profileImageView.isUserInteractionEnabled = true
         viewHeader.profileImageView.addGestureRecognizer(tapGestureRecognizer!)
+        viewHeader.addSubview(cancelButton)
         
     }
     
@@ -72,6 +74,12 @@ class RegisterAccountViewController: UIViewController {
 				alert.dismiss(animated: true, completion: nil)
 			}
 		}else{
+            let alert = UIAlertController(title: "Cadastrado com sucesso!", message: nil, preferredStyle: .alert)
+            self.present(alert, animated: true, completion: nil)
+            let when = DispatchTime.now() + 3
+            DispatchQueue.main.asyncAfter(deadline: when){
+                alert.dismiss(animated: true, completion: nil)
+            }
             newUser.city = self.city.text
             newUser.password = self.password.text
             newUser.profession = self.profession.text
@@ -81,8 +89,10 @@ class RegisterAccountViewController: UIViewController {
             DataManager.saveContext()
 		}
     }
-	
-	//Not testable
+    
+    @IBAction func cancel(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
     
     @objc func keyboardWillShow(notification: Notification){
         let targetFrame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue

@@ -28,7 +28,7 @@ class CustomSegmentedControl: UISegmentedControl {
         self.layer.cornerRadius = 5
         self.clipsToBounds = true
         let unselectedAttributes = [NSAttributedStringKey.foregroundColor: highlightColor,
-                                    NSAttributedStringKey.font: UIFont.systemFont(ofSize: 13, weight: .regular)]
+                                    NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16, weight: .regular)]
         self.setTitleTextAttributes(unselectedAttributes, for: .normal)
     }
     

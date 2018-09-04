@@ -15,51 +15,71 @@ class ClubsViewController: UIViewController {
     let minimumInteritemSpacing: CGFloat = 10
     let minimumLineSpacing:CGFloat = 10
     
-    var clubs: [Club] = []
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.collectionView.register(UINib(nibName: "ClubCardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ClubCardCollectionViewCell")
-        layout(collectionView)
-        getObjectsFromCoreData()
-        
-    }
-    
-    func getObjectsFromCoreData(){
+    var currentuser: User?
+    var clubs: [Club] {
         let entity = DataManager.getEntity(entity: "Club")
         let result = DataManager.getAll(entity: entity)
         if result.success {
-            clubs = result.objects as! [Club]
-        }else{
-            NSLog("Error on fetch clubs")
+            return result.objects as! [Club]
+        }
+        return []
+        
+    }
+    
+    override func viewDidLoad() {
+//        DataManager.deleteAll(entity: DataManager.getEntity(entity: "User"))
+//        DataManager.deleteAll(entity: DataManager.getEntity(entity: "Club"))
+        super.viewDidLoad()
+        self.collectionView.register(UINib(nibName: "ClubCardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ClubCardCollectionViewCell")
+        layout(collectionView)
+        
+    }
+    
+    @IBAction func addClub(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "addClub", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is AddClubViewController{
+            let isLogged = UserDefaults.standard.bool(forKey: "isLogged")
+            if isLogged {
+                let dest = segue.destination as! AddClubViewController
+                dest.user = currentuser
+            } else {
+                let alert: UIAlertController = UIAlertController(title: "Você não está logad@ ainda", message: "É preciso está cadastrada para criar um clube", preferredStyle: .alert)
+                
+                let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+                let logginAction = UIAlertAction(title: "Logar", style: .default) { (_) in
+                    self.performSegue(withIdentifier: "login", sender: nil)
+                }
+                alert.addAction(cancelAction)
+                alert.addAction(logginAction)
+                self.present(alert, animated: true, completion: nil)
+            }
+            
             
         }
     }
+    
 }
+    
 
 func layout(_ collectionView: UICollectionView){
     collectionView.clipsToBounds = true
     collectionView.layer.cornerRadius = 10
-//    collectionView.layer.masksToBounds = false
     collectionView.layer.cornerRadius = 5
-//    collectionView.layer.shadowColor = #colorLiteral(red: 0.4390000105, green: 0.4390000105, blue: 0.4390000105, alpha: 1)
-//    collectionView.layer.shadowRadius = 1
-//    collectionView.layer.shadowOpacity = 0.3
-//    collectionView.layer.shadowOffset = CGSize.init(width: 4.0, height: 4.0)
     collectionView.backgroundColor = #colorLiteral(red: 0.9882352941, green: 0.9882352941, blue: 0.9725490196, alpha: 1)
 }
 
 extension ClubsViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return clubs.count
-        return 4
+       return clubs.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "ClubCardCollectionViewCell", for: indexPath) as! ClubCardCollectionViewCell
-        //let club = clubs[indexPath.row]
-        //let path = club.photo
-//        cell.clubImage.image = fileManager.loadImageFromPath(path!)!
+//        let club = clubs[indexPath.row]
+//        let path = club.photo
+//        //cell.clubImage.image = StoreMidia.loadImageFromPath(path!)!
 //        cell.clubLocation.text = club.local
 //        cell.clubName.text = club.name
 //        cell.clubDescription.text = club.descriptionClub

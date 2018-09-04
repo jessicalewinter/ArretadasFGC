@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yCc-TV-Xck">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yCc-TV-Xck">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,11 +19,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="pMC-jr-qRM" kind="relationship" relationship="viewControllers" id="1lz-r7-ImS"/>
-                        <segue destination="By3-IE-NqN" kind="relationship" relationship="viewControllers" id="G9f-Gv-YTC"/>
-                        <segue destination="KZh-Ef-06b" kind="relationship" relationship="viewControllers" id="ECn-sV-sXA"/>
-                        <segue destination="6Fz-or-y86" kind="relationship" relationship="viewControllers" id="7OJ-w1-icV"/>
-                        <segue destination="5Lg-9y-oEP" kind="relationship" relationship="viewControllers" id="jRW-7X-g9Q"/>
+                        <segue destination="KZh-Ef-06b" kind="relationship" relationship="viewControllers" id="9Id-V7-LUu"/>
+                        <segue destination="By3-IE-NqN" kind="relationship" relationship="viewControllers" id="A9g-zL-g46"/>
+                        <segue destination="pMC-jr-qRM" kind="relationship" relationship="viewControllers" id="jmK-xW-I6I"/>
+                        <segue destination="6Fz-or-y86" kind="relationship" relationship="viewControllers" id="znE-8h-rw6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48J-DX-w0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -34,11 +33,11 @@
         <scene sceneID="c2m-RP-gzn">
             <objects>
                 <viewControllerPlaceholder storyboardName="Clubs" id="pMC-jr-qRM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="home" id="pHa-LO-93a"/>
+                    <tabBarItem key="tabBarItem" title="Clubs" image="clubs" id="pHa-LO-93a"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="450-Uk-HyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-268" y="-589"/>
+            <point key="canvasLocation" x="-378" y="-417"/>
         </scene>
         <!--Glossary-->
         <scene sceneID="V6U-lA-Xxj">
@@ -48,17 +47,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ey-Mm-EAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-283" y="-493"/>
+            <point key="canvasLocation" x="-394" y="-478"/>
         </scene>
         <!--ProfileClub-->
         <scene sceneID="Tzp-sP-kHI">
             <objects>
                 <viewControllerPlaceholder storyboardName="ProfileClub" id="KZh-Ef-06b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Clubes" image="clubs" id="e2D-ij-bOn"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="home" id="e2D-ij-bOn"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPl-Ra-o2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-294" y="-424"/>
+            <point key="canvasLocation" x="-379" y="-551"/>
         </scene>
         <!--ProfileUser-->
         <scene sceneID="8te-pd-Hmr">
@@ -68,21 +67,10 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sgu-EC-TkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-294" y="-320"/>
-        </scene>
-        <!--RegisterAccount-->
-        <scene sceneID="C1t-x2-Pis">
-            <objects>
-                <viewControllerPlaceholder storyboardName="RegisterAccount" id="5Lg-9y-oEP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Register" image="bio" id="LcR-bP-STE"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5hM-ch-zMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-321" y="-193"/>
+            <point key="canvasLocation" x="-363" y="-315"/>
         </scene>
     </scenes>
     <resources>
-        <image name="bio" width="25" height="25"/>
         <image name="clubs" width="25" height="25"/>
         <image name="glossary" width="25" height="31"/>
         <image name="home" width="25" height="24"/>
