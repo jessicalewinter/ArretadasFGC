@@ -11,17 +11,21 @@ import CoreData
 
 class ProfileUserViewController: UIViewController {
 
+    //Outlets
     @IBOutlet var viewRoot: UIView!
     @IBOutlet var viewBio: UIView!
     @IBOutlet var viewLocal: UIView!
     @IBOutlet var viewProfession: UIView!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var backgroundUserView: BackgroundUser!
     
+    @IBOutlet weak var infoLocationLabel: UILabel!
+    @IBOutlet weak var infoProfessionLabel: UILabel!
+    @IBOutlet weak var infoBioLabel: UILabel!
     
-    var dbManager = DataManager()
+    //Variables
     var user: User?
     var userClubs: [Club] = []
-    var icons = ["briefcase", "comment", "location"]
     var info: [String] = []
     var storedOffsets = [Int: CGFloat]()
     private lazy var backgroundView: UIView = {
@@ -43,12 +47,20 @@ class ProfileUserViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        
+        //Set delegate and dataSource of tableView
         tableView.delegate = self
         tableView.dataSource = self
+
+        //Xib of Progfile user
         tableView.register(UINib(nibName: "ProfileUserTableViewFirstCell", bundle: nil), forCellReuseIdentifier: "cellProfileUser")
-        info = [user?.city ?? "Não Informado", user?.profession ?? "Não Informado", user?.bio ?? "Não Informado" ]
+        
+        //Setup layout
         setupLayout()
         getObjectsInCoreData()
+        
+        //Setup data
+         info = [user?.city ?? "Não Informado", user?.profession ?? "Não Informado", user?.bio ?? "Não Informado" ]
 	}
     
     override func viewDidLayoutSubviews() {
@@ -61,7 +73,7 @@ class ProfileUserViewController: UIViewController {
          //userClubs = user?.clubs?.allObjects as! [Club]
     }
     
-    // conf the height of tableViwe header
+    //Configure the height of tableView header
     func sizeHeader(){
         guard let headerView = tableView.tableHeaderView else {
             return
@@ -76,6 +88,22 @@ class ProfileUserViewController: UIViewController {
     }
     
     func setupLayout(){
+        viewLocal.setCornerRadiusDefault()
+        viewRoot.setCornerRadiusDefault()
+        viewBio.setCornerRadiusDefault()
+        viewLocal.addBorder(toEdges: .bottom, color: UIColor(white: 10, alpha: 1.0), thickness: 0.5)
+        viewProfession.addBorder(toEdges: .bottom, color: UIColor(white: 233, alpha: 1.0), thickness: 0.5)
+    }
+    
+    func setupInfoData() {
+        self.infoLocationLabel.text = user?.city
+        self.infoProfessionLabel.text  = user?.profession
+        self.infoBioLabel.text = user?.bio
+        if let imagePath = user?.photo {
+            self.backgroundUserView.profileImageView.image = StoreMidia.loadImageFromPath(imagePath)
+        } else {
+            self.backgroundUserView.profileImageView.image =  #imageLiteral(resourceName: "userDefault")
+        }
         
         viewLocal.layer.cornerRadius = 10
         viewProfession.layer.cornerRadius = 10
@@ -93,23 +121,26 @@ extension ProfileUserViewController: UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellProfileUser", for: indexPath)
+        
+        //If it's first row of the tableView, show clubs collectionView
         if indexPath.row == 0 {
             let collection = cell as! ProfileUserTableViewFirstCell
             collection.setCollectionViewDataSourceDelegate(self, forRow: indexPath.row)
             collection.collectionViewOffset = storedOffsets[indexPath.row-1] ?? 0
             return collection
         }
+        
         //cell dos relatos
 //        cell.imageView?.image = UIImage(named: icons[indexPath.row])
 //        cell.textLabel?.text = info[indexPath.row]
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
         guard let tableViewCell = cell as? ProfileUserTableViewFirstCell else { return }
-        
         storedOffsets[indexPath.row] = tableViewCell.collectionViewOffset
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -127,15 +158,18 @@ extension ProfileUserViewController: UITableViewDelegate, UITableViewDataSource{
 }
 
 extension ProfileUserViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return user?.clubs?.count ?? 3
+        return user?.clubs?.count ?? 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ClubsCollectionViewCell", for: indexPath) as! ClubsCollectionViewCell
+        
         //cell.image.image = self.loadImageFromPath(userClubs[indexPath.row].photo!)
         //cell.labelLocal.text = userClubs[indexPath.row-2].local!
         //cell.labelName.text = userClubs[indexPath.row-2].name!
+        
         return cell
     }
     

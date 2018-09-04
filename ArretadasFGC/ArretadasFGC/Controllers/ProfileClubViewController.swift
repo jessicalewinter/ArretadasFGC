@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ProfileClubViewController: UIViewController {
 	
@@ -48,7 +49,6 @@ class ProfileClubViewController: UIViewController {
 
 		self.club = Club(context: DataManager.getContext())
 		
-		
 		//MOCK
 		let user1 = User(context: DataManager.getContext())
 		user1.name = "Debora"
@@ -64,42 +64,62 @@ class ProfileClubViewController: UIViewController {
 		club?.members = [user1,user2,user3]
 		
 		club?.name = "Clube da Luluzinha"
-		club?.local = "Gentilândia"
-		club?.city = "Fortaleza"
-		club?.dateMeeting = "Seg-Qui 18h"
-		club?.descriptionClub = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet quam vulputate nulla elementum malesuada. Mauris gravida imperdiet dictum."
-		club?.photo = nil
-		
-		//Set variables
-		self.members = club?.members?.allObjects as! [User]
-		
-		setLabelsValues()
-		
-		clubImageView.setCornerRadiusDefault()
-		viewInfo.setCornerRadiusDefault()
-		
-		
-	}
-	
-	func setLabelsValues() {
-		self.clubNameLabel.text = club?.name
-		self.clubCityLabel.text = club?.city
-		if let imagePath = club?.photo {
-			self.clubImageView.image = StoreMidia.loadImageFromPath(imagePath)
-		} else {
-			self.clubImageView.image =  #imageLiteral(resourceName: "userDefault")
-		}
-		
-		self.infoDateLabel.text = club?.dateMeeting
-		self.infoLocalLabel.text = club?.local
-		self.infoBioLabel.text = club?.descriptionClub
-		
-		usersCollectionView.delegate = self
-		usersCollectionView.dataSource = self
-		
-	}
+        club?.local = "Gentilândia"
+        club?.city = "Fortaleza"
+        club?.dateMeeting = "Seg-Qui 18h"
+        club?.descriptionClub = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet quam vulputate nulla elementum malesuada. Mauris gravida imperdiet dictum."
+        club?.photo = nil
+        
+        //Set variables
+        self.members = club?.members?.allObjects as! [User]
+        
+        //Set data
+        setLabelsValues()
+        
+        //Set layout
+        clubImageView.setCornerRadiusDefault()
+        viewInfo.setCornerRadiusDefault()
+
+    }
+    
+    override func viewDidLayoutSubviews() {
+        sizeHeader()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func sizeHeader(){
+        guard let headerView = tableView.tableHeaderView else {
+            return
+        }
+        headerView.setNeedsLayout()
+        headerView.layoutIfNeeded()
+        var frame = headerView.frame
+        frame.size.height = self.view.frame.size.height*0.60
+        headerView.frame = frame
+        
+        tableView.tableHeaderView = headerView
+    }
+    
+    
+    func setLabelsValues() {
+        self.clubNameLabel.text = club?.name
+        self.clubCityLabel.text = club?.city
+        if let imagePath = club?.photo {
+            self.clubImageView.image = StoreMidia.loadImageFromPath(imagePath)
+        } else {
+            self.clubImageView.image =  #imageLiteral(resourceName: "userDefault")
+        }
+        
+        self.infoDateLabel.text = club?.dateMeeting
+        self.infoLocalLabel.text = club?.local
+        self.infoBioLabel.text = club?.descriptionClub
+        
+        usersCollectionView.delegate = self
+        usersCollectionView.dataSource = self
+        
     }
 	
 	@IBAction func valueChanged(_ sender: CustomSegmentedControl) {
@@ -143,10 +163,6 @@ extension ProfileClubViewController : UICollectionViewDelegate, UICollectionView
 		
 		return cell
 	}
-	
-	
-	
-	
 }
 
 
