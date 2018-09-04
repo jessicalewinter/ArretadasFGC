@@ -1,22 +1,37 @@
 //
-//  UserTest.swift
+//  Register.swift
 //  ArretadasFGCTests
 //
-//  Created by Ada 2018 on 29/08/2018.
+//  Created by Ada 2018 on 04/09/18.
 //  Copyright © 2018 Ada 2018. All rights reserved.
 //
 
 import XCTest
 @testable import ArretadasFGC
 
+class RegisterTests: XCTestCase {
+	var user: User?
 
-class UserTest: XCTestCase {
-    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+	
+	func test_checkTextFieldIsEmpty_success(){
+		
+		let result = Register.checkTextFieldIsEmpty(textFields: [UITextField()])
+		
+		XCTAssertTrue(result)
+
+	}
+	
+	func test_checkTextFieldIsEmpty_error() {
+		let field = UITextField()
+	 	field.text = "algo"
+		let result = Register.checkTextFieldIsEmpty(textFields: [field])
+		
+		XCTAssertFalse(result)
+	}
+	
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()

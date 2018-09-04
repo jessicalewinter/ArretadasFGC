@@ -63,14 +63,15 @@ class RegisterAccountViewController: UIViewController {
     
     // Getting the information in textFiels and saving in Core Data
     @IBAction func registerAccount(_ sender: UIButton) {
-        if (self.city.text == "" || self.name.text == "" || self.email.text == "" || self.password.text == "" || self.profession.text == ""){
-            let alert = UIAlertController(title: "Complete all the fields", message: nil, preferredStyle: .alert)
-            self.present(alert, animated: true, completion: nil)
-            let when = DispatchTime.now() + 5
-            DispatchQueue.main.asyncAfter(deadline: when){
-                alert.dismiss(animated: true, completion: nil)
-            }
-        }else{
+
+		if(Register.checkTextFieldIsEmpty(textFields: [self.city, self.name, self.email, self.password, self.profession])){
+			let alert = UIAlertController(title: "Complete all the fields", message: nil, preferredStyle: .alert)
+			self.present(alert, animated: true, completion: nil)
+			let when = DispatchTime.now() + 5
+			DispatchQueue.main.asyncAfter(deadline: when){
+				alert.dismiss(animated: true, completion: nil)
+			}
+		}else{
             newUser.city = self.city.text
             newUser.password = self.password.text
             newUser.profession = self.profession.text
@@ -78,9 +79,10 @@ class RegisterAccountViewController: UIViewController {
             newUser.email = self.email.text
             newUser.photo = StoreMidia.saving(image: viewHeader.profileImageView.image!, withName: pickedImageName)
             DataManager.saveContext()
-        }
+		}
     }
-    
+	
+	//Not testable
     
     @objc func keyboardWillShow(notification: Notification){
         let targetFrame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
@@ -95,6 +97,8 @@ class RegisterAccountViewController: UIViewController {
             scView.scrollRectToVisible(activeField.frame, animated: true)
         }
     }
+	
+	//Not testable
     
     @objc func keyboardWillHide(notif: Notification){
         let contentInsets = UIEdgeInsetsFromString("")
@@ -139,9 +143,7 @@ class RegisterAccountViewController: UIViewController {
         self.present(actionSheet, animated: true, completion: nil)
         
     }
-    
-    
-    
+
 }
 
 
