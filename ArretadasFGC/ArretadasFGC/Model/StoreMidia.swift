@@ -22,7 +22,6 @@ class StoreMidia {
         return nil
         
     }
-    
     static func saving(image: UIImage, withName: String) -> String {
         
         let directory = "Images"

@@ -10,12 +10,18 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet var viewForm: UIView!
+    //Outlets UIBUtton
     @IBOutlet var loginOutlet: UIButton!
     @IBOutlet var singUpOutlet: UIButton!
+    
+    //Outlets textFields
     @IBOutlet var password: UITextField!
     @IBOutlet var email: UITextField!
     
+    //Outlets views
+    @IBOutlet var viewForm: UIView!
+
+    //instaces
     var user: User?
     
     override func viewDidLoad() {
@@ -23,11 +29,7 @@ class LoginViewController: UIViewController {
         setupLayput()
 
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
     func setupLayput(){
         viewForm.addShadow()
         singUpOutlet.primaryButtton()
@@ -35,22 +37,28 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func login(_ sender: UIButton) {
-        // TODO: verificar campos
-        let predicate = NSPredicate(format: "email == %@  AND password == %@", email.text!, password.text!)
-        let result = DataManager.executeThe(query: predicate, forEntityName: "User") as! [User]
-        if result.isEmpty {
-            let alert = UIAlertController(title: "Senha ou email incorretos", message: nil, preferredStyle: .alert)
+        if !Register.checkTextFieldIsEmpty(textFields: [password, email]) {
+            let result = LoginManager.isValid(email: email.text!, password: password.text!)
+            if result.success{
+                user = result.object as? User
+                _ = self.navigationController?.popViewController(animated: true)
+                UserDefaults.standard.set(true, forKey: "isLogged")
+            }else{
+                let alert = UIAlertController(title: "Senha ou email incorretos", message: nil, preferredStyle: .alert)
+                self.present(alert, animated: true, completion: nil)
+                let when = DispatchTime.now() + 3
+                DispatchQueue.main.asyncAfter(deadline: when){
+                    alert.dismiss(animated: true, completion: nil)
+                }
+            }
+            
+        }else{
+            let alert = UIAlertController(title: "Preencha todos os campos", message: nil, preferredStyle: .alert)
             self.present(alert, animated: true, completion: nil)
             let when = DispatchTime.now() + 3
             DispatchQueue.main.asyncAfter(deadline: when){
                 alert.dismiss(animated: true, completion: nil)
             }
-        }else{
-            user = result.first
-            _ = self.navigationController?.popViewController(animated: true)
-            //salvar id user
-            UserDefaults.standard.set(true, forKey: "isLogged")
-            
         }
     }
     
@@ -61,5 +69,5 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
 }
+

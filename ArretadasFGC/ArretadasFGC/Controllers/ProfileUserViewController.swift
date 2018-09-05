@@ -11,21 +11,28 @@ import CoreData
 
 class ProfileUserViewController: UIViewController {
 
-    //Outlets
-    @IBOutlet var viewRoot: UIView!
-    @IBOutlet var viewBio: UIView!
-    @IBOutlet var viewLocal: UIView!
-    @IBOutlet var viewProfession: UIView!
-    @IBOutlet var tableView: UITableView!
-    @IBOutlet weak var backgroundUserView: BackgroundUser!
-    
+    //Outlets labels
     @IBOutlet weak var infoLocationLabel: UILabel!
     @IBOutlet weak var infoProfessionLabel: UILabel!
     @IBOutlet weak var infoBioLabel: UILabel!
     
-    //Variables
+    // Outlets views
+    @IBOutlet var viewRoot: UIView!
+    @IBOutlet var viewBio: UIView!
+    @IBOutlet var viewLocal: UIView!
+    @IBOutlet var viewProfession: UIView!
+    
+    //Outlets tabels e collections
+    @IBOutlet var tableView: UITableView!
+    
+    //Outlets others
+    @IBOutlet weak var backgroundUserView: BackgroundUser!
+    
+    //Instances
     var user: User?
     var userClubs: [Club] = []
+    
+    //variables
     var info: [String] = []
     var storedOffsets = [Int: CGFloat]()
     private lazy var backgroundView: UIView = {
@@ -42,9 +49,9 @@ class ProfileUserViewController: UIViewController {
         return view
     }()
     
+    //Constants
     let screenWidth = UIScreen.main.bounds.width
     
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
         
@@ -57,10 +64,12 @@ class ProfileUserViewController: UIViewController {
         
         //Setup layout
         setupLayout()
-        getObjectsInCoreData()
         
         //Setup data
          info = [user?.city ?? "Não Informado", user?.profession ?? "Não Informado", user?.bio ?? "Não Informado" ]
+        
+        //Setup user's info
+        setupInfoData()
 	}
     
     override func viewDidLayoutSubviews() {
@@ -69,9 +78,6 @@ class ProfileUserViewController: UIViewController {
         setupLayout()
     }
     
-    func getObjectsInCoreData(){
-         //userClubs = user?.clubs?.allObjects as! [Club]
-    }
     
     //Configure the height of tableView header
     func sizeHeader(){
@@ -95,7 +101,7 @@ class ProfileUserViewController: UIViewController {
         viewProfession.addBorder(toEdges: .bottom, color: UIColor(white: 233, alpha: 1.0), thickness: 0.5)
     }
     
-    func setupInfoData() {
+    func setupInfoData(){
         self.infoLocationLabel.text = user?.city
         self.infoProfessionLabel.text  = user?.profession
         self.infoBioLabel.text = user?.bio
@@ -104,14 +110,6 @@ class ProfileUserViewController: UIViewController {
         } else {
             self.backgroundUserView.profileImageView.image =  #imageLiteral(resourceName: "userDefault")
         }
-        
-        viewLocal.layer.cornerRadius = 10
-        viewProfession.layer.cornerRadius = 10
-        viewBio.layer.cornerRadius = 10
-        viewRoot.addShadow()
-        viewLocal.addBorder(toEdges: .bottom, color: .lightGray, thickness: 0.5)
-        viewProfession.addBorder(toEdges: .bottom, color: .lightGray, thickness: 0.5)
-        
     }
 }
 
@@ -152,7 +150,6 @@ extension ProfileUserViewController: UITableViewDelegate, UITableViewDataSource{
             return "Meus Relatos"
         }
         return ""
-        
     }
     
 }

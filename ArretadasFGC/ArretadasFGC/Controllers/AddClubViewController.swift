@@ -71,8 +71,8 @@ class AddClubViewController: UIViewController {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         image.isUserInteractionEnabled = true
         image.addGestureRecognizer(tapGestureRecognizer)
-        // 3 - Configure suggestions search text field
-        configureSimpleSearchTextField()
+        //suggestions search text field
+        SearchTextFieldModel.configureSimple(SearchTextField: city)
     }
 
     override func didReceiveMemoryWarning() {
@@ -80,61 +80,31 @@ class AddClubViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    fileprivate func configureSimpleSearchTextField() {
-        // Start visible even without user's interaction as soon as created - Default: false
-        //city.startVisibleWithoutInteraction = true
-        
-        // Set data source
-        let countries = cities()
-        city.filterStrings(countries)
-    }
     
-    fileprivate func cities() -> [String] {
-        if let path = Bundle.main.path(forResource: "c", ofType: "json") {
-            do {
-                let jsonData = try Data(contentsOf: URL(fileURLWithPath: path), options: .dataReadingMapped)
-                let jsonResult = try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
-                
-                guard let countries = jsonResult as? [String: [String]] else { return [] }
-            
-                var cityNames = [String]()
-            
-                for country in countries {
-                    cityNames.append(contentsOf: country.value)
-                }
-//                let locale = Locale.current
-//
-//                let code = (locale as NSLocale).object(forKey: NSLocale.Key.countryCode) as! String?
-//                let currentCountryName = (locale as NSLocale).localizedString(forCurrencyCode: code!)
-//
-//                print(currentCountryName!)
-//                return cityNames.filter { c -> Bool in
-//                    return c == "Brazil"
-//                }
-//
-                return cityNames
-            } catch {
-                print("Error parsing jSON: \(error)")
-                return []
-            }
-        }
-        return []
-    }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
     
-
     @IBAction func done(_ sender: UIButton) {
-        let newClub = Club(context: DataManager.getContext())
-        newClub.local = local.text
-        newClub.city = city.text
-        newClub.name = name.text
-        newClub.descriptionClub = clubDescription.text
-        newClub.photo = StoreMidia.saving(image: image.image!, withName: nameImagePicker)
-        user?.addToClubs(newClub)
-        DataManager.saveContext()
-        dismiss(animated: true, completion: nil)
+        if !Register.checkTextFieldIsEmpty(textFields: [privacy, city, local, name]){
+            let newClub = Club(context: DataManager.getContext())
+            newClub.local = local.text
+            newClub.city = city.text
+            newClub.name = name.text
+            newClub.descriptionClub = clubDescription.text
+            newClub.photo = StoreMidia.saving(image: image.image!, withName: nameImagePicker)
+            user?.addToClubs(newClub)
+            DataManager.saveContext()
+            dismiss(animated: true, completion: nil)
+        }else{
+            let alert = UIAlertController(title: "Preencha todos os campos", message: nil, preferredStyle: .alert)
+            self.present(alert, animated: true, completion: nil)
+            let when = DispatchTime.now() + 3
+            DispatchQueue.main.asyncAfter(deadline: when){
+                alert.dismiss(animated: true, completion: nil)
+            }
+        }
+       
         
     }
     
@@ -167,10 +137,10 @@ class AddClubViewController: UIViewController {
             privacy.resignFirstResponder()
         }
     }
+    
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
-        
-        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        let _ = tapGestureRecognizer.view as! UIImageView
         
         let actionSheet: UIAlertController = UIAlertController(title: "Capture an image", message: "Choose an option", preferredStyle: .actionSheet)
         
@@ -205,7 +175,6 @@ class AddClubViewController: UIViewController {
         
     }
     
-
     
 }
 

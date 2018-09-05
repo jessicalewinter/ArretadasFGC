@@ -10,6 +10,9 @@
 		3612C9D3BDC9148179348AA4 /* Pods_ArretadasFGCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBA7C463DEC82FF771E8A3 /* Pods_ArretadasFGCTests.framework */; };
 		7B2D8994860BA3C5DB8B0CD4 /* Pods_ArretadasFGCUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDE91DB5E6317B5E8B49196F /* Pods_ArretadasFGCUITests.framework */; };
 		9507711CD3AA9AA00310D077 /* Pods_ArretadasFGC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5F0E432A60D89966A25FF7 /* Pods_ArretadasFGC.framework */; };
+		BE16E47121400747006B3EA3 /* ProfileUserTeste.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16E47021400747006B3EA3 /* ProfileUserTeste.swift */; };
+		BE16E47321400C57006B3EA3 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16E47221400C57006B3EA3 /* LoginManager.swift */; };
+		BE1D9FD0213FFECF0031EF08 /* SearchTextFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1D9FCF213FFECF0031EF08 /* SearchTextFieldModel.swift */; };
 		BE21485D21382EA5002BED27 /* BackgroundUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE21485C21382EA5002BED27 /* BackgroundUser.xib */; };
 		BE21485F21383185002BED27 /* BackgroundUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21485E21383185002BED27 /* BackgroundUser.swift */; };
 		BE2148612138808E002BED27 /* ClubsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE2148602138808E002BED27 /* ClubsCell.xib */; };
@@ -83,6 +86,9 @@
 		A73CB1D4E11585942C67D6B5 /* Pods-ArretadasFGCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArretadasFGCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArretadasFGCTests/Pods-ArretadasFGCTests.release.xcconfig"; sourceTree = "<group>"; };
 		ADBBA7C463DEC82FF771E8A3 /* Pods_ArretadasFGCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArretadasFGCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE91DB5E6317B5E8B49196F /* Pods_ArretadasFGCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArretadasFGCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE16E47021400747006B3EA3 /* ProfileUserTeste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserTeste.swift; sourceTree = "<group>"; };
+		BE16E47221400C57006B3EA3 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		BE1D9FCF213FFECF0031EF08 /* SearchTextFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextFieldModel.swift; sourceTree = "<group>"; };
 		BE21485C21382EA5002BED27 /* BackgroundUser.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BackgroundUser.xib; path = ArretadasFGC/Xibs/BackgroundUser.xib; sourceTree = SOURCE_ROOT; };
 		BE21485E21383185002BED27 /* BackgroundUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundUser.swift; sourceTree = "<group>"; };
 		BE2148602138808E002BED27 /* ClubsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ClubsCell.xib; path = ArretadasFGC/Xibs/ClubsCell.xib; sourceTree = SOURCE_ROOT; };
@@ -215,6 +221,8 @@
 				BE7D2FF1213DA27E003897C5 /* StoreMidia.swift */,
 				BE5F902D213EAF740008CA7E /* Register.swift */,
 				BE4C8D50213FF0E000E67168 /* GlossaryData.plist */,
+				BE1D9FCF213FFECF0031EF08 /* SearchTextFieldModel.swift */,
+				BE16E47221400C57006B3EA3 /* LoginManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +325,7 @@
 				BE5F902F213EBCC30008CA7E /* RegisterTests.swift */,
 				BE5F9031213EC5F30008CA7E /* DataManagerTest.swift */,
 				BE5F9033213EC8820008CA7E /* StoreMediaTest.swift */,
+				BE16E47021400747006B3EA3 /* ProfileUserTeste.swift */,
 			);
 			path = ArretadasFGCTests;
 			sourceTree = "<group>";
@@ -576,10 +585,12 @@
 				BE24BC53213811C300CBAE4C /* FeedViewController.swift in Sources */,
 				BEF5B0862136E013002FB168 /* AppDelegate.swift in Sources */,
 				BEC6149C21397E34009E8E51 /* CardRegisterAccountTableViewCell.swift in Sources */,
+				BE16E47321400C57006B3EA3 /* LoginManager.swift in Sources */,
 				BE7D2FF2213DA27E003897C5 /* StoreMidia.swift in Sources */,
 				BEDE55D7213984B20076CCB5 /* PrimaryButton.swift in Sources */,
 				BEC6148E213882F0009E8E51 /* ClubsCollectionViewCell.swift in Sources */,
 				BE24BC51213811C300CBAE4C /* ProfileClubViewController.swift in Sources */,
+				BE1D9FD0213FFECF0031EF08 /* SearchTextFieldModel.swift in Sources */,
 				BE3751B0213DCDC300224587 /* LoginViewController.swift in Sources */,
 				BE21487621399034002BED27 /* ClubCardCollectionViewCell.swift in Sources */,
 				BEDE55D5213983D60076CCB5 /* ReportCard.swift in Sources */,
@@ -602,6 +613,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE16E47121400747006B3EA3 /* ProfileUserTeste.swift in Sources */,
 				BE5F9034213EC8820008CA7E /* StoreMediaTest.swift in Sources */,
 				BE5F9032213EC5F30008CA7E /* DataManagerTest.swift in Sources */,
 				BE5F9030213EBCC30008CA7E /* RegisterTests.swift in Sources */,
