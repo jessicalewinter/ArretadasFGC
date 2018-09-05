@@ -83,7 +83,7 @@ class ClubsViewController: UIViewController, UIViewControllerTransitioningDelega
         }else if segue.destination is ProfileClubViewController{
             let dest = segue.destination as! ProfileClubViewController
             dest.club = self.selectedClub
-            dest.currentUser = self.currentUser
+            dest.currentUser = LoginManager.getUserLogged()
         }
     }
     
