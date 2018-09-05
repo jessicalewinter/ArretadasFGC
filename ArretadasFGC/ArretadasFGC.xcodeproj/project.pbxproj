@@ -13,6 +13,7 @@
 		BE06E281213FFD9900630314 /* ProfileClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE06E280213FFD9900630314 /* ProfileClub.swift */; };
 		BE06E28E214000D200630314 /* ClubingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE06E28D214000D200630314 /* ClubingTest.swift */; };
 		BE16E47121400747006B3EA3 /* ProfileUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16E47021400747006B3EA3 /* ProfileUserTest.swift */; };
+		BE06E290214015CE00630314 /* GlossaryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE06E28F214015CE00630314 /* GlossaryTest.swift */; };
 		BE16E47321400C57006B3EA3 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16E47221400C57006B3EA3 /* LoginManager.swift */; };
 		BE16E47521401520006B3EA3 /* LoginManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16E47421401520006B3EA3 /* LoginManagerTest.swift */; };
 		BE16E4772140203D006B3EA3 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE16E4762140203D006B3EA3 /* Intro.storyboard */; };
@@ -96,6 +97,7 @@
 		BE06E280213FFD9900630314 /* ProfileClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileClub.swift; sourceTree = "<group>"; };
 		BE06E28D214000D200630314 /* ClubingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubingTest.swift; sourceTree = "<group>"; };
 		BE16E47021400747006B3EA3 /* ProfileUserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserTest.swift; sourceTree = "<group>"; };
+		BE06E28F214015CE00630314 /* GlossaryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryTest.swift; sourceTree = "<group>"; };
 		BE16E47221400C57006B3EA3 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		BE16E47421401520006B3EA3 /* LoginManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManagerTest.swift; sourceTree = "<group>"; };
 		BE16E4762140203D006B3EA3 /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 				BE5F9033213EC8820008CA7E /* StoreMediaTest.swift */,
 				BE16E47021400747006B3EA3 /* ProfileUserTest.swift */,
 				BE16E47421401520006B3EA3 /* LoginManagerTest.swift */,
+				BE06E28F214015CE00630314 /* GlossaryTest.swift */,
 			);
 			path = ArretadasFGCTests;
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 				BE7D3005213EA477003897C5 /* RegisterAccountViewControllerTest.swift in Sources */,
 				BE06E28E214000D200630314 /* ClubingTest.swift in Sources */,
 				BE16E47521401520006B3EA3 /* LoginManagerTest.swift in Sources */,
+				BE06E290214015CE00630314 /* GlossaryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
