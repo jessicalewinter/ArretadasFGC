@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ClubsViewController: UIViewController {
+class ClubsViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     let searchController = UISearchController(searchResultsController: nil)

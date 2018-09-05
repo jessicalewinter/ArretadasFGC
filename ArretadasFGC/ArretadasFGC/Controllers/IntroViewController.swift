@@ -134,10 +134,10 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @objc func pressedStart(sender: UIButton!){
-        let sb = UIStoryboard(name: "Clubs", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "ClubsViewController") as! FeedViewController
-        vc.transitioningDelegate = self
-        self.present(vc, animated: true, completion: nil)
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let tc = sb.instantiateViewController(withIdentifier: "mainTabController") as! UITabBarController
+        tc.transitioningDelegate = self
+        self.present(tc, animated: true, completion: nil)
     }
 
     @IBAction func changePage(_ sender: Any) {
@@ -169,15 +169,6 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
-    
-    
-//    @IBAction func start(_ sender: UIButton) {
-//        let sb = UIStoryboard(name: "Clubs", bundle: nil)
-//        let vc = sb.instantiateViewController(withIdentifier: "ClubsViewController") as! FeedViewController
-//        vc.transitioningDelegate = self
-//        self.present(vc, animated: true, completion: nil)
-//
-//    }
 }
 
 extension IntroViewController: UIViewControllerTransitioningDelegate {
