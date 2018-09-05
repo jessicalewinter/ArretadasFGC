@@ -7,16 +7,24 @@
 //
 
 import UIKit
+import SearchTextField
 
 class AddClubViewController: UIViewController {
 
+    //Outlets textField
+    @IBOutlet var privacy: UITextField!
+    @IBOutlet var city: SearchTextField!
+    @IBOutlet var local: SearchTextField!
+    @IBOutlet var clubDescription: UITextView!
+    @IBOutlet var name: UITextField!
+   
+    //Outlets imageView e view
     @IBOutlet var viewForm: UIView!
     @IBOutlet var image: UIImageView!
+    
+    //Outlets others
     @IBOutlet var scView: UIScrollView!
-    @IBOutlet var privacy: UITextField!
-    @IBOutlet var local: UITextField!
-    @IBOutlet var clubDescription: UITextField!
-    @IBOutlet var name: UITextField!
+    
     
     let privacyPicker = UIPickerView()
     let privacyTypes = ["Aberto", "Fechado", "Privado"]
@@ -44,6 +52,10 @@ class AddClubViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        clubDescription.layer.borderWidth = 0.3
+        clubDescription.layer.borderColor = UIColor.lightGray.cgColor
+        clubDescription.layer.cornerRadius = 5
+        clubDescription.clipsToBounds = true
         viewForm.addShadow()
         image.clipsToBounds = true
         image.layer.cornerRadius = 5
@@ -59,8 +71,8 @@ class AddClubViewController: UIViewController {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         image.isUserInteractionEnabled = true
         image.addGestureRecognizer(tapGestureRecognizer)
-
-        // Do any additional setup after loading the view.
+        // 3 - Configure suggestions search text field
+        configureSimpleSearchTextField()
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,14 +80,61 @@ class AddClubViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    fileprivate func configureSimpleSearchTextField() {
+        // Start visible even without user's interaction as soon as created - Default: false
+        //city.startVisibleWithoutInteraction = true
+        
+        // Set data source
+        let countries = cities()
+        city.filterStrings(countries)
+    }
+    
+    fileprivate func cities() -> [String] {
+        if let path = Bundle.main.path(forResource: "c", ofType: "json") {
+            do {
+                let jsonData = try Data(contentsOf: URL(fileURLWithPath: path), options: .dataReadingMapped)
+                let jsonResult = try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments)
+                
+                guard let countries = jsonResult as? [String: [String]] else { return [] }
+            
+                var cityNames = [String]()
+            
+                for country in countries {
+                    cityNames.append(contentsOf: country.value)
+                }
+//                let locale = Locale.current
+//
+//                let code = (locale as NSLocale).object(forKey: NSLocale.Key.countryCode) as! String?
+//                let currentCountryName = (locale as NSLocale).localizedString(forCurrencyCode: code!)
+//
+//                print(currentCountryName!)
+//                return cityNames.filter { c -> Bool in
+//                    return c == "Brazil"
+//                }
+//
+                return cityNames
+            } catch {
+                print("Error parsing jSON: \(error)")
+                return []
+            }
+        }
+        return []
+    }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
 
     @IBAction func done(_ sender: UIButton) {
         let newClub = Club(context: DataManager.getContext())
         newClub.local = local.text
+        newClub.city = city.text
         newClub.name = name.text
         newClub.descriptionClub = clubDescription.text
         newClub.photo = StoreMidia.saving(image: image.image!, withName: nameImagePicker)
         user?.addToClubs(newClub)
+        DataManager.saveContext()
+        dismiss(animated: true, completion: nil)
         
     }
     

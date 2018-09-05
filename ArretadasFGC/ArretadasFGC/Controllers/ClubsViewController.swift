@@ -15,7 +15,8 @@ class ClubsViewController: UIViewController {
     let minimumInteritemSpacing: CGFloat = 10
     let minimumLineSpacing:CGFloat = 10
     
-    var currentuser: User?
+    var currentUser: User?
+    var selectedClub: Club?
     var clubs: [Club] {
         let entity = DataManager.getEntity(entity: "Club")
         let result = DataManager.getAll(entity: entity)
@@ -30,9 +31,18 @@ class ClubsViewController: UIViewController {
 //        DataManager.deleteAll(entity: DataManager.getEntity(entity: "User"))
 //        DataManager.deleteAll(entity: DataManager.getEntity(entity: "Club"))
         super.viewDidLoad()
+        
         self.collectionView.register(UINib(nibName: "ClubCardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ClubCardCollectionViewCell")
+        collectionView.allowsSelection = false
         layout(collectionView)
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.update()
+    }
+    
+    func update(){
+        collectionView.reloadData()
     }
     
     @IBAction func addClub(_ sender: UIBarButtonItem) {
@@ -44,7 +54,7 @@ class ClubsViewController: UIViewController {
             let isLogged = UserDefaults.standard.bool(forKey: "isLogged")
             if isLogged {
                 let dest = segue.destination as! AddClubViewController
-                dest.user = currentuser
+                dest.user = currentUser
             } else {
                 let alert: UIAlertController = UIAlertController(title: "Você não está logad@ ainda", message: "É preciso está cadastrada para criar um clube", preferredStyle: .alert)
                 
@@ -56,9 +66,15 @@ class ClubsViewController: UIViewController {
                 alert.addAction(logginAction)
                 self.present(alert, animated: true, completion: nil)
             }
-            
-            
+        }else if segue.destination is ProfileClubViewController{
+            let dest = segue.destination as! ProfileClubViewController
+            dest.club = self.selectedClub
+            dest.currentUser = self.currentUser
         }
+    }
+    @objc func buttonAction(sender: UIButton){
+        selectedClub = clubs[sender.tag]
+        performSegue(withIdentifier: "goProfileClub", sender: nil)
     }
     
 }
@@ -77,12 +93,15 @@ extension ClubsViewController: UICollectionViewDelegateFlowLayout, UICollectionV
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "ClubCardCollectionViewCell", for: indexPath) as! ClubCardCollectionViewCell
-//        let club = clubs[indexPath.row]
-//        let path = club.photo
-//        //cell.clubImage.image = StoreMidia.loadImageFromPath(path!)!
-//        cell.clubLocation.text = club.local
-//        cell.clubName.text = club.name
-//        cell.clubDescription.text = club.descriptionClub
+        let club = clubs[indexPath.row]
+        let path = club.photo
+        cell.clubMoreInfoBtn.primaryButtton()
+        cell.clubMoreInfoBtn.addTarget(self, action: #selector(buttonAction(sender:)), for: .touchUpInside)
+        cell.clubMoreInfoBtn.tag = indexPath.row
+        cell.clubImage.image = StoreMidia.loadImageFromPath(path!)!
+        cell.clubLocation.text = club.city
+        cell.clubName.text = club.name
+        cell.clubDescription.text = club.descriptionClub
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -95,7 +114,6 @@ extension ClubsViewController: UICollectionViewDelegateFlowLayout, UICollectionV
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return minimumInteritemSpacing
     }
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    
+    
 }
