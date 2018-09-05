@@ -18,9 +18,9 @@ class StoreMediaTest: XCTestCase {
 //		let img = #imageLiteral(resourceName: "home_active")
 //		let myPath =
 		
-		let results = StoreMidia.saving(image: img, withName: "Casa")
-		
-		XCTAssertEqual(results, directory)
+//		let results = StoreMidia.saving(image: img, withName: "Casa")
+//		
+//		XCTAssertEqual(results, directory)
 		
 		
 		

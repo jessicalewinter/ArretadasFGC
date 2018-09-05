@@ -39,6 +39,8 @@
 		BE7D3000213DC930003897C5 /* ReportImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D2FFF213DC930003897C5 /* ReportImageCell.swift */; };
 		BE7D3005213EA477003897C5 /* RegisterAccountViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D3003213EA477003897C5 /* RegisterAccountViewControllerTest.swift */; };
 		BEAADC0D2139DD4A002CCE0B /* GlossaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAADC0C2139DD4A002CCE0B /* GlossaryViewController.swift */; };
+		BEBCD2FB213EF4D0006EECD3 /* c.json in Resources */ = {isa = PBXBuildFile; fileRef = BEBCD2FA213EF4D0006EECD3 /* c.json */; };
+		BEBCD2FF213EFAC0006EECD3 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBCD2FE213EFAC0006EECD3 /* Country.swift */; };
 		BEC6148E213882F0009E8E51 /* ClubsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6148C213882F0009E8E51 /* ClubsCollectionViewCell.swift */; };
 		BEC6149421395B34009E8E51 /* ProfileUserTableViewFirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6149221395B34009E8E51 /* ProfileUserTableViewFirstCell.swift */; };
 		BEC6149521395B34009E8E51 /* ProfileUserTableViewFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEC6149321395B34009E8E51 /* ProfileUserTableViewFirstCell.xib */; };
@@ -108,6 +110,8 @@
 		BE7D2FFF213DC930003897C5 /* ReportImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportImageCell.swift; sourceTree = "<group>"; };
 		BE7D3003213EA477003897C5 /* RegisterAccountViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAccountViewControllerTest.swift; sourceTree = "<group>"; };
 		BEAADC0C2139DD4A002CCE0B /* GlossaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryViewController.swift; sourceTree = "<group>"; };
+		BEBCD2FA213EF4D0006EECD3 /* c.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = c.json; sourceTree = "<group>"; };
+		BEBCD2FE213EFAC0006EECD3 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		BEC6148C213882F0009E8E51 /* ClubsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsCollectionViewCell.swift; sourceTree = "<group>"; };
 		BEC6149221395B34009E8E51 /* ProfileUserTableViewFirstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserTableViewFirstCell.swift; sourceTree = "<group>"; };
 		BEC6149321395B34009E8E51 /* ProfileUserTableViewFirstCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileUserTableViewFirstCell.xib; sourceTree = "<group>"; };
@@ -215,6 +219,14 @@
 			path = Xibs;
 			sourceTree = "<group>";
 		};
+		BEBCD2F9213EF4C2006EECD3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BEBCD2FA213EF4D0006EECD3 /* c.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		BEC6149821397DA5009E8E51 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +244,8 @@
 				BEF5B0A72136E014002FB168 /* ArretadasFGCUITests */,
 				BEF5B0832136E013002FB168 /* Products */,
 				BEC6149821397DA5009E8E51 /* Recovered References */,
+				EAA6DE95583C6AA3ADF21A3F /* Pods */,
+				BE1B2142076F51F36E82F316 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -248,6 +262,7 @@
 		BEF5B0842136E013002FB168 /* ArretadasFGC */ = {
 			isa = PBXGroup;
 			children = (
+				BEBCD2F9213EF4C2006EECD3 /* Resources */,
 				BE7D2FCF21382741003897C5 /* Xibs */,
 				BE7D2FCE21381841003897C5 /* View */,
 				BE7D2FCD21381834003897C5 /* Model */,
@@ -454,6 +469,7 @@
 				BE7D2FF2213DA27E003897C5 /* StoreMidia.swift in Sources */,
 				BEDE55D7213984B20076CCB5 /* PrimaryButton.swift in Sources */,
 				BEC6148E213882F0009E8E51 /* ClubsCollectionViewCell.swift in Sources */,
+				BEBCD2FF213EFAC0006EECD3 /* Country.swift in Sources */,
 				BE24BC51213811C300CBAE4C /* ProfileClubViewController.swift in Sources */,
 				BE3751B0213DCDC300224587 /* LoginViewController.swift in Sources */,
 				BE21487621399034002BED27 /* ClubCardCollectionViewCell.swift in Sources */,
