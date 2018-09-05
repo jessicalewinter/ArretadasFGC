@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" red="0.90980392160000001" green="0.0" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.90980392160000001" green="0.0" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="KZh-Ef-06b" kind="relationship" relationship="viewControllers" id="evL-5G-BC1"/>
@@ -34,7 +34,7 @@
         <scene sceneID="c2m-RP-gzn">
             <objects>
                 <viewControllerPlaceholder storyboardName="Clubs" id="pMC-jr-qRM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Clubs" image="clubs" id="pHa-LO-93a"/>
+                    <tabBarItem key="tabBarItem" title="" id="pHa-LO-93a"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="450-Uk-HyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,7 +44,7 @@
         <scene sceneID="V6U-lA-Xxj">
             <objects>
                 <viewControllerPlaceholder storyboardName="Glossary" id="By3-IE-NqN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Glossário" image="glossary" id="Ny1-m6-ZTe"/>
+                    <tabBarItem key="tabBarItem" title="" id="Ny1-m6-ZTe"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ey-Mm-EAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,7 +54,7 @@
         <scene sceneID="Tzp-sP-kHI">
             <objects>
                 <viewControllerPlaceholder storyboardName="ProfileClub" id="KZh-Ef-06b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Feed" image="home" id="e2D-ij-bOn"/>
+                    <tabBarItem key="tabBarItem" title="" id="e2D-ij-bOn"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPl-Ra-o2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,17 +64,11 @@
         <scene sceneID="8te-pd-Hmr">
             <objects>
                 <viewControllerPlaceholder storyboardName="ProfileUser" id="6Fz-or-y86" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Perfil" image="user" id="MFb-xX-Txi"/>
+                    <tabBarItem key="tabBarItem" title="" id="MFb-xX-Txi"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sgu-EC-TkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-363" y="-315"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="clubs" width="25" height="25"/>
-        <image name="glossary" width="25" height="31"/>
-        <image name="home" width="25" height="24"/>
-        <image name="user" width="25" height="32"/>
-    </resources>
 </document>

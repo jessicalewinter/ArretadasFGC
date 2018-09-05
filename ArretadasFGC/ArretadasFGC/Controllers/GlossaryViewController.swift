@@ -12,11 +12,12 @@ class GlossaryViewController: UIViewController {
 
     //Outlets
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
+    let searchController = UISearchController(searchResultsController: nil)
     
     //Plist Glossary
     let glossary = Glossary()
-    var glossaryDict : [(String, String)] = []
+    var glossaryWords : [(String, String)] = []
+    var filteredWords : [(String, String)] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,25 +27,30 @@ class GlossaryViewController: UIViewController {
         tableView.dataSource = self
         
         //Set up Search Controller
-//        searchBar.delegate = self
-//        searchController.searchResultsUpdater = self
-//        searchController.obscuresBackgroundDuringPresentation = false
-//        searchController.searchBar.placeholder = "Search Quotes"
-//        navigationItem.searchController = searchController
-//        definesPresentationContext = true
-//        extendedLayoutIncludesOpaqueBars = true
-//        searchController.delegate = self
-//        searchController.searchBar.delegate = self
-//        searchController.searchBar.tintColor = UIColor(named: "primary")
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Pesquisar por palavras"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        extendedLayoutIncludesOpaqueBars = true
+        searchController.delegate = self
+        
+        //Search Controller style
+        searchController.searchBar.delegate = self
+        searchController.searchBar.tintColor = UIColor.primary
+
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: UIColor(white: 90, alpha: 1.0)]
+
         
         //Set array of glossary's words
         if let dict = glossary.dictionary {
             for (key, value) in dict {
                 let sKey = key as! String
                 let sValue = value as! String
-                self.glossaryDict.append((sKey,sValue))
-                tableView.reloadData()
+                self.glossaryWords.append((sKey,sValue))
             }
+            self.glossaryWords =  self.glossaryWords.sorted { $0.0 < $1.0 }
+            tableView.reloadData()
         }
         
         //Setup layout
@@ -54,28 +60,61 @@ class GlossaryViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    func filterContentForSearchText(_ searchText: String) {
+        filteredWords = []
+        
+        filteredWords = glossaryWords.filter({( key : String, value : String) -> Bool in
+            if searchBarIsEmpty() {
+                return true
+            } else {
+                return key.lowercased().contains(searchText.lowercased())
+            }
+        })
+        tableView.reloadData()
+    }
+    
+    func searchBarIsEmpty() -> Bool {
+        return self.searchController.searchBar.text?.isEmpty ?? true
+    }
 
 }
 
 extension GlossaryViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let length = glossary.dictionary?.count {
-            return length
+        if searchBarIsEmpty() {
+            return (glossary.dictionary?.count)!
         } else {
-            return 0
+            return filteredWords.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "wordCell", for: indexPath)
         
-        cell.textLabel?.text = glossaryDict[indexPath.row].0
-        cell.detailTextLabel?.text = glossaryDict[indexPath.row].1
+        if searchBarIsEmpty() {
+            cell.textLabel?.text = glossaryWords[indexPath.row].0
+            cell.detailTextLabel?.text = glossaryWords[indexPath.row].1
+        } else {
+            cell.textLabel?.text = filteredWords[indexPath.row].0
+            cell.detailTextLabel?.text = filteredWords[indexPath.row].1
+        }
         
         return cell
     }
 }
 
-extension GlossaryViewController : UISearchBarDelegate {
+extension GlossaryViewController : UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+}
+
+extension GlossaryViewController: UISearchBarDelegate {
     
 }
+
+extension GlossaryViewController: UISearchControllerDelegate {
+    
+}
+
