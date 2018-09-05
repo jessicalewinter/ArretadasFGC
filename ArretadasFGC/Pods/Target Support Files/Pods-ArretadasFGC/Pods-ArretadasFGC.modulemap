@@ -1,0 +1,6 @@
+framework module Pods_ArretadasFGC {
+  umbrella header "Pods-ArretadasFGC-umbrella.h"
+
+  export *
+  module * { export * }
+}

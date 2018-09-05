@@ -11,31 +11,42 @@ import CoreData
 
 class ProfileClubViewController: UIViewController {
 	
-	//Outlets
+	//Outlets labels
 	@IBOutlet weak var clubNameLabel: UILabel!
 	@IBOutlet weak var clubCityLabel: UILabel!
+    @IBOutlet weak var infoBioLabel: UILabel!
+    @IBOutlet weak var infoDateLabel: UILabel!
+    @IBOutlet weak var infoLocalLabel: UILabel!
+    
+    //Outlets imageViews
 	@IBOutlet weak var clubImageView: UIImageView!
 	@IBOutlet weak var iconLocationImageView: UIImageView!
-	@IBOutlet weak var joinButton: PrimaryButton!
+    
+    //Outlets views
+    @IBOutlet weak var viewInfo: UIView!
+    
+    //Outlets buttons
+    @IBOutlet weak var joinButton: PrimaryButton!
+
+    //Outlets Tables and Collections
+	@IBOutlet weak var usersCollectionView: UICollectionView!
 	@IBOutlet weak var tableView: UITableView!
+    
+    // Outlet others 
 	@IBOutlet weak var segmentedControl: CustomSegmentedControl!
 	
-	@IBOutlet weak var infoBioLabel: UILabel!
-	@IBOutlet weak var infoDateLabel: UILabel!
-	@IBOutlet weak var usersCollectionView: UICollectionView!
-	@IBOutlet weak var infoLocalLabel: UILabel!
-	
-	@IBOutlet weak var viewInfo: UIView!
-	
-	//Instance of club
+	//Instances
+    var currentUser: User?
 	var club : Club?
-	var members: [User] = []
-//	var reports: [ExperienceReports] = []
+    var members: [User] {
+        guard let m = club?.members?.allObjects as? [User] else{ return []}
+        return m
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//		reports = club.expReports?.allObjects as! [ExperienceReports]
-//		members = club.members?.allObjects as! [User]
+
 		
 		//Set delegates and datasources of tableview
 		tableView.delegate = self
@@ -45,40 +56,18 @@ class ProfileClubViewController: UIViewController {
 		tableView.register(UINib(nibName: "ReportImage", bundle: nil), forCellReuseIdentifier: "cellReportImage")
 		tableView.register(UINib(nibName: "ReportText", bundle: nil), forCellReuseIdentifier: "cellReportText")
 		tableView.register(UINib(nibName: "ReportAudio", bundle: nil), forCellReuseIdentifier: "cellReportAudio")
-		
 
-		self.club = Club(context: DataManager.getContext())
-		
-		//MOCK
-		let user1 = User(context: DataManager.getContext())
-		user1.name = "Debora"
-		user1.email = "deboramoura@gmail.com"
-		user1.photo = nil
-		user1.city = "Fortaleza"
-		user1.bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-		user1.profession = "iOS Developer"
-		user1.password = "12345"
-		
-		let user2 = User(context: DataManager.getContext())
-		let user3 = User(context: DataManager.getContext())
-		club?.members = [user1,user2,user3]
-		
-		club?.name = "Clube da Luluzinha"
-        club?.local = "Gentilândia"
-        club?.city = "Fortaleza"
-        club?.dateMeeting = "Seg-Qui 18h"
-        club?.descriptionClub = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet quam vulputate nulla elementum malesuada. Mauris gravida imperdiet dictum."
-        club?.photo = nil
-        
-        //Set variables
-        self.members = club?.members?.allObjects as! [User]
-        
         //Set data
         setLabelsValues()
         
         //Set layout
+        joinButton.primaryButtton()
         clubImageView.setCornerRadiusDefault()
         viewInfo.setCornerRadiusDefault()
+        guard let user = currentUser else {return}
+        if isAMember(user: user){
+            joinButton.titleLabel?.text = "Participando"
+        }
 
     }
     
@@ -90,6 +79,12 @@ class ProfileClubViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    //returns true if the current user is a member of this club
+    func isAMember(user: User) -> Bool{
+        return members.contains(user)
+    }
+    
+    //adjusting the size of tableview header
     func sizeHeader(){
         guard let headerView = tableView.tableHeaderView else {
             return
@@ -107,6 +102,7 @@ class ProfileClubViewController: UIViewController {
     func setLabelsValues() {
         self.clubNameLabel.text = club?.name
         self.clubCityLabel.text = club?.city
+        self.infoLocalLabel.text = club?.local
         if let imagePath = club?.photo {
             self.clubImageView.image = StoreMidia.loadImageFromPath(imagePath)
         } else {
@@ -119,14 +115,35 @@ class ProfileClubViewController: UIViewController {
         
         usersCollectionView.delegate = self
         usersCollectionView.dataSource = self
-        
     }
 	
 	@IBAction func valueChanged(_ sender: CustomSegmentedControl) {
 		sender.changeSelectedIndex(to: sender.selectedSegmentIndex)
 	}
 	
-	
+    
+    @IBAction func joinClub(_ sender: PrimaryButton) {
+        //TODO: ver se tá logado
+        guard let user = currentUser else {return}
+        if isAMember(user: user) {
+            print("nao")
+            let alert: UIAlertController = UIAlertController(title: "Deixar clube", message: "Deseja deixar o clube?", preferredStyle: .alert)
+            
+            let noAction = UIAlertAction(title: "Não", style: .cancel, handler: nil)
+            let yesAction = UIAlertAction(title: "Sim", style: .default) { (_) in
+                self.joinButton.titleLabel?.text = "Participar"
+                user.removeFromClubs(self.club!)
+            }
+            alert.addAction(noAction)
+            alert.addAction(yesAction)
+            self.present(alert, animated: true, completion: nil)
+        }else{
+            print("sim")
+            self.joinButton.titleLabel?.text = "Participando"
+            guard let user = currentUser else {return}
+            user.addToClubs(club!)
+        }
+    }
 }
 
 extension ProfileClubViewController : UITableViewDelegate, UITableViewDataSource {
