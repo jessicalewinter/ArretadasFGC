@@ -10,11 +10,7 @@ import XCTest
 @testable import ArretadasFGC
 
 class StoreMediaTest: XCTestCase {
-	
-	
-	
-	func test_saving_sucess(){
-
-	}
 
 }
+	
+	
