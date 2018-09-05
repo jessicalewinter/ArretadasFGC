@@ -9,7 +9,7 @@
 import XCTest
 @testable import ArretadasFGC
 
-class ProfileUserTeste: XCTestCase {
+class ProfileUserTest: XCTestCase {
     
     var viewController: ProfileUserViewController!
     

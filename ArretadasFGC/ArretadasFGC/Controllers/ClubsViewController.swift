@@ -18,7 +18,7 @@ class ClubsViewController: UIViewController {
     var currentUser: User?
     var selectedClub: Club?
     var clubs: [Club] {
-        let entity = DataManager.getEntity(entity: "Club")
+        guard let entity = DataManager.getEntity(entity: "Club") else{ return [] }
         let result = DataManager.getAll(entity: entity)
         if result.success {
             return result.objects as! [Club]
