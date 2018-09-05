@@ -38,6 +38,7 @@ class ProfileClubViewController: UIViewController {
 	//Instances
     var currentUser: User?
 	var club : Club?
+	var profileclub: ProfileClub?
     var members: [User] {
         guard let m = club?.members?.allObjects as? [User] else{ return []}
         return m
@@ -65,24 +66,19 @@ class ProfileClubViewController: UIViewController {
         clubImageView.setCornerRadiusDefault()
         viewInfo.setCornerRadiusDefault()
         guard let user = currentUser else {return}
-        if isAMember(user: user){
+		if profileclub!.isAMember(user: user, members: members){
             joinButton.titleLabel?.text = "Participando"
         }
-
     }
     
     override func viewDidLayoutSubviews() {
         sizeHeader()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
+	
     //returns true if the current user is a member of this club
-    func isAMember(user: User) -> Bool{
-        return members.contains(user)
-    }
+//    func isAMember(user: User) -> Bool{
+//        return members.contains(user)
+//    }
     
     //adjusting the size of tableview header
     func sizeHeader(){
@@ -125,7 +121,7 @@ class ProfileClubViewController: UIViewController {
     @IBAction func joinClub(_ sender: PrimaryButton) {
         //TODO: ver se tá logado
         guard let user = currentUser else {return}
-        if isAMember(user: user) {
+		if profileclub!.isAMember(user: user, members: members) {
             print("nao")
             let alert: UIAlertController = UIAlertController(title: "Deixar clube", message: "Deseja deixar o clube?", preferredStyle: .alert)
             
@@ -172,7 +168,7 @@ extension ProfileClubViewController : UICollectionViewDelegate, UICollectionView
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "clubMember", for: indexPath) as! MemberCollectionViewCell
 		
-		if let imagePath = members[indexPath.row].photo {
+		if let imagePath = self.members[indexPath.row].photo {
 			cell.memberImageView.image = StoreMidia.loadImageFromPath(imagePath)
 		} else {
 			cell.memberImageView.image =  #imageLiteral(resourceName: "userDefault")

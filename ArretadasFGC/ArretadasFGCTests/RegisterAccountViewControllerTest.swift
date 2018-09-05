@@ -19,6 +19,12 @@ class RegisterAccountViewController: XCTestCase {
 		
     }
 	
+	func test_RegisterAccount_succsess(){
+	
+		
+		
+	}
+	
 	func test_registerAccount_sucess(){
 		user?.city = "Cidade"
 		user?.email = "Cidade"
