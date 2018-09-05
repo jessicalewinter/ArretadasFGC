@@ -10,10 +10,18 @@ import UIKit
 import CoreData
 
 class DataManager {
+    
+    private var storeType: String!
+    
+    
+    init(persistenceType: String = NSSQLiteStoreType){
+        self.storeType = persistenceType
+    }
 	
 	static var persistentContainer: NSPersistentContainer = {
 		let container = NSPersistentContainer(name: "ArretadasFGC")
 		container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+//            storeDescription.type = storeType
 			if let error = error as NSError? {
 				fatalError("Unresolved error \(error), \(error.userInfo)")
 			}
@@ -34,10 +42,10 @@ class DataManager {
 		}
 	}
 	
-	static func getEntity(entity: String) -> (NSEntityDescription){
+	static func getEntity(entity: String) -> (NSEntityDescription)?{
 		let context = self.getContext()
 		
-		let description:NSEntityDescription = NSEntityDescription.entity(forEntityName: entity, in: context)!
+        guard let description:NSEntityDescription = NSEntityDescription.entity(forEntityName: entity, in: context) else { return nil }
 		
 		return description
 	}
@@ -50,25 +58,6 @@ class DataManager {
 		let context = self.getContext()
 		
 		let request:NSFetchRequest = NSFetchRequest<NSFetchRequestResult>()
-		request.entity = entity
-		
-		var result:[NSManagedObject]?
-		
-		do {
-			result = try context.fetch(request) as? [NSManagedObject]
-			return(true, result!)
-		} catch {
-			print("Failed reading all")
-			return(false, result!)
-		}
-	}
-	
-	static func getRecords(entity: NSEntityDescription, fetchOffset: Int) -> (success: Bool, objects: [NSManagedObject]){
-		let context = self.getContext()
-		
-		let request:NSFetchRequest = NSFetchRequest<NSFetchRequestResult>()
-		request.fetchLimit = 10
-		request.fetchOffset = fetchOffset
 		request.entity = entity
 		
 		var result:[NSManagedObject]?
