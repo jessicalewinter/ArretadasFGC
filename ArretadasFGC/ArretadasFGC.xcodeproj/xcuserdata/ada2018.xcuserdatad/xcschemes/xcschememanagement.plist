@@ -7,10 +7,26 @@
 		<key>ArretadasFGC.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>BEF5B0812136E013002FB168</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BEF5B0982136E014002FB168</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BEF5B0A32136E014002FB168</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
