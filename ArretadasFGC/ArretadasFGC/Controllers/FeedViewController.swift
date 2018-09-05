@@ -61,6 +61,9 @@ extension FeedViewController : UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             cell.textLabel?.text = "Página em construção"
             cell.detailTextLabel?.text = "Estamos trabalhando para criar mais funcionalidades para você. Obrigada pela paciência <3"
+        } else {
+            cell.textLabel?.text = ""
+            cell.detailTextLabel?.text = ""
         }
         
         return cell

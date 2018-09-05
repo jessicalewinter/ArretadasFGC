@@ -47,7 +47,7 @@
                                             <color key="backgroundColor" red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ygV-wK-YcP" userLabel="ViewRoot">
-                                            <rect key="frame" x="16" y="31" width="343" height="60"/>
+                                            <rect key="frame" x="16" y="31" width="343" height="52"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                     </subviews>
@@ -56,7 +56,7 @@
                                         <constraint firstAttribute="trailing" secondItem="x0R-FY-X4d" secondAttribute="trailing" id="1tC-uT-dtB"/>
                                         <constraint firstItem="ygV-wK-YcP" firstAttribute="leading" secondItem="ljK-S7-465" secondAttribute="leading" constant="16" id="40f-14-1KC"/>
                                         <constraint firstItem="x0R-FY-X4d" firstAttribute="top" secondItem="ljK-S7-465" secondAttribute="top" id="5SA-ac-7Kt"/>
-                                        <constraint firstAttribute="bottom" secondItem="ygV-wK-YcP" secondAttribute="bottom" id="ADF-hV-BFT"/>
+                                        <constraint firstAttribute="bottom" secondItem="ygV-wK-YcP" secondAttribute="bottom" constant="8" id="ADF-hV-BFT"/>
                                         <constraint firstItem="x0R-FY-X4d" firstAttribute="height" secondItem="ljK-S7-465" secondAttribute="height" id="TlW-PO-Jsn"/>
                                         <constraint firstAttribute="trailing" secondItem="ygV-wK-YcP" secondAttribute="trailing" constant="16" id="XBF-dy-9Dt"/>
                                         <constraint firstItem="x0R-FY-X4d" firstAttribute="leading" secondItem="ljK-S7-465" secondAttribute="leading" id="aKL-Q5-tk3"/>
