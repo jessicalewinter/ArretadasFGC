@@ -38,7 +38,6 @@ class ProfileClubViewController: UIViewController {
 	//Instances
     var currentUser: User?
 	var club : Club?
-	var profileclub: ProfileClub?
     var members: [User] {
         guard let m = club?.members?.allObjects as? [User] else{ return []}
         return m
@@ -47,7 +46,6 @@ class ProfileClubViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
 		
 		//Set delegates and datasources of tableview
 		tableView.delegate = self
@@ -65,9 +63,11 @@ class ProfileClubViewController: UIViewController {
         joinButton.primaryButtton()
         clubImageView.setCornerRadiusDefault()
         viewInfo.setCornerRadiusDefault()
-        guard let user = currentUser else {return}
-		if profileclub!.isAMember(user: user, members: members){
-            joinButton.titleLabel?.text = "Participando"
+        self.currentUser = LoginManager.getUserLogged()
+        if self.currentUser != nil{
+            if ProfileClub.isAMember(user: self.currentUser!, members: members){
+                self.joinButton.setTitle("Participando", for: .normal)
+            }
         }
     }
     
@@ -120,24 +120,37 @@ class ProfileClubViewController: UIViewController {
     
     @IBAction func joinClub(_ sender: PrimaryButton) {
         //TODO: ver se tá logado
-        guard let user = currentUser else {return}
-		if profileclub!.isAMember(user: user, members: members) {
-            print("nao")
-            let alert: UIAlertController = UIAlertController(title: "Deixar clube", message: "Deseja deixar o clube?", preferredStyle: .alert)
-            
-            let noAction = UIAlertAction(title: "Não", style: .cancel, handler: nil)
-            let yesAction = UIAlertAction(title: "Sim", style: .default) { (_) in
-                self.joinButton.titleLabel?.text = "Participar"
-                user.removeFromClubs(self.club!)
+        if self.currentUser != nil{
+            if ProfileClub.isAMember(user: self.currentUser!, members: members) {
+                print("nao")
+                let alert: UIAlertController = UIAlertController(title: "Deixar clube", message: "Deseja deixar o clube?", preferredStyle: .alert)
+                
+                let noAction = UIAlertAction(title: "Não", style: .cancel, handler: nil)
+                let yesAction = UIAlertAction(title: "Sim", style: .default) { (_) in
+                    self.joinButton.titleLabel?.text = "Participar"
+                    self.currentUser!.removeFromClubs(self.club!)
+                    self.usersCollectionView.reloadData()
+                }
+                alert.addAction(noAction)
+                alert.addAction(yesAction)
+                self.present(alert, animated: true, completion: nil)
+            }else{
+                print("sim")
+                self.joinButton.setTitle("Participando", for: .normal)
+                self.currentUser!.addToClubs(club!)
+                self.usersCollectionView.reloadData()
             }
-            alert.addAction(noAction)
-            alert.addAction(yesAction)
-            self.present(alert, animated: true, completion: nil)
         }else{
-            print("sim")
-            self.joinButton.titleLabel?.text = "Participando"
-            guard let user = currentUser else {return}
-            user.addToClubs(club!)
+            let alert: UIAlertController = UIAlertController(title: "Você não está logad@ ainda", message: "É preciso está cadastrada para criar um clube", preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+            let logginAction = UIAlertAction(title: "Logar", style: .default) { (_) in
+                //self.performSegue(withIdentifier: "login", sender: nil)
+            }
+            alert.addAction(cancelAction)
+            alert.addAction(logginAction)
+            self.present(alert, animated: true, completion: nil)
+            
         }
     }
 }

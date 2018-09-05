@@ -11,7 +11,7 @@ import CoreData
 
 class ProfileClub {
 	
-	func isAMember(user: User, members: [User]) -> Bool{
+	static func isAMember(user: User, members: [User]) -> Bool{
 		return members.contains(user)
 	}
 }
