@@ -83,7 +83,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IAj-en-zFv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="glossary" selectedImage="glossary_active" id="Mq1-8N-OY7"/>
+                    <tabBarItem key="tabBarItem" title="" image="glossary" selectedImage="glossary_active" id="Mq1-8N-OY7">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BtX-hO-yj8" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pad-0q-v1P">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pad-0q-v1P">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -72,7 +72,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fu8-Os-mjM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="clubs" selectedImage="clubs_active" id="xei-bz-yN4"/>
+                    <tabBarItem key="tabBarItem" title="" image="clubs" selectedImage="clubs_active" id="xei-bz-yN4">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Clubes" id="kme-bu-lgF">
                         <barButtonItem key="backBarButtonItem" title=" " id="VYT-tg-Aah"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="sxD-9z-kH9">

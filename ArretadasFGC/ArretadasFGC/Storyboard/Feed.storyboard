@@ -21,6 +21,7 @@
                         <viewLayoutGuide key="safeArea" id="RcN-Vm-thA"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="home" selectedImage="home_active" id="lHe-GJ-CtB">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
