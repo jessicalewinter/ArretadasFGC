@@ -30,7 +30,11 @@ class ProfileUserViewController: UIViewController {
     
     //Instances
     var user: User?
-    var userClubs: [Club] = []
+    
+    var userClubs: [Club] {
+        guard let clubs = user?.clubs?.allObjects as? [Club] else {return []}
+        return clubs
+    }
     
     //variables
     var info: [String] = []
@@ -68,9 +72,33 @@ class ProfileUserViewController: UIViewController {
         //Setup data
          info = [user?.city ?? "Não Informado", user?.profession ?? "Não Informado", user?.bio ?? "Não Informado" ]
         
-        //Setup user's info
-        setupInfoData()
 	}
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.user = LoginManager.getUserLogged()
+        
+        if self.user == nil {
+//            let vc = UIStoryboard(name: "RegisterAccount", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController")
+//
+//            self.present(vc, animated: true, completion: nil)
+            
+            self.performSegue(withIdentifier: "goToLogin", sender: nil)
+            
+        }else{
+            let club = Club(context: DataManager.getContext())
+            club.city = "Itaberaba"
+            club.name = "Clube massa"
+            club.descriptionClub = ".kasdhwulhqdowihd"
+            club.local = "Shopping"
+            user?.addToClubs(club)
+            
+            
+            //Setup user's info
+            setupInfoData()
+        }
+        
+        
+    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -110,6 +138,8 @@ class ProfileUserViewController: UIViewController {
         } else {
             self.backgroundUserView.profileImageView.image =  #imageLiteral(resourceName: "userDefault")
         }
+        self.backgroundUserView.nameLabel.text = user?.name
+        
     }
 }
 
@@ -121,7 +151,7 @@ extension ProfileUserViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellProfileUser", for: indexPath)
         
         //If it's first row of the tableView, show clubs collectionView
-        if indexPath.row == 0 {
+        if indexPath.row == 0 && indexPath.section == 0{
             let collection = cell as! ProfileUserTableViewFirstCell
             collection.setCollectionViewDataSourceDelegate(self, forRow: indexPath.row)
             collection.collectionViewOffset = storedOffsets[indexPath.row-1] ?? 0
@@ -152,20 +182,32 @@ extension ProfileUserViewController: UITableViewDelegate, UITableViewDataSource{
         return ""
     }
     
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        if section == 0 {
+//            let view = UI
+//        }
+//    }
+    
 }
 
 extension ProfileUserViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return user?.clubs?.count ?? 5
+        guard let clubs = user?.clubs else { return 0}
+        print(clubs.count)
+        return clubs.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ClubsCollectionViewCell", for: indexPath) as! ClubsCollectionViewCell
-        
-        //cell.image.image = self.loadImageFromPath(userClubs[indexPath.row].photo!)
-        //cell.labelLocal.text = userClubs[indexPath.row-2].local!
-        //cell.labelName.text = userClubs[indexPath.row-2].name!
+        let club = userClubs[indexPath.row]
+        if let imagePath = club.photo {
+            cell.image.image = StoreMidia.loadImageFromPath(imagePath)
+        } else {
+            cell.image.image =  #imageLiteral(resourceName: "userDefault")
+        }
+        cell.labelLocal.text = userClubs[indexPath.row].local!
+        cell.labelName.text = userClubs[indexPath.row].name!
         
         return cell
     }

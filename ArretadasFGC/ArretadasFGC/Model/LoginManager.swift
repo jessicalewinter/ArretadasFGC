@@ -18,7 +18,22 @@ class LoginManager: NSObject {
         if result.isEmpty {
             return (false, nil)
         }
-        return (true, result.first)
+        let user = result.first
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(user?.objectID.uriRepresentation(), forKey: "userID")
+        userDefaults.synchronize()
+        return (true, user)
+        
+    }
+    
+    static func getUserLogged() -> User? {
+        let contex = DataManager.getContext()
+        
+        guard let url = UserDefaults.standard.url(forKey: "userID") else {return nil}
+        guard let objetcID: NSManagedObjectID = contex.persistentStoreCoordinator?.managedObjectID(forURIRepresentation: url) else {return nil}
+        guard let userTemp = contex.object(with: objetcID)  as? User else {return nil}
+        return userTemp
+        
         
     }
 }

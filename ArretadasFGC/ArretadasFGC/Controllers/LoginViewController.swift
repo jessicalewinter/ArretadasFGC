@@ -42,7 +42,6 @@ class LoginViewController: UIViewController {
             if result.success{
                 user = result.object as? User
                 _ = self.navigationController?.popViewController(animated: true)
-                UserDefaults.standard.set(true, forKey: "isLogged")
             }else{
                 let alert = UIAlertController(title: "Senha ou email incorretos", message: nil, preferredStyle: .alert)
                 self.present(alert, animated: true, completion: nil)
