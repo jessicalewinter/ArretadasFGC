@@ -21,7 +21,8 @@ class LoginManager: NSObject {
         let user = result.first
         let userDefaults = UserDefaults.standard
         userDefaults.set(user?.objectID.uriRepresentation(), forKey: "userID")
-        userDefaults.synchronize()
+        //userDefaults.synchronize()
+        userDefaults.set(true, forKey: "isLogged")
         return (true, user)
         
     }
