@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RRE-fF-FFM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3UX-NM-Jtp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,29 +11,46 @@
     </dependencies>
     <scenes>
         <!--Intro View Controller-->
-        <scene sceneID="thE-Or-pJM">
+        <scene sceneID="f3j-0x-Deg">
             <objects>
-                <viewController id="RRE-fF-FFM" customClass="IntroViewController" customModule="ArretadasFGC" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9I8-pR-zbG">
+                <viewController storyboardIdentifier="Intro" id="3UX-NM-Jtp" customClass="IntroViewController" customModule="MrBigIdea" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Db-hY-kfl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNl-YP-9Ui">
-                                <rect key="frame" x="159" y="407" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNZ-V4-ayG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Kia-xR-dYS">
+                                <rect key="frame" x="0.0" y="610" width="375" height="37"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="pageIndicatorTintColor" red="0.35294117650000001" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.90980392160000001" green="0.0" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="start:" destination="RRE-fF-FFM" eventType="touchUpInside" id="tKh-it-pqM"/>
+                                    <action selector="changePage:" destination="3UX-NM-Jtp" eventType="valueChanged" id="ynN-Pq-MbJ"/>
                                 </connections>
-                            </button>
+                            </pageControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="5BI-u8-GHr"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FNZ-V4-ayG" firstAttribute="leading" secondItem="JO4-Rx-Dda" secondAttribute="leading" id="1AM-3g-XJA"/>
+                            <constraint firstItem="FNZ-V4-ayG" firstAttribute="top" secondItem="JO4-Rx-Dda" secondAttribute="top" id="1kR-QH-ySG"/>
+                            <constraint firstItem="JO4-Rx-Dda" firstAttribute="bottom" secondItem="Kia-xR-dYS" secondAttribute="bottom" constant="20" id="2BG-8T-9Ly"/>
+                            <constraint firstItem="Kia-xR-dYS" firstAttribute="centerX" secondItem="JO4-Rx-Dda" secondAttribute="centerX" id="cyY-16-PZF"/>
+                            <constraint firstItem="FNZ-V4-ayG" firstAttribute="bottom" secondItem="JO4-Rx-Dda" secondAttribute="bottom" id="rmg-17-3eG"/>
+                            <constraint firstItem="FNZ-V4-ayG" firstAttribute="trailing" secondItem="JO4-Rx-Dda" secondAttribute="trailing" id="unT-7x-Nxm"/>
+                            <constraint firstItem="Kia-xR-dYS" firstAttribute="width" secondItem="2Db-hY-kfl" secondAttribute="width" id="vXd-JE-q1f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JO4-Rx-Dda"/>
                     </view>
+                    <connections>
+                        <outlet property="introPageControl" destination="Kia-xR-dYS" id="wzA-dp-1tX"/>
+                        <outlet property="introScrollView" destination="FNZ-V4-ayG" id="Xhj-gb-4z1"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wg0-Oi-GEY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1b0-XG-uRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="193" y="243"/>
+            <point key="canvasLocation" x="318" y="-434"/>
         </scene>
     </scenes>
 </document>

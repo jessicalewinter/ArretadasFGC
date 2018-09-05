@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yCc-TV-Xck">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yCc-TV-Xck">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -50,13 +50,13 @@
             </objects>
             <point key="canvasLocation" x="-394" y="-478"/>
         </scene>
-        <!--Intro-->
+        <!--Feed-->
         <scene sceneID="Tzp-sP-kHI">
             <objects>
-                <viewControllerPlaceholder storyboardName="Intro" id="KZh-Ef-06b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Feed" image="home" id="e2D-ij-bOn"/>
-                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPl-Ra-o2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Feed" id="KZh-Ef-06b" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="e2D-ij-bOn"/>
+                </viewControllerPlaceholder>
             </objects>
             <point key="canvasLocation" x="-379" y="-551"/>
         </scene>
