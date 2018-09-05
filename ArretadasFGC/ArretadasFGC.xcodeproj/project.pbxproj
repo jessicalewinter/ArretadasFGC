@@ -29,6 +29,7 @@
 		BE24BC64213814F700CBAE4C /* ProfileUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE24BC63213814F700CBAE4C /* ProfileUser.storyboard */; };
 		BE3751AA213DAA8800224587 /* AddClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3751A9213DAA8800224587 /* AddClubViewController.swift */; };
 		BE3751B0213DCDC300224587 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3751AF213DCDC300224587 /* LoginViewController.swift */; };
+		BE3DAAA92140051B00FCD262 /* Glossary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3DAAA82140051B00FCD262 /* Glossary.swift */; };
 		BE4C8D51213FF0E000E67168 /* GlossaryData.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE4C8D50213FF0E000E67168 /* GlossaryData.plist */; };
 		BE5F902E213EAF740008CA7E /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F902D213EAF740008CA7E /* Register.swift */; };
 		BE5F9030213EBCC30008CA7E /* RegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F902F213EBCC30008CA7E /* RegisterTests.swift */; };
@@ -102,6 +103,7 @@
 		BE24BC63213814F700CBAE4C /* ProfileUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileUser.storyboard; sourceTree = "<group>"; };
 		BE3751A9213DAA8800224587 /* AddClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClubViewController.swift; sourceTree = "<group>"; };
 		BE3751AF213DCDC300224587 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BE3DAAA82140051B00FCD262 /* Glossary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glossary.swift; sourceTree = "<group>"; };
 		BE4C8D50213FF0E000E67168 /* GlossaryData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GlossaryData.plist; sourceTree = "<group>"; };
 		BE5F902D213EAF740008CA7E /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		BE5F902F213EBCC30008CA7E /* RegisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTests.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				BE7D2FF1213DA27E003897C5 /* StoreMidia.swift */,
 				BE5F902D213EAF740008CA7E /* Register.swift */,
 				BE4C8D50213FF0E000E67168 /* GlossaryData.plist */,
+				BE3DAAA82140051B00FCD262 /* Glossary.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 				BEDE55D7213984B20076CCB5 /* PrimaryButton.swift in Sources */,
 				BEC6148E213882F0009E8E51 /* ClubsCollectionViewCell.swift in Sources */,
 				BE24BC51213811C300CBAE4C /* ProfileClubViewController.swift in Sources */,
+				BE3DAAA92140051B00FCD262 /* Glossary.swift in Sources */,
 				BE3751B0213DCDC300224587 /* LoginViewController.swift in Sources */,
 				BE21487621399034002BED27 /* ClubCardCollectionViewCell.swift in Sources */,
 				BEDE55D5213983D60076CCB5 /* ReportCard.swift in Sources */,
