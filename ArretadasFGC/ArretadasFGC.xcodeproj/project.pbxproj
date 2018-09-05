@@ -12,8 +12,13 @@
 		9507711CD3AA9AA00310D077 /* Pods_ArretadasFGC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5F0E432A60D89966A25FF7 /* Pods_ArretadasFGC.framework */; };
 		BE06E281213FFD9900630314 /* ProfileClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE06E280213FFD9900630314 /* ProfileClub.swift */; };
 		BE06E28E214000D200630314 /* ClubingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE06E28D214000D200630314 /* ClubingTest.swift */; };
-		BE16E47121400747006B3EA3 /* ProfileUserTeste.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16E47021400747006B3EA3 /* ProfileUserTeste.swift */; };
+		BE16E47121400747006B3EA3 /* ProfileUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16E47021400747006B3EA3 /* ProfileUserTest.swift */; };
+		BE06E290214015CE00630314 /* GlossaryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE06E28F214015CE00630314 /* GlossaryTest.swift */; };
 		BE16E47321400C57006B3EA3 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16E47221400C57006B3EA3 /* LoginManager.swift */; };
+		BE16E47521401520006B3EA3 /* LoginManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16E47421401520006B3EA3 /* LoginManagerTest.swift */; };
+		BE16E4772140203D006B3EA3 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE16E4762140203D006B3EA3 /* Intro.storyboard */; };
+		BE16E4792140206C006B3EA3 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16E4782140206C006B3EA3 /* IntroViewController.swift */; };
+		BE16E47B21402149006B3EA3 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16E47A21402149006B3EA3 /* Transition.swift */; };
 		BE1D9FD0213FFECF0031EF08 /* SearchTextFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1D9FCF213FFECF0031EF08 /* SearchTextFieldModel.swift */; };
 		BE21485D21382EA5002BED27 /* BackgroundUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE21485C21382EA5002BED27 /* BackgroundUser.xib */; };
 		BE21485F21383185002BED27 /* BackgroundUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE21485E21383185002BED27 /* BackgroundUser.swift */; };
@@ -91,8 +96,13 @@
 		BDE91DB5E6317B5E8B49196F /* Pods_ArretadasFGCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArretadasFGCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE06E280213FFD9900630314 /* ProfileClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileClub.swift; sourceTree = "<group>"; };
 		BE06E28D214000D200630314 /* ClubingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubingTest.swift; sourceTree = "<group>"; };
-		BE16E47021400747006B3EA3 /* ProfileUserTeste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserTeste.swift; sourceTree = "<group>"; };
+		BE16E47021400747006B3EA3 /* ProfileUserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserTest.swift; sourceTree = "<group>"; };
+		BE06E28F214015CE00630314 /* GlossaryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryTest.swift; sourceTree = "<group>"; };
 		BE16E47221400C57006B3EA3 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		BE16E47421401520006B3EA3 /* LoginManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManagerTest.swift; sourceTree = "<group>"; };
+		BE16E4762140203D006B3EA3 /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
+		BE16E4782140206C006B3EA3 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		BE16E47A21402149006B3EA3 /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		BE1D9FCF213FFECF0031EF08 /* SearchTextFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextFieldModel.swift; sourceTree = "<group>"; };
 		BE21485C21382EA5002BED27 /* BackgroundUser.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BackgroundUser.xib; path = ArretadasFGC/Xibs/BackgroundUser.xib; sourceTree = SOURCE_ROOT; };
 		BE21485E21383185002BED27 /* BackgroundUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundUser.swift; sourceTree = "<group>"; };
@@ -216,6 +226,7 @@
 				BEF5B0892136E013002FB168 /* Main.storyboard */,
 				BE7D2FD0213827BF003897C5 /* RegisterAccount.storyboard */,
 				BE214878213990C6002BED27 /* Clubs.storyboard */,
+				BE16E4762140203D006B3EA3 /* Intro.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -320,6 +331,7 @@
 				BEF5B0912136E014002FB168 /* LaunchScreen.storyboard */,
 				BEF5B0942136E014002FB168 /* Info.plist */,
 				BE24BC572138122800CBAE4C /* ArretadasFGC.xcdatamodeld */,
+				BE16E47A21402149006B3EA3 /* Transition.swift */,
 			);
 			path = ArretadasFGC;
 			sourceTree = "<group>";
@@ -334,7 +346,9 @@
 				BE5F902F213EBCC30008CA7E /* RegisterTests.swift */,
 				BE5F9031213EC5F30008CA7E /* DataManagerTest.swift */,
 				BE5F9033213EC8820008CA7E /* StoreMediaTest.swift */,
-				BE16E47021400747006B3EA3 /* ProfileUserTeste.swift */,
+				BE16E47021400747006B3EA3 /* ProfileUserTest.swift */,
+				BE16E47421401520006B3EA3 /* LoginManagerTest.swift */,
+				BE06E28F214015CE00630314 /* GlossaryTest.swift */,
 			);
 			path = ArretadasFGCTests;
 			sourceTree = "<group>";
@@ -359,6 +373,7 @@
 				BEAADC0C2139DD4A002CCE0B /* GlossaryViewController.swift */,
 				BE3751A9213DAA8800224587 /* AddClubViewController.swift */,
 				BE3751AF213DCDC300224587 /* LoginViewController.swift */,
+				BE16E4782140206C006B3EA3 /* IntroViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -489,6 +504,7 @@
 				BEF5B08B2136E013002FB168 /* Main.storyboard in Resources */,
 				BE7D2FD1213827BF003897C5 /* RegisterAccount.storyboard in Resources */,
 				BE24BC64213814F700CBAE4C /* ProfileUser.storyboard in Resources */,
+				BE16E4772140203D006B3EA3 /* Intro.storyboard in Resources */,
 				BEC6149521395B34009E8E51 /* ProfileUserTableViewFirstCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,11 +605,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE16E47B21402149006B3EA3 /* Transition.swift in Sources */,
 				BEC6149421395B34009E8E51 /* ProfileUserTableViewFirstCell.swift in Sources */,
 				BE7D2FF8213DAC6F003897C5 /* CustomSegmentedControl.swift in Sources */,
 				BE24BC53213811C300CBAE4C /* FeedViewController.swift in Sources */,
 				BEF5B0862136E013002FB168 /* AppDelegate.swift in Sources */,
 				BEC6149C21397E34009E8E51 /* CardRegisterAccountTableViewCell.swift in Sources */,
+				BE16E4792140206C006B3EA3 /* IntroViewController.swift in Sources */,
 				BE16E47321400C57006B3EA3 /* LoginManager.swift in Sources */,
 				BE7D2FF2213DA27E003897C5 /* StoreMidia.swift in Sources */,
 				BEDE55D7213984B20076CCB5 /* PrimaryButton.swift in Sources */,
@@ -624,12 +642,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE16E47121400747006B3EA3 /* ProfileUserTeste.swift in Sources */,
+				BE16E47121400747006B3EA3 /* ProfileUserTest.swift in Sources */,
 				BE5F9034213EC8820008CA7E /* StoreMediaTest.swift in Sources */,
 				BE5F9032213EC5F30008CA7E /* DataManagerTest.swift in Sources */,
 				BE5F9030213EBCC30008CA7E /* RegisterTests.swift in Sources */,
 				BE7D3005213EA477003897C5 /* RegisterAccountViewControllerTest.swift in Sources */,
 				BE06E28E214000D200630314 /* ClubingTest.swift in Sources */,
+				BE16E47521401520006B3EA3 /* LoginManagerTest.swift in Sources */,
+				BE06E290214015CE00630314 /* GlossaryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

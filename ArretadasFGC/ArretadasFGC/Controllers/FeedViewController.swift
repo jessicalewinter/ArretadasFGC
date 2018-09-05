@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class FeedViewController: UIViewController, UIViewControllerTransitioningDelegate {
 	
 	var clubs: [Club] = []
 	var personalPublicReports: [ExperienceReports] = []
@@ -17,12 +17,12 @@ class FeedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		fetchClubs()
+		//fetchClubs()
     }
 	
 
 	func fetchClubs(){
-		let entity = DataManager.getEntity(entity: "Club")
+        guard let entity = DataManager.getEntity(entity: "Club") else{ return }
 		let result = DataManager.getAll(entity: entity)
 		if result.success {
 			clubs = result.objects as! [Club]

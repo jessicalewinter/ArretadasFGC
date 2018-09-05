@@ -1,15 +1,14 @@
 //
-//  DataManagerTest.swift
+//  LoginManagerTest.swift
 //  ArretadasFGCTests
 //
-//  Created by Ada 2018 on 04/09/18.
+//  Created by Ada 2018 on 05/09/2018.
 //  Copyright © 2018 Ada 2018. All rights reserved.
 //
 
 import XCTest
-@testable import ArretadasFGC
 
-class DataManagerTest: XCTestCase {
+class LoginManagerTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,14 +20,7 @@ class DataManagerTest: XCTestCase {
         super.tearDown()
     }
     
-    func test_getEntity_succes(){
-        let entity = DataManager.getEntity(entity: "User")
-        XCTAssertNotNil(entity)
-        
-    }
-    func test_getEntity_error(){
-        let entity = DataManager.getEntity(entity: "error")
-        XCTAssertNil(entity)
+    func test_isValid_succes(){
         
     }
     
