@@ -17,7 +17,8 @@ class AddClubViewController: UIViewController {
     @IBOutlet var local: SearchTextField!
     @IBOutlet var clubDescription: UITextView!
     @IBOutlet var name: UITextField!
-   
+    @IBOutlet var dateMeentings: UITextField!
+    
     //Outlets imageView e view
     @IBOutlet var viewForm: UIView!
     @IBOutlet var image: UIImageView!
@@ -86,11 +87,12 @@ class AddClubViewController: UIViewController {
     }
     
     @IBAction func done(_ sender: UIButton) {
-        if !Register.checkTextFieldIsEmpty(textFields: [privacy, city, local, name]){
+        if !Register.checkTextFieldIsEmpty(textFields: [privacy, city, local, name, dateMeentings]){
             let newClub = Club(context: DataManager.getContext())
             newClub.local = local.text
             newClub.city = city.text
             newClub.name = name.text
+            newClub.dateMeeting = dateMeentings.text
             newClub.descriptionClub = clubDescription.text
             newClub.photo = StoreMidia.saving(image: image.image!, withName: nameImagePicker)
             user?.addToClubs(newClub)

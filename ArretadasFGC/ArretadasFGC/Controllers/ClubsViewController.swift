@@ -148,11 +148,15 @@ extension ClubsViewController: UICollectionViewDelegateFlowLayout, UICollectionV
             club = filteredClubs[indexPath.row]
         }
         
-        let path = club.photo
         cell.clubMoreInfoBtn.primaryButtton()
         cell.clubMoreInfoBtn.addTarget(self, action: #selector(buttonAction(sender:)), for: .touchUpInside)
         cell.clubMoreInfoBtn.tag = indexPath.row
-        cell.clubImage.image = StoreMidia.loadImageFromPath(path!)!
+        if let imagePath = club?.photo {
+            cell.clubImage.image = StoreMidia.loadImageFromPath(imagePath)
+        } else {
+            cell.clubImage.image =  #imageLiteral(resourceName: "userDefault")
+        }
+        
         cell.clubLocation.text = club.city
         cell.clubName.text = club.name
         cell.clubDescription.text = club.descriptionClub
