@@ -20,9 +20,8 @@
                         <color key="backgroundColor" red="0.90980392160000001" green="0.0" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="RcN-Vm-thA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="home" selectedImage="home_active" id="lHe-GJ-CtB">
+                    <tabBarItem key="tabBarItem" title="" image="user" selectedImage="user_active" id="ckr-Bo-a6I">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -32,7 +31,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="home" width="25" height="24"/>
-        <image name="home_active" width="25" height="24"/>
+        <image name="user" width="25" height="32"/>
+        <image name="user_active" width="25" height="32"/>
     </resources>
 </document>

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,32 +14,21 @@
         <!--Glossário-->
         <scene sceneID="bV2-2r-uXU">
             <objects>
-                <viewController title="Clubes" id="4rZ-Eh-iHC" userLabel="Glossário" customClass="GlossaryViewController" customModule="ArretadasFGC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Glossário" id="4rZ-Eh-iHC" userLabel="Glossário" customClass="GlossaryViewController" customModule="ArretadasFGC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jAM-7n-Qfm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jq8-fs-0We">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8J-u4-HvY">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
-                                <subviews>
-                                    <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="Pesquise por palavras" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XWo-9P-hgQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <scopeButtonTitles>
-                                            <string>Nome</string>
-                                            <string>Local</string>
-                                        </scopeButtonTitles>
-                                    </searchBar>
-                                </subviews>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60.5"/>
                                 <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="XWo-9P-hgQ" firstAttribute="top" secondItem="x8J-u4-HvY" secondAttribute="top" id="18u-kL-3tR"/>
-                                    <constraint firstItem="XWo-9P-hgQ" firstAttribute="leading" secondItem="x8J-u4-HvY" secondAttribute="leading" id="NRs-PQ-pd3"/>
-                                    <constraint firstAttribute="trailing" secondItem="XWo-9P-hgQ" secondAttribute="trailing" id="Pyd-Ge-KfL"/>
-                                </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nU8-4p-QY0">
-                                <rect key="frame" x="16" y="56" width="343" height="547"/>
+                                <rect key="frame" x="16" y="0.5" width="343" height="602.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="wordCell" textLabel="LJt-rv-JCA" detailTextLabel="LaO-Tr-m0K" style="IBUITableViewCellStyleSubtitle" id="7Io-JH-ZtQ">
@@ -79,17 +69,21 @@
                                 <sections/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.96862745100000003" green="0.96470588239999999" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.17647058823529413" green="0.17647058823529413" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.90980392160000001" green="0.0" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nU8-4p-QY0" firstAttribute="top" secondItem="x8J-u4-HvY" secondAttribute="bottom" constant="-40" id="10I-dv-otz"/>
+                            <constraint firstItem="nU8-4p-QY0" firstAttribute="top" secondItem="x8J-u4-HvY" secondAttribute="bottom" constant="-60" id="10I-dv-otz"/>
+                            <constraint firstAttribute="trailing" secondItem="Jq8-fs-0We" secondAttribute="trailing" id="1X0-lm-sCQ"/>
+                            <constraint firstItem="2ZH-18-HDc" firstAttribute="bottom" secondItem="Jq8-fs-0We" secondAttribute="bottom" id="7L4-Gb-pwt"/>
                             <constraint firstAttribute="bottom" secondItem="nU8-4p-QY0" secondAttribute="bottom" id="Dkf-aZ-06O"/>
+                            <constraint firstItem="x8J-u4-HvY" firstAttribute="height" secondItem="jAM-7n-Qfm" secondAttribute="height" multiplier="0.1" id="GMR-G2-zcF"/>
                             <constraint firstItem="x8J-u4-HvY" firstAttribute="leading" secondItem="2ZH-18-HDc" secondAttribute="leading" id="JqM-B9-n1E"/>
-                            <constraint firstItem="nU8-4p-QY0" firstAttribute="top" secondItem="XWo-9P-hgQ" secondAttribute="bottom" id="UFZ-dE-ih2"/>
+                            <constraint firstItem="Jq8-fs-0We" firstAttribute="top" secondItem="2ZH-18-HDc" secondAttribute="top" id="Snm-gV-u8j"/>
                             <constraint firstItem="x8J-u4-HvY" firstAttribute="top" secondItem="2ZH-18-HDc" secondAttribute="top" id="h7I-kJ-9It"/>
+                            <constraint firstItem="Jq8-fs-0We" firstAttribute="leading" secondItem="2ZH-18-HDc" secondAttribute="leading" id="oib-NF-CSR"/>
                             <constraint firstItem="2ZH-18-HDc" firstAttribute="trailing" secondItem="x8J-u4-HvY" secondAttribute="trailing" id="tQ8-np-EaC"/>
-                            <constraint firstItem="nU8-4p-QY0" firstAttribute="leading" secondItem="2ZH-18-HDc" secondAttribute="leading" constant="16" id="zac-A2-3Vj"/>
-                            <constraint firstItem="2ZH-18-HDc" firstAttribute="trailing" secondItem="nU8-4p-QY0" secondAttribute="trailing" constant="16" id="zx9-HN-ABQ"/>
+                            <constraint firstItem="nU8-4p-QY0" firstAttribute="leading" secondItem="jAM-7n-Qfm" secondAttribute="leading" constant="16" id="zac-A2-3Vj"/>
+                            <constraint firstAttribute="trailing" secondItem="nU8-4p-QY0" secondAttribute="trailing" constant="16" id="zx9-HN-ABQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2ZH-18-HDc"/>
                     </view>
@@ -101,16 +95,11 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="searchBar" destination="XWo-9P-hgQ" id="ZNT-5R-uYV"/>
                         <outlet property="tableView" destination="nU8-4p-QY0" id="RK7-qg-xOJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j30-Sf-03P" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="bt4-ED-C2m">
-                    <connections>
-                        <outlet property="searchBar" destination="XWo-9P-hgQ" id="Cld-uF-BBZ"/>
-                    </connections>
-                </searchDisplayController>
+                <searchDisplayController id="bt4-ED-C2m"/>
             </objects>
             <point key="canvasLocation" x="-522" y="-173"/>
         </scene>
