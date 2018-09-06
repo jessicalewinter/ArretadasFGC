@@ -40,7 +40,7 @@
             <color key="backgroundColor" red="0.1764705882352941" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1Fh-eA-JUr" secondAttribute="bottom" constant="65" id="H62-W2-QWK"/>
-                <constraint firstItem="iuK-ac-uEq" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.3" priority="750" id="Tks-GE-4RC"/>
+                <constraint firstItem="iuK-ac-uEq" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.5" priority="750" id="Tks-GE-4RC"/>
                 <constraint firstItem="iuK-ac-uEq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="b8H-01-nla"/>
                 <constraint firstItem="1Fh-eA-JUr" firstAttribute="top" secondItem="iuK-ac-uEq" secondAttribute="bottom" constant="13" id="cJ4-hW-qvU"/>
                 <constraint firstItem="1Fh-eA-JUr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="i7p-8K-UPR"/>
