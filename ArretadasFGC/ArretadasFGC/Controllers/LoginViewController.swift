@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
     }
     
     func setupLayput(){
-        viewForm.addShadow()
+        viewForm.setCornerRadiusDefault()
         singUpOutlet.primaryButtton()
         loginOutlet.primaryButtton()
     }

@@ -45,13 +45,8 @@ class RegisterAccountViewController: UIViewController {
     }
 
     func initialConfg(){
-        viewCard.layer.cornerRadius = 5
-        viewCard.layer.shadowColor = #colorLiteral(red: 0.4390000105, green: 0.4390000105, blue: 0.4390000105, alpha: 1)
-        viewCard.layer.shadowRadius = 1
-        viewCard.layer.shadowOpacity = 0.3
-        viewCard.layer.shadowOffset = CGSize.init(width: 4.0, height: 4.0)
-        viewCard.clipsToBounds = true
-        viewCard.layer.masksToBounds = false
+        viewCard.setCornerRadiusDefault()
+        
         registerButton.sizeToFit()
         registerButton.primaryButtton()
         registerButton.titleLabel?.sizeToFit()

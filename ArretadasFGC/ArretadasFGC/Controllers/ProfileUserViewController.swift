@@ -85,12 +85,12 @@ class ProfileUserViewController: UIViewController {
             self.performSegue(withIdentifier: "goToLogin", sender: nil)
             
         }else{
-            let club = Club(context: DataManager.getContext())
-            club.city = "Itaberaba"
-            club.name = "Clube massa"
-            club.descriptionClub = ".kasdhwulhqdowihd"
-            club.local = "Shopping"
-            user?.addToClubs(club)
+//            let club = Club(context: DataManager.getContext())
+//            club.city = "Itaberaba"
+//            club.name = "Clube massa"
+//            club.descriptionClub = ".kasdhwulhqdowihd"
+//            club.local = "Shopping"
+//            user?.addToClubs(club)
             
             
             //Setup user's info
@@ -115,7 +115,7 @@ class ProfileUserViewController: UIViewController {
         headerView.setNeedsLayout()
         headerView.layoutIfNeeded()
         var frame = headerView.frame
-        frame.size.height = self.view.frame.size.height*0.45
+        frame.size.height = self.view.frame.size.height*0.4
         headerView.frame = frame
         
         tableView.tableHeaderView = headerView
