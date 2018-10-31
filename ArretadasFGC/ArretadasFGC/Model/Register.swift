@@ -18,6 +18,17 @@ class Register {
 		}
 		return false
 	}
+	static func validateRegister(emial: String) -> Bool{
+        let predicate = NSPredicate(format: "email == %@", email)
+        guard let result = DataManager.executeThe(query: predicate, forEntityName: "User") as? [User] else {return false}
+        
+        if result.isEmpty {
+            return true
+        }else{
+            return false
+        }
+        
+}
 }
 
 
